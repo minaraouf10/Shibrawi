@@ -25,6 +25,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const ShibrawiLayout(),
         );
+
+      case RouteNames.shimmerButton:
+        return MaterialPageRoute(
+          builder: (context) => const ShimmerButton(),
+        );
     }
   }
 

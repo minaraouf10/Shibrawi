@@ -20,16 +20,18 @@ class ShimmerButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
       baseColor: AppColors.primaryLight,
-      highlightColor: const Color(0xfff0f6f8),
+      highlightColor: const Color(0xFFF9FAFB),
       child: GestureDetector(
         onTap: onPressed ?? () => {},
         child: Container(
           decoration: BoxDecoration(
-            color: AppColors.white,
+            color: Colors.grey.shade300,
             borderRadius: BorderRadius.circular(borderRadius ?? 8),
           ),
           width: width ?? 220,
-          height: height ?? 48,
+          height: 60.0,
+
+          //   height: height ?? 48,
         ),
       ),
     );

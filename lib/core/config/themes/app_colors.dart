@@ -35,6 +35,10 @@ class AppColors {
   static const Color faceBook = Color(0xFF367FC0);
   static const Color google = Color(0xFFDD4B39);
 
+  ///Home screen
+  static const Color foreground = Color(0xFFB6B7B7);
+
+
   ///text form field color
   static const Color gryFormField = Color(0xFFF2F2F2);
 

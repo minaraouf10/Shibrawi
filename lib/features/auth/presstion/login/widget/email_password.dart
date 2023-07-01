@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_button.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/text_form_field.dart';
+import 'package:shibrawi/features/auth/presstion/login/controller/login_provider_screen.dart';
 import 'package:shibrawi/generated/translations.g.dart';
 
-class EmailPassword extends StatelessWidget {
+class EmailPassword extends ConsumerWidget {
   EmailPassword({Key? key}) : super(key: key);
-  var emailController = TextEditingController();
-  var passwordController = TextEditingController();
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final loginProvider = ref.read(loginProviderScreen);
+
     return Column(
       children: [
         const SizedBox(height: 40.0),
@@ -42,12 +46,24 @@ class EmailPassword extends StatelessWidget {
         const SizedBox(
           height: 30.0,
         ),
-        DefaultButton(
-          text: Translations.of(context).login,
-          function: () {
-            Navigator.pushNamed(context, RouteNames.shibrawiLayout,);
+        Consumer(
+          builder: (BuildContext context, WidgetRef ref, Widget? child) {
+            return DefaultButton(
+              isLoading: ref.watch(loginProvider.isLoading.provider),
+              text: tr.login,
+              function: () {
+                loginProvider.userLogin(
+                  email: emailController.text,
+                  password: passwordController.text,
+                );
+                Navigator.pushNamed(
+                  context,
+                  RouteNames.shibrawiLayout,
+                );
+              },
+              background: AppColors.orange,
+            );
           },
-          background: AppColors.orange,
         ),
         const SizedBox(
           height: 15,

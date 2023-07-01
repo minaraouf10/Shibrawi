@@ -12,7 +12,7 @@ class LoginOrSignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.only(
-          start: 20.0, top: 34.0, end: 20.0, bottom: 10.0),
+          start: 20.0, top: 32.0, end: 20.0, bottom: 10.0),
       child: Column(
         children: [
           Text(
@@ -24,7 +24,7 @@ class LoginOrSignUp extends StatelessWidget {
             style: const TextStyle(fontSize: 15.0, color: AppColors.lightBlack),
           ),
           const SizedBox(
-            height: 58.0,
+            height: 28.0,
           ),
           DefaultButton(
             function: () {
@@ -37,7 +37,7 @@ class LoginOrSignUp extends StatelessWidget {
             isUpperCase: false,
           ),
           const SizedBox(
-            height: 20.0,
+            height: 30.0,
           ),
           Container(
             padding: const EdgeInsetsDirectional.only(

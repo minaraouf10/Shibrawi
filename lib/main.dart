@@ -1,5 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shibrawi/core/api_helper/dio_client.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/router/router_imports.dart';
 import 'package:shibrawi/generated/translations.g.dart';
@@ -14,7 +16,7 @@ void main() {
       tools: const [
         ...DevicePreview.defaultTools,
       ],
-      builder: (context) => TranslationProvider(child: const MyApp()),
+      builder: (context) => TranslationProvider(child: const ProviderScope(child: MyApp())),
     ),
   );
 }

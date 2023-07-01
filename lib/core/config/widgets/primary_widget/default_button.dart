@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/widgets/shimmer/shimmer_button.dart';
 
 class DefaultButton extends StatelessWidget {
   const DefaultButton({
@@ -11,6 +12,7 @@ class DefaultButton extends StatelessWidget {
     this.isUpperCase = true,
     this.radius = 3.0,
     this.fontSize = 16.0,
+    this.isLoading = false
   }) : super(key: key);
 
   final double width;
@@ -20,16 +22,17 @@ class DefaultButton extends StatelessWidget {
   final Function() function;
   final String text;
   final double fontSize;
+  final bool isLoading;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return isLoading ? ShimmerButton(width: width ,) : Container(
       padding: const EdgeInsetsDirectional.only(start: 10,end: 10,top: 5.0),
       margin:const EdgeInsetsDirectional.symmetric(horizontal: 5),
       width: width,
-     // height: 70.0,
+      height: 60.0,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(35),
         color: background,
       ),
       child: MaterialButton(
@@ -43,7 +46,7 @@ class DefaultButton extends StatelessWidget {
             fontSize: fontSize,
           ),
         ),
-      ),
+      )   ,
     );
   }
 }

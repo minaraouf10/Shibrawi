@@ -11,9 +11,9 @@ class AuthService {
 
   AuthService(this.client);
 
-  Future<void> login(String phoneNumber, String password) async {
+  Future<void> login(String email, String password) async {
     final body = {
-      'phoneNumber': phoneNumber,
+      'email': email,
       'password': password,
     };
     final res = await client.post(Endpoints.login, body: body);
