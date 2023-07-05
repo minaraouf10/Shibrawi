@@ -40,7 +40,7 @@ class DioClient {
             headers: {
               if (attachToken) 'Authorization': token ?? await userToken,
               ...headers,
-              'Accept-Language': langPrefs.locale.toString(),
+              'lang': langPrefs.locale.toString(),
             },
           ),
         ),
@@ -64,7 +64,7 @@ class DioClient {
           data: body,
           options: Options(
             headers: {
-              'Accept-Language': langPrefs.locale.toString(),
+              'lang': langPrefs.locale.toString(),
               if (attachToken) 'Authorization': token ?? await userToken,
               ...headers,
             },
@@ -90,7 +90,7 @@ class DioClient {
           data: body,
           options: Options(
             headers: {
-              'Accept-Language': langPrefs.locale.toString(),
+              'lang': langPrefs.locale.toString(),
               if (attachToken) 'Authorization': token ?? await userToken,
               ...headers,
             },
@@ -116,7 +116,7 @@ class DioClient {
           data: body,
           options: Options(
             headers: {
-              'Accept-Language': langPrefs.locale.toString(),
+              'lang': langPrefs.locale.toString(),
               if (attachToken) 'Authorization': token ?? await userToken,
               ...headers,
             },

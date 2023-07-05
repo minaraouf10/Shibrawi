@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:flutter/cupertino.dart';
@@ -7,26 +6,34 @@ import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/auth/data/service/auth_service.dart';
 import 'package:shibrawi/generated/translations.g.dart';
 
-final loginProviderScreen = Provider<LoginLogic>(
-  (ref) => LoginLogic(ref: ref, authService: ref.read(authServiceProvider)),
+final signUpProviderScreen = Provider<SignUpLogic>(
+  (ref) => SignUpLogic(ref: ref, authService: ref.read(authServiceProvider)),
 );
 
-class LoginLogic extends _LoginStates {
-  LoginLogic({required this.authService, required super.ref});
+class SignUpLogic extends _SignUpStates {
+  SignUpLogic({required this.authService, required super.ref});
 
   final AuthService authService;
 
+  final TextEditingController nameController = TextEditingController();
+
   final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController phoneController = TextEditingController();
+
+  final TextEditingController imageController = TextEditingController();
 
   final TextEditingController passwordController = TextEditingController();
 
-  Future<void> userLogin() async {
+  Future<void> signUp() async {
     try {
       isLoading.state = true;
 
-      await authService.login(
+      await authService.signUp(
+        nameController.text.trim(),
         emailController.text.trim(),
         passwordController.text.trim(),
+        phoneController.text.trim(),
       );
       isSuccess.state = true;
     } catch (e) {
@@ -43,22 +50,35 @@ class LoginLogic extends _LoginStates {
     return null;
   }
 
+  String? nameValidation(String? value) {
+    if (value!.isEmpty) {
+      return tr.name_not_empty;
+    }
+    return null;
+  }
+
+  String? phoneValidation(String? value) {
+    if (value!.isEmpty) {
+      return tr.mobile_not_empty;
+    }
+    return null;
+  }
+
   String? passwordValidation(String? value) {
     if (value!.isEmpty) {
       return tr.password_not_empty;
     }
     return null;
   }
-
 }
 
-class _LoginStates {
+class _SignUpStates {
   final ProviderRef ref;
   final CustomState<bool> isLoading;
   final CustomState<String> isError;
   final CustomState<bool> isSuccess;
 
-  _LoginStates({required this.ref})
+  _SignUpStates({required this.ref})
       : isLoading = CustomState<bool>(ref, false),
         isError = CustomState<String>(ref, ''),
         isSuccess = CustomState<bool>(ref, false);

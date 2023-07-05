@@ -6,6 +6,8 @@ import 'package:shibrawi/features/intro/on_boarding/widget/boarding_item.dart';
 import 'package:shibrawi/features/intro/on_boarding/widget/boarding_list.dart';
 
 class BoardingScreen extends StatefulWidget {
+  const BoardingScreen({super.key});
+
   @override
   _BoardingScreenState createState() => _BoardingScreenState();
 }

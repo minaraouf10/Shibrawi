@@ -30,12 +30,14 @@ class HomePopularRestaurants extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         Container(
           height: 350,
           child: ListView.separated(
             physics: const BouncingScrollPhysics(),
-            itemBuilder: (context, index)=> const RestaurantsItem(),
+            itemBuilder: (context, index) => const RestaurantsItem(),
             separatorBuilder: (context, index) => const SizedBox(
               height: 10.0,
             ),

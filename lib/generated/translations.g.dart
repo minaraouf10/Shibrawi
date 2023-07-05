@@ -168,7 +168,7 @@ class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
 	String get login_with => 'or Login With';
 	String get mobile => 'Mobile No';
 	String get mobile_not_empty => 'mobile number must not empty';
-	String get name => 'Add your details to sign up';
+	String get name => 'Name';
 	String get name_not_empty => 'name must not empty';
 	String get next => 'Next';
 	String get no_internet => 'No Internet Connection';

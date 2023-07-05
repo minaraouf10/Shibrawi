@@ -37,7 +37,7 @@ class DefaultButton extends StatelessWidget {
       ),
       child: MaterialButton(
        // splashColor:AppColors.orange,
-         highlightColor: AppColors.orange,
+         highlightColor: AppColors.white,
          onPressed: function,
         child: Text(
           isUpperCase ? text.toUpperCase() : text,

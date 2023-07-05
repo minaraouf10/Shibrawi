@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
-import 'package:shibrawi/core/config/router/router_imports.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_button.dart';
 import 'package:shibrawi/generated/translations.g.dart';
@@ -37,7 +36,7 @@ class LoginOrSignUp extends StatelessWidget {
             isUpperCase: false,
           ),
           const SizedBox(
-            height: 30.0,
+            height: 20.0,
           ),
           Container(
             padding: const EdgeInsetsDirectional.only(
@@ -46,13 +45,14 @@ class LoginOrSignUp extends StatelessWidget {
             ),
             margin: const EdgeInsetsDirectional.symmetric(horizontal: 5),
             width: double.infinity,
+            height: 60,
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(
                 width: 1,
                 color: AppColors.orange,
               ),
-              borderRadius: BorderRadius.circular(25),
+              borderRadius: BorderRadius.circular(35),
             ),
             child: MaterialButton(
               onPressed: () {

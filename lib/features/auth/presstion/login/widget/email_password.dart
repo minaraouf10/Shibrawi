@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_button.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
@@ -9,9 +8,7 @@ import 'package:shibrawi/features/auth/presstion/login/controller/login_provider
 import 'package:shibrawi/generated/translations.g.dart';
 
 class EmailPassword extends ConsumerWidget {
-  EmailPassword({Key? key}) : super(key: key);
-  final emailController = TextEditingController();
-  final passwordController = TextEditingController();
+ const EmailPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, ref) {
@@ -21,26 +18,16 @@ class EmailPassword extends ConsumerWidget {
       children: [
         const SizedBox(height: 40.0),
         TextForm(
-          controller: emailController,
-          validate: (String? value) {
-            if (value!.isEmpty) {
-              return tr.email_not_empty;
-            }
-            return null;
-          },
+          controller: loginProvider.emailController,
+          validate: loginProvider.emailValidation,
           labelText: tr.email,
         ),
         const SizedBox(
           height: 25.0,
         ),
         TextForm(
-          controller: passwordController,
-          validate: (String? value) {
-            if (value!.isEmpty) {
-              return tr.password_not_empty;
-            }
-            return null;
-          },
+          controller: loginProvider.passwordController,
+          validate: loginProvider.passwordValidation,
           labelText: tr.password,
         ),
         const SizedBox(
@@ -51,16 +38,7 @@ class EmailPassword extends ConsumerWidget {
             return DefaultButton(
               isLoading: ref.watch(loginProvider.isLoading.provider),
               text: tr.login,
-              function: () {
-                loginProvider.userLogin(
-                  email: emailController.text,
-                  password: passwordController.text,
-                );
-                Navigator.pushNamed(
-                  context,
-                  RouteNames.shibrawiLayout,
-                );
-              },
+              function: loginProvider.userLogin,
               background: AppColors.orange,
             );
           },

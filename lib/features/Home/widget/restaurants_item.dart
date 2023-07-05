@@ -48,7 +48,7 @@ class RestaurantsItem extends StatelessWidget {
             const Text(
               '(124 ratings) Café estern Food',
               style: TextStyle(
-                color: Color(0xFFFB6B7B7),
+                color: Color(0xfffb6b7b7),
               ),
             ),
           ],
