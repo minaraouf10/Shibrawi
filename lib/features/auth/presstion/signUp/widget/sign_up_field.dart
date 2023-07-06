@@ -11,8 +11,8 @@ import 'package:shibrawi/generated/translations.g.dart';
 class SignUpField extends ConsumerWidget {
   SignUpField({Key? key}) : super(key: key);
 
-  var addressController = TextEditingController();
-  var confirmPasswordController = TextEditingController();
+  final addressController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context, ref) {

@@ -31,7 +31,7 @@ class AuthService {
     if (data.isError) throw data.message;
     log(data.data.toString());
 
-    //prefs.setUserToken(data.data.token);
+    prefs.setUserToken(data.data['token']);
    // log(data.data.data.toString());
     /// save local user
   }

@@ -36,7 +36,6 @@ class MyApp extends StatelessWidget {
       locale: TranslationProvider.of(context).flutterLocale,
       onGenerateRoute: AppRouter.onGenerateRoute,
       initialRoute: RouteNames.firstScreen,
-      //home: BoardingScreen(),
     );
   }
 }

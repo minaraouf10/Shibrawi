@@ -4,7 +4,7 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 class HomeSearchBar extends StatelessWidget {
   HomeSearchBar({super.key});
 
-  var searchController = TextEditingController();
+  final searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
