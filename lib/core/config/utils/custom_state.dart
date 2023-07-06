@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+typedef Json = Map<String,dynamic>;
 
 class CustomState<T> {
   final ProviderRef ref;
