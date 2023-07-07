@@ -30,6 +30,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const ShimmerButton(),
         );
+
+      case RouteNames.homeScreen:
+        return MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
+        );
     }
   }
 

@@ -2,7 +2,7 @@ class UserModel {
   late String name;
   late String phone;
   late String email;
-  late String password;
+  //late String password;
   late String image;
   late String token;
 
@@ -10,7 +10,7 @@ class UserModel {
     required this.name,
     required this.phone,
     required this.email,
-    required this.password,
+    //required this.password,
     required this.image,
     required this.token,
   });
@@ -19,7 +19,7 @@ class UserModel {
     name = json['name'];
     phone = json['phone'];
     email = json['email'];
-    password = json['password'];
+    //password = json['password'];
     image = json['image'];
     token = json['token'];
   }
@@ -29,7 +29,7 @@ class UserModel {
     data['name'] = name;
     data['phone'] = phone;
     data['email'] = email;
-    data['password'] = password;
+    //data['password'] = password;
     data['image'] = image;
     data['token'] = token;
     return data;

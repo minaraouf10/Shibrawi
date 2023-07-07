@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
@@ -26,8 +28,9 @@ class LoginLogic extends _LoginStates {
         passwordController.text.trim(),
       );
       isSuccess.state = true;
-    } catch (e) {
+    } catch (e,s) {
       isError.state = e.toString();
+      log(isError.state,stackTrace:s );
     } finally {
       isLoading.state = false;
     }

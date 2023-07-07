@@ -7,6 +7,7 @@ class RouteNames {
   static const  signUpScreen = '/SignUpScreen';
   static const  shibrawiLayout = '/ShibrawiLayout';
   static const  shimmerButton = '/ShimmerButton';
+  static const  homeScreen = '/HomeScreen';
   static const resetPasswordFirstStep = '/reset-password';
   static const resetPasswordFinalStep = '/new-password';
   static const phoneVerification = '/phone-verification';

@@ -37,52 +37,52 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(
                     height: 30.0,
                   ),
-                  
                 ],
               ),
             ),
           ),
         ),
-        Positioned(
-            bottom: 0.0,
-            right: 0.0,
-            left: 0.0,
-            child: CurvedNavigationBar(
-              index: 2,
-              backgroundColor: Colors.transparent,
-              animationDuration: const Duration(milliseconds: 300),
-              height: 65,
-              items: [
-                SvgPicture.asset(
-                  'assets/icons/menu.svg',
-                  height: 20,
-                  width: 20.0,
-                ),
-                SvgPicture.asset(
-                  'assets/icons/offers.svg',
-                  height: 20,
-                  width: 20.0,
-                ),
-                SvgPicture.asset(
-                  'assets/icons/home.svg',
-                  height: 30,
-                  width: 30.0,
-                ),
-                SvgPicture.asset(
-                  'assets/icons/profile.svg',
-                  height: 20,
-                  width: 20.0,
-                ),
-                SvgPicture.asset(
-                  'assets/icons/more_icon.svg',
-                  height: 20,
-                  width: 20.0,
-                ),
-              ],
-              color: Colors.white,
-              buttonBackgroundColor: Colors.white,
-              animationCurve: Curves.easeInOut,
-            ))
+        // Positioned(
+        //     bottom: 0.0,
+        //     right: 0.0,
+        //     left: 0.0,
+        //     child: CurvedNavigationBar(
+        //       index: 2,
+        //       backgroundColor: Colors.transparent,
+        //       animationDuration: const Duration(milliseconds: 300),
+        //       height: 65,
+        //       items: [
+        //         SvgPicture.asset(
+        //           'assets/icons/menu.svg',
+        //           height: 20,
+        //           width: 20.0,
+        //         ),
+        //         SvgPicture.asset(
+        //           'assets/icons/offers.svg',
+        //           height: 20,
+        //           width: 20.0,
+        //         ),
+        //         SvgPicture.asset(
+        //           'assets/icons/home.svg',
+        //           height: 30,
+        //           width: 30.0,
+        //         ),
+        //         SvgPicture.asset(
+        //           'assets/icons/profile.svg',
+        //           height: 20,
+        //           width: 20.0,
+        //         ),
+        //         SvgPicture.asset(
+        //           'assets/icons/more_icon.svg',
+        //           height: 20,
+        //           width: 20.0,
+        //         ),
+        //       ],
+        //       color: Colors.white,
+        //       buttonBackgroundColor: Colors.white,
+        //       animationCurve: Curves.easeInOut,
+        //     ),
+        // )
       ]),
     );
   }
