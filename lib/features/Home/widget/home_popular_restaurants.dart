@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
 import 'package:shibrawi/features/Home/widget/restaurants_item.dart';
 
@@ -33,15 +34,14 @@ class HomePopularRestaurants extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Container(
-          height: 350,
-          child: ListView.separated(
-            physics: const BouncingScrollPhysics(),
-            itemBuilder: (context, index) => const RestaurantsItem(),
-            separatorBuilder: (context, index) => const SizedBox(
-              height: 10.0,
-            ),
-            itemCount: 4,
+        ...List.generate(
+          4,
+          (index) => Column(
+            children: [
+              const RestaurantsItem(),
+              if(index != 3)
+              const Height(20),
+            ],
           ),
         ),
       ],

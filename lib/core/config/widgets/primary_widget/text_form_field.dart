@@ -37,7 +37,7 @@ class TextForm extends StatelessWidget {
       width: width,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(10),
         border: Border.all(color: Colors.white, width: 2.0),
       ),
       child: TextFormField(

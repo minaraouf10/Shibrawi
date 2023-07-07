@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:shibrawi/core/config/constants/constants.dart';
 
-class CustomSizedBox extends StatelessWidget {
-  const CustomSizedBox({
-    super.key,
-    this.height,
-    this.width,
-  });
+extension NumExtension on num {
+  Widget get h => SizedBox(height: toDouble());
 
-  final double? height;
-  final double? width;
+  Widget get w => SizedBox(width: toDouble());
+}
+
+class Height extends StatelessWidget {
+  const Height(this.height, {super.key});
+
+  final double height;
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: height ?? Constants.defaultPadding,
-      width: width,
-    );
-  }
+  Widget build(BuildContext context) => SizedBox(height: height);
+}
+
+class Width extends StatelessWidget {
+  const Width(this.width, {super.key});
+
+  final double width;
+
+  @override
+  Widget build(BuildContext context) => SizedBox(width: width);
 }

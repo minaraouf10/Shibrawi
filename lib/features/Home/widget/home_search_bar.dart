@@ -16,7 +16,7 @@ class HomeSearchBar extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
         color: AppColors.gryFormField,
-        borderRadius: BorderRadius.circular(25),
+        borderRadius: BorderRadius.circular(10),
         border: Border.all(color: Colors.white, width: 2.0),
       ),
       child: TextFormField(
@@ -34,7 +34,7 @@ class HomeSearchBar extends StatelessWidget {
             padding: EdgeInsetsDirectional.only(start: 10, end: 10),
             child: Icon(
               Icons.search,
-              size: 35,
+              size: 27,
             ),
           ),
           //prefixIcon: SvgPicture.asset('assets/icons/search_icon.svg',width: 5,height: 5,),
