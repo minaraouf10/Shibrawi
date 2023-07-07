@@ -5,7 +5,6 @@ import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/styles/app_text_styles.dart';
 
-
 extension ThemeExtentions on BuildContext {
   Color get primaryColor => Theme.of(this).primaryColor;
 

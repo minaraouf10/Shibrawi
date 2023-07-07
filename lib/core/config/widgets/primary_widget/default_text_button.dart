@@ -23,7 +23,7 @@ class DefaultTextButton extends StatelessWidget {
       onPressed: function,
       child: Text(
         text!,
-       // text!.toUpperCase(),
+        // text!.toUpperCase(),
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: fontWeight,

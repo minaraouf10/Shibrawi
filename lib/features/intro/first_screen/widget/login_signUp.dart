@@ -52,7 +52,7 @@ class LoginOrSignUp extends StatelessWidget {
                 width: 1,
                 color: AppColors.orange,
               ),
-              borderRadius: BorderRadius.circular(35),
+              borderRadius: BorderRadius.circular(10),
             ),
             child: MaterialButton(
               onPressed: () {

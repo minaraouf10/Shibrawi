@@ -6,6 +6,7 @@ final userPrefsProvider = Provider<UserPrefs>((ref) {
 });
 
 const sharedTokenId = 'token';
+
 class UserPrefs {
   final prefs = SharedPrefs.instance;
 

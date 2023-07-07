@@ -42,7 +42,8 @@ class AuthService {
       'password': password,
       'phone': phone,
     };
-    final res = CustomResponse(await client.post(Endpoints.register, body: body));
+    final res =
+        CustomResponse(await client.post(Endpoints.register, body: body));
     if (res.isError) throw res.message;
     log(res.data.toString());
   }

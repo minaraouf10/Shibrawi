@@ -2,6 +2,7 @@ class UserModel {
   late String name;
   late String phone;
   late String email;
+
   //late String password;
   late String image;
   late String token;

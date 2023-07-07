@@ -22,7 +22,7 @@ class SignUpScreen extends ConsumerWidget {
     });
 
     ref.listen(signUpProvider.isSuccess.provider, (_, state) {
-      if(state){
+      if (state) {
         context.pushNamed(RouteNames.loginScreen);
       }
     });

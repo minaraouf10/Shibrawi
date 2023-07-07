@@ -5,7 +5,6 @@ class AppRouter {
   static Route? onGenerateRoute(RouteSettings settings) {
     // final args = settings.arguments;
     switch (settings.name) {
-
       case RouteNames.firstScreen:
         return MaterialPageRoute(
           builder: (context) => const FirstScreen(),

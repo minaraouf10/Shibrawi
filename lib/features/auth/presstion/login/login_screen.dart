@@ -9,7 +9,6 @@ import 'package:shibrawi/features/auth/presstion/login/widget/login_with_google.
 import 'package:shibrawi/features/auth/presstion/login/widget/top_screen.dart';
 
 class LoginScreen extends ConsumerWidget {
-
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -24,8 +23,7 @@ class LoginScreen extends ConsumerWidget {
     });
 
     ref.listen(loginProvider.isSuccess.provider, (_, state) {
-      if(state)
-      {
+      if (state) {
         context.pushNamed(RouteNames.shibrawiLayout);
       }
     });

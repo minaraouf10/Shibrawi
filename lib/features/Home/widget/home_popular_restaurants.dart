@@ -39,8 +39,7 @@ class HomePopularRestaurants extends StatelessWidget {
           (index) => Column(
             children: [
               const RestaurantsItem(),
-              if(index != 3)
-              const Height(20),
+              if (index != 3) const Height(20),
             ],
           ),
         ),

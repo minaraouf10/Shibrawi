@@ -27,7 +27,7 @@ class LoginWithGoogle extends StatelessWidget {
           margin: const EdgeInsetsDirectional.symmetric(horizontal: 5),
           width: double.infinity,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(35),
+            borderRadius: BorderRadius.circular(10),
             color: AppColors.faceBook,
           ),
           child: Row(
@@ -59,7 +59,7 @@ class LoginWithGoogle extends StatelessWidget {
           margin: const EdgeInsetsDirectional.symmetric(horizontal: 5),
           width: double.infinity,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(35.0),
+              borderRadius: BorderRadius.circular(10.0),
               color: AppColors.google),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -6,7 +6,6 @@ import 'package:shibrawi/core/config/router/router_imports.dart';
 import 'package:shibrawi/core/data/locale/pref.dart';
 import 'package:shibrawi/generated/translations.g.dart';
 
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPrefs.init();
@@ -24,6 +23,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

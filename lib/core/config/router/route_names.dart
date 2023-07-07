@@ -2,12 +2,12 @@ class RouteNames {
   static const bottomNavBar = '/';
   static const onBoarding = '/onBoarding';
   static const faqs = '/faqs';
-  static const  firstScreen = '/FirstScreen';
-  static const  loginScreen = '/LoginScreen';
-  static const  signUpScreen = '/SignUpScreen';
-  static const  shibrawiLayout = '/ShibrawiLayout';
-  static const  shimmerButton = '/ShimmerButton';
-  static const  homeScreen = '/HomeScreen';
+  static const firstScreen = '/FirstScreen';
+  static const loginScreen = '/LoginScreen';
+  static const signUpScreen = '/SignUpScreen';
+  static const shibrawiLayout = '/ShibrawiLayout';
+  static const shimmerButton = '/ShimmerButton';
+  static const homeScreen = '/HomeScreen';
   static const resetPasswordFirstStep = '/reset-password';
   static const resetPasswordFinalStep = '/new-password';
   static const phoneVerification = '/phone-verification';
@@ -33,5 +33,5 @@ class RouteNames {
   static const deleteAccount = '/delete_user';
   static const editProfile = '/edit_profile';
 
-  //RouteNames._();
+//RouteNames._();
 }

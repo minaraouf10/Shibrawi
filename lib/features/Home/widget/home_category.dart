@@ -11,8 +11,10 @@ class HomeCategory extends StatelessWidget {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
-        itemBuilder: (context,index)=> const CategoryItem(),
-        separatorBuilder: (context,index)=> const SizedBox(width: 10,),
+        itemBuilder: (context, index) => const CategoryItem(),
+        separatorBuilder: (context, index) => const SizedBox(
+          width: 10,
+        ),
         itemCount: 10,
       ),
     );

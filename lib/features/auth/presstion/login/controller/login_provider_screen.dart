@@ -28,9 +28,9 @@ class LoginLogic extends _LoginStates {
         passwordController.text.trim(),
       );
       isSuccess.state = true;
-    } catch (e,s) {
+    } catch (e, s) {
       isError.state = e.toString();
-      log(isError.state,stackTrace:s );
+      log(isError.state, stackTrace: s);
     } finally {
       isLoading.state = false;
     }
@@ -49,7 +49,6 @@ class LoginLogic extends _LoginStates {
     }
     return null;
   }
-
 }
 
 class _LoginStates {

@@ -6,7 +6,6 @@ import 'package:shibrawi/core/api_helper/endpoints.dart';
 import 'package:shibrawi/core/data/locale/lang_pref.dart';
 import 'package:shibrawi/core/data/locale/user_pref.dart';
 
-
 final dioProvider = Provider<Dio>(
   (ref) {
     final dio = Dio(

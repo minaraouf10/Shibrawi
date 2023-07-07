@@ -8,7 +8,7 @@ import 'package:shibrawi/features/auth/presstion/login/controller/login_provider
 import 'package:shibrawi/generated/translations.g.dart';
 
 class EmailPassword extends ConsumerWidget {
- const EmailPassword({Key? key}) : super(key: key);
+  const EmailPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, ref) {

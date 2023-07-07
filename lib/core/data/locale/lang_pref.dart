@@ -18,7 +18,7 @@ class LangPrefs {
 
   bool get isArabic =>
       prefs.getBool(isKeyArabic) ??
-          (LocaleSettings.currentLocale.languageCode == AppLocale.ar.languageCode);
+      (LocaleSettings.currentLocale.languageCode == AppLocale.ar.languageCode);
 
   Future<void> setLangToArabic() => prefs.setBool(isKeyArabic, true);
 

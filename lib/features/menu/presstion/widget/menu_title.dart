@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HomeTitle extends StatelessWidget {
-  const HomeTitle({super.key});
+class MenuTitle extends StatelessWidget {
+  const MenuTitle({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +13,9 @@ class HomeTitle extends StatelessWidget {
         child: Row(
           children: [
             const Text(
-              'Good morning Akila!',
+              'Menu',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 24,
                 fontWeight: FontWeight.w400,
               ),
             ),

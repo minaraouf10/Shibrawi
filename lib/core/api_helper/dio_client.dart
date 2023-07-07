@@ -1,11 +1,11 @@
 import 'dart:developer';
 import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 import 'package:shibrawi/core/api_helper/exceptions.dart';
 import 'package:shibrawi/core/data/locale/lang_pref.dart';
 import 'package:shibrawi/core/data/locale/user_pref.dart';
-
 
 /// wrapper around dio to handlers api calls
 class DioClient {

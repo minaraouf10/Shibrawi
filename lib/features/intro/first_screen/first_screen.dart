@@ -13,8 +13,8 @@ class FirstScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SvgPicture.asset(
-              'assets/images/first_page_image.svg',
-              width: MediaQuery.of(context).size.width,
+            'assets/images/first_page_image.svg',
+            width: MediaQuery.of(context).size.width,
           ),
           const LoginOrSignUp()
         ],

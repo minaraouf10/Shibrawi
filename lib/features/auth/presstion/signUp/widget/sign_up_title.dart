@@ -8,7 +8,7 @@ class SignUpTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:  [
+      children: [
         Text(
           tr.sign_up,
           style: const TextStyle(
@@ -20,13 +20,15 @@ class SignUpTitle extends StatelessWidget {
           height: 15.0,
         ),
         Text(
-         tr.add_your_details_to_sign_up,
+          tr.add_your_details_to_sign_up,
           style: const TextStyle(
             fontSize: 14.0,
             color: AppColors.lightBlack,
           ),
         ),
-        const SizedBox(height: 20.0,)
+        const SizedBox(
+          height: 20.0,
+        )
       ],
     );
   }

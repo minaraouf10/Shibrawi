@@ -16,7 +16,7 @@ class TopScreen extends StatelessWidget {
         const SizedBox(
           height: 15,
         ),
-         Text(
+        Text(
           tr.add_details_login,
           style: const TextStyle(fontSize: 15.0, color: AppColors.lightBlack),
         ),
