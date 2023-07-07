@@ -40,6 +40,7 @@ class ShibrawiLayout extends ConsumerWidget {
               'assets/icons/home.svg',
               height: 30,
               width: 30.0,
+
             ),
             SvgPicture.asset(
               'assets/icons/profile.svg',
