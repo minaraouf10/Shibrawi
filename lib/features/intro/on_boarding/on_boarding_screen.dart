@@ -9,10 +9,10 @@ class BoardingScreen extends StatefulWidget {
   const BoardingScreen({super.key});
 
   @override
-  _BoardingScreenState createState() => _BoardingScreenState();
+  BoardingScreenState createState() => BoardingScreenState();
 }
 
-class _BoardingScreenState extends State<BoardingScreen> {
+class BoardingScreenState extends State<BoardingScreen> {
   @override
   void initState() {
     super.initState();

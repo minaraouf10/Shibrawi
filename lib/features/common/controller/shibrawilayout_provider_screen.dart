@@ -29,10 +29,8 @@ class ShibrawiLayoutLogic extends ShibrawiLayoutStates {
 
 class ShibrawiLayoutStates {
   final ProviderRef ref;
-  final CustomState<bool> isLoading;
   final CustomState<int> currentIndex;
 
   ShibrawiLayoutStates({required this.ref})
-      : isLoading = CustomState<bool>(ref, false),
-        currentIndex = CustomState<int>(ref, 2);
+      :currentIndex = CustomState<int>(ref, 2);
 }
