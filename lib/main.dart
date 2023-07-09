@@ -15,8 +15,11 @@ void main() {
       tools: const [
         ...DevicePreview.defaultTools,
       ],
-      builder: (context) =>
-          TranslationProvider(child: const ProviderScope(child: MyApp())),
+      builder: (context) => TranslationProvider(
+        child: const ProviderScope(
+          child: MyApp(),
+        ),
+      ),
     ),
   );
 }

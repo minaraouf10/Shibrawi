@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class MenuItem extends StatelessWidget {
   const MenuItem({super.key});
@@ -16,6 +17,10 @@ class MenuItem extends StatelessWidget {
             end: 15.0,
           ),
           child: Container(
+            padding: const EdgeInsetsDirectional.symmetric(
+              horizontal: 40.0,
+              vertical: 10.0,
+            ),
             height: 70.0,
             width: MediaQuery.of(context).size.width * 0.75,
             decoration: BoxDecoration(
@@ -29,6 +34,27 @@ class MenuItem extends StatelessWidget {
                 ),
               ],
               border: Border.all(color: Colors.white, width: 2.0),
+            ),
+            child: const Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: Column(
+                children: [
+                  Text(
+                    'Food',
+                    style: TextStyle(
+                      color: AppColors.loginBlack,
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                  Height(5.0),
+                  Text('120 item',style: TextStyle(
+                    color: AppColors.foreground,
+                    fontSize:12.0,
+                    fontWeight: FontWeight.w400
+                  ),)
+                ],
+              ),
             ),
           ),
         ),
@@ -50,7 +76,6 @@ class MenuItem extends StatelessWidget {
             ),
             child: SvgPicture.asset(
               'assets/images/Find food you love vector.svg',
-              clipBehavior: Clip.antiAlias,
               fit: BoxFit.cover,
             ),
           ),
