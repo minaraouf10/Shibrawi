@@ -8,17 +8,8 @@ class RouteNames {
   static const shibrawiLayout = '/ShibrawiLayout';
   static const shimmerButton = '/ShimmerButton';
   static const homeScreen = '/HomeScreen';
-  static const resetPasswordFirstStep = '/reset-password';
-  static const resetPasswordFinalStep = '/new-password';
-  static const phoneVerification = '/phone-verification';
-  static const registerFinalStep = '/final-step';
-  static const termsAndConditions = '/terms-and-conditions';
-  static const rejectedRegister = '/rejectedRegister';
-  static const reviewRegister = '/reviewRegister';
-  static const otp = '/otp';
-  static const selectProject = '/selectProject';
-  static const splash = '/splash';
-  static const home = '/home';
+  static const subItemScreen = '/SubItemScreen';
+
 
   // static const profileSettings = '/profile-settings';
   static const accountSettings = '/account-settings';

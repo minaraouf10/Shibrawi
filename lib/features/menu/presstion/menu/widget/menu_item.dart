@@ -35,10 +35,10 @@ class MenuItem extends StatelessWidget {
               ],
               border: Border.all(color: Colors.white, width: 2.0),
             ),
-            child: const Align(
+            child: Align(
               alignment: AlignmentDirectional.centerStart,
               child: Column(
-                children: [
+                children: const [
                   Text(
                     'Food',
                     style: TextStyle(
@@ -48,11 +48,13 @@ class MenuItem extends StatelessWidget {
                     ),
                   ),
                   Height(5.0),
-                  Text('120 item',style: TextStyle(
-                    color: AppColors.foreground,
-                    fontSize:12.0,
-                    fontWeight: FontWeight.w400
-                  ),)
+                  Text(
+                    '120 item',
+                    style: TextStyle(
+                        color: AppColors.foreground,
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.w400),
+                  )
                 ],
               ),
             ),

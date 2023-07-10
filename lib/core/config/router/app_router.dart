@@ -34,6 +34,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const HomeScreen(),
         );
+
+      case RouteNames.subItemScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SubItemScreen(),
+        );
     }
   }
 

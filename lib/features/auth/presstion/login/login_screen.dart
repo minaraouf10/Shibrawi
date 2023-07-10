@@ -28,14 +28,14 @@ class LoginScreen extends ConsumerWidget {
       }
     });
 
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
+              children: const [
                 TopScreen(),
                 EmailPassword(),
                 LoginWithGoogle(),

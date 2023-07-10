@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
+import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/features/menu/presstion/widget/menu_item.dart';
+import 'package:shibrawi/features/menu/presstion/menu/widget/menu_item.dart';
 
 class MenuBody extends StatelessWidget {
   const MenuBody({super.key});
@@ -19,18 +21,23 @@ class MenuBody extends StatelessWidget {
                   bottomEnd: Radius.circular(30.0)),
               color: AppColors.orange),
         ),
-        const Padding(
-          padding:  EdgeInsetsDirectional.only(top: 32.0,start: 40.0,end: 20.0),
+        Padding(
+          padding: const EdgeInsetsDirectional.only(
+              top: 32.0, start: 40.0, end: 20.0),
           child: Column(
-            children: [
-              MenuItem(),
-              Height(35.0),
-              MenuItem(),
-              Height(35.0),
-              MenuItem(),
-              Height(35.0),
-              MenuItem(),
-              Height(35.0),
+            children:  [
+              InkWell(
+                onTap: (){
+                  context.pushNamed(RouteNames.subItemScreen);
+                },
+                child: const MenuItem(),),
+              const Height(35.0),
+              const MenuItem(),
+              const Height(35.0),
+              const MenuItem(),
+              const Height(35.0),
+              const MenuItem(),
+              const Height(35.0),
             ],
           ),
         )
