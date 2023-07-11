@@ -17,20 +17,22 @@ class MenuBody extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.27,
           decoration: const BoxDecoration(
               borderRadius: BorderRadiusDirectional.only(
-                  topEnd: Radius.circular(30),
-                  bottomEnd: Radius.circular(30.0)),
+                topEnd: Radius.circular(30),
+                bottomEnd: Radius.circular(30.0),
+              ),
               color: AppColors.orange),
         ),
         Padding(
           padding: const EdgeInsetsDirectional.only(
               top: 32.0, start: 40.0, end: 20.0),
           child: Column(
-            children:  [
+            children: [
               InkWell(
-                onTap: (){
+                onTap: () {
                   context.pushNamed(RouteNames.subItemScreen);
                 },
-                child: const MenuItem(),),
+                child: const MenuItem(),
+              ),
               const Height(35.0),
               const MenuItem(),
               const Height(35.0),

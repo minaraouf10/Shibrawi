@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class SubItemMenuTitle extends StatelessWidget {
   const SubItemMenuTitle({super.key});
@@ -12,7 +14,12 @@ class SubItemMenuTitle extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 5.0),
         child: Row(
           children: [
-            const Icon(Icons.arrow_back_ios_new_outlined),
+            InkWell(
+              onTap: (){
+                context.pop();
+              },
+                child: const Icon(Icons.arrow_back_ios_new_outlined)),
+            const Width(20.4),
             const Text(
               'Desserts',
               style: TextStyle(

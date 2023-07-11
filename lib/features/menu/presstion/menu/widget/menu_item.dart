@@ -35,10 +35,10 @@ class MenuItem extends StatelessWidget {
               ],
               border: Border.all(color: Colors.white, width: 2.0),
             ),
-            child: Align(
+            child: const Align(
               alignment: AlignmentDirectional.centerStart,
               child: Column(
-                children: const [
+                children: [
                   Text(
                     'Food',
                     style: TextStyle(
@@ -62,23 +62,26 @@ class MenuItem extends StatelessWidget {
         ),
         Align(
           alignment: AlignmentDirectional.centerStart,
-          child: Container(
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-              color: AppColors.white,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  spreadRadius: 3,
-                  blurRadius: 4,
-                ),
-              ],
-            ),
-            child: SvgPicture.asset(
-              'assets/images/Find food you love vector.svg',
-              fit: BoxFit.cover,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(100.0),
+            child: Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                color: AppColors.white,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.1),
+                    spreadRadius: 3,
+                    blurRadius: 4,
+                  ),
+                ],
+              ),
+              child: SvgPicture.asset(
+                'assets/images/Find food you love vector.svg',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),
