@@ -15,9 +15,9 @@ class SubItemMenuTitle extends StatelessWidget {
         child: Row(
           children: [
             InkWell(
-              onTap: (){
-                context.pop();
-              },
+                onTap: () {
+                  context.pop();
+                },
                 child: const Icon(Icons.arrow_back_ios_new_outlined)),
             const Width(20.4),
             const Text(

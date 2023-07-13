@@ -12,6 +12,7 @@ class TextForm extends StatelessWidget {
       this.suffix,
       this.suffixPressed,
       this.width = double.infinity,
+      this.onSubmitted,
       required this.validate,
       this.onChange})
       : super(key: key);
@@ -25,6 +26,7 @@ class TextForm extends StatelessWidget {
   final VoidCallback? suffixPressed;
   final double width;
   final FormFieldValidator<String>? validate;
+  final FormFieldValidator<String>? onSubmitted;
   final ValueChanged<String>? onChange;
 
   @override
@@ -48,6 +50,7 @@ class TextForm extends StatelessWidget {
         autocorrect: false,
         validator: validate,
         onChanged: onChange,
+        onFieldSubmitted: onSubmitted,
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.symmetric(horizontal: 20),
           labelText: labelText,

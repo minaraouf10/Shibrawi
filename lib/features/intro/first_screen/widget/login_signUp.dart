@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
@@ -32,7 +30,7 @@ class LoginOrSignUp extends StatelessWidget {
             height: 28.0,
           ),
           DefaultButton(
-            width:MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width,
             function: () {
               Navigator.pushNamed(
                 context,

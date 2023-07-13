@@ -35,7 +35,7 @@ class MenuItem extends StatelessWidget {
               ],
               border: Border.all(color: Colors.white, width: 2.0),
             ),
-            child:  Align(
+            child: Align(
               alignment: AlignmentDirectional.centerStart,
               child: Column(
                 children: const [

@@ -10,7 +10,6 @@ class RouteNames {
   static const homeScreen = '/HomeScreen';
   static const subItemScreen = '/SubItemScreen';
 
-
   // static const profileSettings = '/profile-settings';
   static const accountSettings = '/account-settings';
   static const changePassword = '/change-password';
