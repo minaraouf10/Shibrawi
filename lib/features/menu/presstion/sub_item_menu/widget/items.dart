@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class Items extends StatelessWidget {
-  const Items({Key? key});
+  const Items({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,27 +26,30 @@ class Items extends StatelessWidget {
               colors: [Colors.black.withOpacity(0.3), Colors.transparent],
             ),
           ),
-          child: Column(
-            children: [
-              Text(
-                'French Apple Pie',
-                style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.white
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Column(
+              children: const [
+                Text(
+                  'French Apple Pie',
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.white
+                  ),
                 ),
-              ),
-            ],
+                Text(
+                  'French Apple Pie',
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.white
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-        // const Align(
-        //   alignment: AlignmentDirectional.bottomStart,
-        //   child: Column(
-        //     children: [
-        //
-        //     ],
-        //   ),
-        // ),
       ],
     );
   }
