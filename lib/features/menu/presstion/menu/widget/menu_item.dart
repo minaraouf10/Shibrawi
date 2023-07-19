@@ -35,10 +35,10 @@ class MenuItem extends StatelessWidget {
               ],
               border: Border.all(color: Colors.white, width: 2.0),
             ),
-            child: const Align(
+            child: Align(
               alignment: AlignmentDirectional.centerStart,
               child: Column(
-                children: [
+                children: const [
                   Text(
                     'Food',
                     style: TextStyle(

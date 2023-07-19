@@ -31,8 +31,8 @@ class DefaultButton extends StatelessWidget {
             width: width,
           )
         : Container(
-            padding:
-                const EdgeInsetsDirectional.only(start: 10, end: 10, top: 5.0),
+            // padding:
+            //     const EdgeInsetsDirectional.only(start: 10, end: 10, top: 5.0),
             margin: const EdgeInsetsDirectional.symmetric(horizontal: 5),
             width: width,
             height: 60.0,
@@ -41,8 +41,8 @@ class DefaultButton extends StatelessWidget {
               color: background,
             ),
             child: MaterialButton(
-              // splashColor:AppColors.orange,
-              highlightColor: AppColors.white,
+              //splashColor:AppColors.orange,
+              highlightColor: AppColors.white.withOpacity(0.1),
               onPressed: function,
               child: Text(
                 isUpperCase ? text.toUpperCase() : text,

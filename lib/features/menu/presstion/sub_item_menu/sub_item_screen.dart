@@ -3,7 +3,6 @@ import 'package:shibrawi/features/menu/presstion/menu/widget/menu_search_bar.dar
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/items.dart';
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/sub_item_menu_title.dart';
 
-
 class SubItemScreen extends StatelessWidget {
   const SubItemScreen({Key? key}) : super(key: key);
 
@@ -22,16 +21,16 @@ class SubItemScreen extends StatelessWidget {
               child: MenuSearchBar(),
             ),
             Expanded(
-              child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                children: [
-                  const SizedBox(height: 25.0),
-                  ...List.generate(
-                    5,
-                        (index) => Items()
-                            //SvgPicture.asset('assets/images/Find food you love vector.svg'),
-                  ),
-                ],
+              child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                shrinkWrap: true,
+                padding: const EdgeInsetsDirectional.only(
+                  start: 20.0,
+                  end: 20.0,
+                  top: 15.0,
+                ),
+                itemCount: 5,
+                itemBuilder: (context, index) => const Items(),
               ),
             ),
           ],

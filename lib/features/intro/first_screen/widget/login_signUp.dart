@@ -11,7 +11,11 @@ class LoginOrSignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.only(
-          start: 20.0, top: 32.0, end: 20.0, bottom: 10.0),
+        start: 22.0,
+        top: 32.0,
+        end: 22.0,
+        bottom: 10.0,
+      ),
       child: Column(
         children: [
           Text(
@@ -26,6 +30,7 @@ class LoginOrSignUp extends StatelessWidget {
             height: 28.0,
           ),
           DefaultButton(
+            width: MediaQuery.of(context).size.width,
             function: () {
               Navigator.pushNamed(
                 context,
@@ -39,10 +44,10 @@ class LoginOrSignUp extends StatelessWidget {
             height: 20.0,
           ),
           Container(
-            padding: const EdgeInsetsDirectional.only(
-              start: 10,
-              end: 10,
-            ),
+            // padding: const EdgeInsetsDirectional.only(
+            //   start: 10,
+            //   end: 10,
+            // ),
             margin: const EdgeInsetsDirectional.symmetric(horizontal: 5),
             width: double.infinity,
             height: 60,
