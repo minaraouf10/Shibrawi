@@ -9,6 +9,7 @@ class RouteNames {
   static const shimmerButton = '/ShimmerButton';
   static const homeScreen = '/HomeScreen';
   static const subItemScreen = '/SubItemScreen';
+  static const itemDetailsScreen = '/ItemDetailsScreen';
 
 
   // static const profileSettings = '/profile-settings';
