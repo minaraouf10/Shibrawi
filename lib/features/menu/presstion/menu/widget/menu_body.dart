@@ -35,14 +35,13 @@ class MenuBody extends StatelessWidget {
               ),
               const Height(35.0),
               InkWell(
-
-                hoverColor:Colors.transparent ,
+                  hoverColor: Colors.transparent,
                   //splashColor:AppColors.orange,
-                highlightColor: Colors.transparent,
-                //splashColor: Colors.transparent,
-              //canRequestFocus: false,
-                //autofocus: false,
-                //focusColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  //splashColor: Colors.transparent,
+                  //canRequestFocus: false,
+                  //autofocus: false,
+                  //focusColor: Colors.transparent,
                   onTap: () {
                     context.pushNamed(RouteNames.subItemScreen);
                   },

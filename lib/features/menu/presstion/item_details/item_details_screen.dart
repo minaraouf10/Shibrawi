@@ -3,7 +3,8 @@ import 'package:shibrawi/features/menu/presstion/item_details/widget/item_detail
 import 'package:shibrawi/features/menu/presstion/item_details/widget/top_screen.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
-  const ItemDetailsScreen({Key? key}) : super(key: key); // Fix the super(key) argument
+  const ItemDetailsScreen({Key? key})
+      : super(key: key); // Fix the super(key) argument
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class ItemDetailsScreen extends StatelessWidget {
               child: TopScreenItemDetails(),
             ),
             Expanded(
-              flex: 6,
+              flex: 7,
               child: ItemDetailsBody(),
             )
           ],
@@ -25,4 +26,3 @@ class ItemDetailsScreen extends StatelessWidget {
     );
   }
 }
-
