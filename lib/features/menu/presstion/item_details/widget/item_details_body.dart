@@ -6,7 +6,6 @@ class ItemDetailsBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-<<<<<<< HEAD
       width: MediaQuery.of(context).size.width,
       decoration:  BoxDecoration(
         boxShadow: [
@@ -19,19 +18,6 @@ class ItemDetailsBody extends StatelessWidget {
         borderRadius: const BorderRadiusDirectional.only(
           topEnd: Radius.circular(50),
           topStart: Radius.circular(50),
-=======
-      decoration: const BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            blurRadius: 8.0,
-            spreadRadius: 0.0,
-          ), //BoxShadow
-        ],
-        borderRadius: BorderRadiusDirectional.only(
-          topEnd: Radius.circular(30),
-          topStart: Radius.circular(30),
->>>>>>> origin/main
         ),
       ),
       child: Column(

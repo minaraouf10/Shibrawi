@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class Items extends StatelessWidget {
-  const Items({Key? key});
+  const Items({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
-<<<<<<< HEAD
         InkWell(
           onTap: () {
             context.pushNamed(
@@ -20,7 +20,6 @@ class Items extends StatelessWidget {
           child: Stack(
             children: [
               Image.network(
-                //'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn4Hs0kj95V9ps8mM_FSGBRxA3G0uNED5fKCblBonxC4U4ngNky2HdytC93umfhrpHXyo&usqp=CAU',
                 'https://media.istockphoto.com/id/109723209/photo/caviar-on-quail-egg-and-avocado-mousse.jpg?s=612x612&w=0&k=20&c=KbUQGBuVMy6gwFmRp4CLvHTSVWUAx0-8gm-YqPQ4zWE=',
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width,
@@ -81,46 +80,8 @@ class Items extends StatelessWidget {
               ),
             ],
           ),
-=======
-        Image.network(
-          'https://media.istockphoto.com/id/109723209/photo/caviar-on-quail-egg-and-avocado-mousse.jpg?s=612x612&w=0&k=20&c=KbUQGBuVMy6gwFmRp4CLvHTSVWUAx0-8gm-YqPQ4zWE=',
-          fit: BoxFit.cover,
-          width: MediaQuery.of(context).size.width,
-          height: 200,
->>>>>>> origin/main
         ),
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: 200,
-          decoration:  BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-               stops: const [0.2,0.8],
-              colors: [Colors.black.withOpacity(0.3), Colors.transparent],
-            ),
-          ),
-          child: Column(
-            children: [
-              Text(
-                'French Apple Pie',
-                style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.white
-                ),
-              ),
-            ],
-          ),
-        ),
-        // const Align(
-        //   alignment: AlignmentDirectional.bottomStart,
-        //   child: Column(
-        //     children: [
-        //
-        //     ],
-        //   ),
-        // ),
+        const Height(8.0)
       ],
     );
   }

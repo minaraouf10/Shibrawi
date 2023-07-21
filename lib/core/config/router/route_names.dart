@@ -10,10 +10,9 @@ class RouteNames {
   static const homeScreen = '/HomeScreen';
   static const subItemScreen = '/SubItemScreen';
   static const itemDetailsScreen = '/ItemDetailsScreen';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
+
+
 
   // static const profileSettings = '/profile-settings';
   static const accountSettings = '/account-settings';
