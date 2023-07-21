@@ -60,7 +60,7 @@ class BoardingItem extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 4.0),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: i == currentPage ? AppColors.orange : Colors.grey,
+            color: i == currentPage ? AppColors.primary : Colors.grey,
           ),
         ),
       );

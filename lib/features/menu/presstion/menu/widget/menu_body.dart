@@ -20,7 +20,7 @@ class MenuBody extends StatelessWidget {
                 topEnd: Radius.circular(30),
                 bottomEnd: Radius.circular(30.0),
               ),
-              color: AppColors.orange),
+              color: AppColors.primary),
         ),
         Padding(
           padding: const EdgeInsetsDirectional.only(

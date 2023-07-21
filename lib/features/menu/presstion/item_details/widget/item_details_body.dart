@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/customize_order_item_details.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/title_price_item_details.dart';
 
 class ItemDetailsBody extends StatelessWidget {
@@ -16,7 +17,7 @@ class ItemDetailsBody extends StatelessWidget {
             color: Colors.black.withOpacity(0.7),
             blurRadius: 4.0,
             spreadRadius: 18.0,
-          ), //BoxShadow
+          ),
         ],
         borderRadius: const BorderRadiusDirectional.only(
           topEnd: Radius.circular(50),
@@ -24,11 +25,13 @@ class ItemDetailsBody extends StatelessWidget {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.only(top: 30,start: 20),
+        padding:
+            const EdgeInsetsDirectional.only(top: 30, start: 20, end: 20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
             TitlePriceItemDetails(),
+            CustomizeOrderItemDetails(),
           ],
         ),
       ),

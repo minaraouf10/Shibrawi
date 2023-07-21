@@ -27,7 +27,7 @@ class HomeSearchBar extends StatelessWidget {
               ),
               icon: const Icon(
                 Icons.keyboard_arrow_down_rounded,
-                color: AppColors.orange,
+                color: AppColors.primary,
               ),
               items: const [
                 DropdownMenuItem(

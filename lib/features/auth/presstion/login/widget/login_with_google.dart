@@ -95,7 +95,7 @@ class LoginWithGoogle extends StatelessWidget {
             DefaultTextButton(
               text: 'Sign Up',
               fontSize: 17.0,
-              color: AppColors.orange,
+              color: AppColors.primary,
               function: () {
                 Navigator.pushNamed(
                   context,

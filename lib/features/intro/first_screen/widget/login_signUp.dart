@@ -55,7 +55,7 @@ class LoginOrSignUp extends StatelessWidget {
               color: Colors.white,
               border: Border.all(
                 width: 1,
-                color: AppColors.orange,
+                color: AppColors.primary,
               ),
               borderRadius: BorderRadius.circular(10),
             ),
@@ -69,7 +69,7 @@ class LoginOrSignUp extends StatelessWidget {
               child: Text(
                 tr.create_an_account,
                 style: const TextStyle(
-                  color: AppColors.orange,
+                  color: AppColors.primary,
                   fontSize: 16.0,
                 ),
               ),

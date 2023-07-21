@@ -115,7 +115,7 @@ class SignUpField extends ConsumerWidget {
                   RouteNames.loginScreen,
                 );
               },
-              color: AppColors.orange,
+              color: AppColors.primary,
               fontSize: 15.0,
               fontWeight: FontWeight.bold,
             )

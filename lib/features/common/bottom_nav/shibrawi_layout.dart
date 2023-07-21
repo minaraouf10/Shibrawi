@@ -13,7 +13,7 @@ class ShibrawiLayout extends ConsumerWidget {
     final layoutProvider = ref.read(shibrawilayoutProviderScreen);
     final curr = ref.watch(layoutProvider.currentIndex.provider);
     const colorIcon = ColorFilter.mode(
-      AppColors.orange,
+      AppColors.primary,
       BlendMode.srcIn,
     );
     return Scaffold(
@@ -35,7 +35,8 @@ class ShibrawiLayout extends ConsumerWidget {
               onTap: (index) {
                 layoutProvider.changeBottomNav(index);
               },
-              backgroundColor: Colors.transparent,
+              backgroundColor: AppColors.primary,
+              //Colors.transparent,
               animationDuration: const Duration(milliseconds: 300),
               height: 65,
               items: [

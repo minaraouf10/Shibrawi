@@ -71,7 +71,7 @@ class BoardingScreenState extends State<BoardingScreen> {
                   text: BoardingItem.currentPage < boarding.length - 1
                       ? 'Next'
                       : 'Get Started',
-                  background: AppColors.orange,
+                  background: AppColors.primary,
                 ),
               ),
             ],

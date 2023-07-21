@@ -8,7 +8,7 @@ class DefaultButton extends StatelessWidget {
       required this.function,
       required this.text,
       this.width = double.infinity,
-      this.background = AppColors.orange,
+      this.background = AppColors.primary,
       this.isUpperCase = true,
       this.radius = 3.0,
       this.fontSize = 16.0,

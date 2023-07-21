@@ -39,7 +39,7 @@ class RestaurantsItem extends StatelessWidget {
             const Text(
               '4.9',
               style: TextStyle(
-                color: AppColors.orange,
+                color: AppColors.primary,
               ),
             ),
             const SizedBox(

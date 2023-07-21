@@ -39,7 +39,7 @@ class EmailPassword extends ConsumerWidget {
               isLoading: ref.watch(loginProvider.isLoading.provider),
               text: tr.login,
               function: loginProvider.userLogin,
-              background: AppColors.orange,
+              background: AppColors.primary,
             );
           },
         ),

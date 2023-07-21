@@ -25,7 +25,7 @@ class HomePopularRestaurants extends StatelessWidget {
             DefaultTextButton(
               text: 'View all',
               fontSize: 13.0,
-              color: AppColors.orange,
+              color: AppColors.primary,
               fontWeight: FontWeight.w400,
               function: () {},
             ),
