@@ -77,7 +77,7 @@ class TitlePriceItemDetails extends StatelessWidget {
               fontWeight: FontWeight.w400,
               color: AppColors.lightBlack),
         ),
-        const Height(35.5),
+        const Height(15.5),
         const DefaultDivider(),
       ],
     );

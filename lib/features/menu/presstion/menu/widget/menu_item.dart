@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
@@ -78,8 +77,8 @@ class MenuItem extends StatelessWidget {
                   ),
                 ],
               ),
-              child: SvgPicture.asset(
-                'assets/images/Find food you love vector.svg',
+              child: Image.asset(
+                'assets/images/brger.png',
                 fit: BoxFit.cover,
               ),
             ),

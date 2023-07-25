@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
@@ -10,17 +9,18 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPrefs.init();
   runApp(
-    DevicePreview(
-      enabled: true,
-      tools: const [
-        ...DevicePreview.defaultTools,
-      ],
-      builder: (context) => TranslationProvider(
-        child: const ProviderScope(
-          child: MyApp(),
-        ),
+    // DevicePreview(
+    // enabled: true,
+    //   tools: const [
+    //    ...DevicePreview.defaultTools,
+    //  ],
+    // builder: (context) =>
+    TranslationProvider(
+      child: const ProviderScope(
+        child: MyApp(),
       ),
     ),
+    //),
   );
 }
 

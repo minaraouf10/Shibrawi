@@ -26,10 +26,11 @@ enum AppLocale with BaseAppLocale<AppLocale, _TranslationsEn> {
   en(languageCode: 'en', build: _TranslationsEn.build),
   ar(languageCode: 'ar', build: _TranslationsAr.build);
 
-  const AppLocale({required this.languageCode,
-    this.scriptCode,
-    this.countryCode,
-    required this.build}); // ignore: unused_element
+  const AppLocale(
+      {required this.languageCode,
+      this.scriptCode,
+      this.countryCode,
+      required this.build}); // ignore: unused_element
 
   @override
   final String languageCode;
@@ -75,9 +76,7 @@ class Translations {
   Translations._(); // no constructor
 
   static _TranslationsEn of(BuildContext context) =>
-      InheritedLocaleData
-          .of<AppLocale, _TranslationsEn>(context)
-          .translations;
+      InheritedLocaleData.of<AppLocale, _TranslationsEn>(context).translations;
 }
 
 /// The provider for method B
@@ -87,7 +86,7 @@ class TranslationProvider
       : super(settings: LocaleSettings.instance);
 
   static InheritedLocaleData<AppLocale, _TranslationsEn> of(
-      BuildContext context) =>
+          BuildContext context) =>
       InheritedLocaleData.of<AppLocale, _TranslationsEn>(context);
 }
 
@@ -97,10 +96,7 @@ class TranslationProvider
 /// Usage (e.g. in a widget's build method):
 /// context.tr.someKey.anotherKey
 extension BuildContextTranslationsExtension on BuildContext {
-  _TranslationsEn get tr =>
-      TranslationProvider
-          .of(this)
-          .translations;
+  _TranslationsEn get tr => TranslationProvider.of(this).translations;
 }
 
 /// Manages all translation instances and the current locale
@@ -116,11 +112,11 @@ class LocaleSettings
   static Stream<AppLocale> getLocaleStream() => instance.getLocaleStream();
 
   static AppLocale setLocale(AppLocale locale,
-      {bool? listenToDeviceLocale = false}) =>
+          {bool? listenToDeviceLocale = false}) =>
       instance.setLocale(locale, listenToDeviceLocale: listenToDeviceLocale);
 
   static AppLocale setLocaleRaw(String rawLocale,
-      {bool? listenToDeviceLocale = false}) =>
+          {bool? listenToDeviceLocale = false}) =>
       instance.setLocaleRaw(rawLocale,
           listenToDeviceLocale: listenToDeviceLocale);
 
@@ -132,10 +128,11 @@ class LocaleSettings
   @Deprecated('Use [AppLocaleUtils.supportedLocalesRaw]')
   static List<String> get supportedLocalesRaw => instance.supportedLocalesRaw;
 
-  static void setPluralResolver({String? language,
-    AppLocale? locale,
-    PluralResolver? cardinalResolver,
-    PluralResolver? ordinalResolver}) =>
+  static void setPluralResolver(
+          {String? language,
+          AppLocale? locale,
+          PluralResolver? cardinalResolver,
+          PluralResolver? ordinalResolver}) =>
       instance.setPluralResolver(
         language: language,
         locale: locale,
@@ -154,9 +151,10 @@ class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, _TranslationsEn> {
   // static aliases (checkout base methods for documentation)
   static AppLocale parse(String rawLocale) => instance.parse(rawLocale);
 
-  static AppLocale parseLocaleParts({required String languageCode,
-    String? scriptCode,
-    String? countryCode}) =>
+  static AppLocale parseLocaleParts(
+          {required String languageCode,
+          String? scriptCode,
+          String? countryCode}) =>
       instance.parseLocaleParts(
           languageCode: languageCode,
           scriptCode: scriptCode,
@@ -175,11 +173,12 @@ class AppLocaleUtils extends BaseAppLocaleUtils<AppLocale, _TranslationsEn> {
 class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _TranslationsEn.build({Map<String, Node>? overrides,
-    PluralResolver? cardinalResolver,
-    PluralResolver? ordinalResolver})
+  _TranslationsEn.build(
+      {Map<String, Node>? overrides,
+      PluralResolver? cardinalResolver,
+      PluralResolver? ordinalResolver})
       : assert(overrides == null,
-  'Set "translation_overrides: true" in order to enable this feature.'),
+            'Set "translation_overrides: true" in order to enable this feature.'),
         $meta = TranslationMetadata(
           locale: AppLocale.en,
           overrides: overrides ?? {},
@@ -269,11 +268,12 @@ class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
 class _TranslationsAr implements _TranslationsEn {
   /// You can call this constructor and build your own translation instance of this locale.
   /// Constructing via the enum [AppLocale.build] is preferred.
-  _TranslationsAr.build({Map<String, Node>? overrides,
-    PluralResolver? cardinalResolver,
-    PluralResolver? ordinalResolver})
+  _TranslationsAr.build(
+      {Map<String, Node>? overrides,
+      PluralResolver? cardinalResolver,
+      PluralResolver? ordinalResolver})
       : assert(overrides == null,
-  'Set "translation_overrides: true" in order to enable this feature.'),
+            'Set "translation_overrides: true" in order to enable this feature.'),
         $meta = TranslationMetadata(
           locale: AppLocale.ar,
           overrides: overrides ?? {},
