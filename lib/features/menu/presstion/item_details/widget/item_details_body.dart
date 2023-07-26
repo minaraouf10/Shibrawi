@@ -13,13 +13,14 @@ class ItemDetailsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         color: AppColors.white,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.7),
             blurRadius: 4.0,
-            spreadRadius: 18.0,
+            spreadRadius: 10.0,
           ),
         ],
         borderRadius: const BorderRadiusDirectional.only(
@@ -37,7 +38,8 @@ class ItemDetailsBody extends StatelessWidget {
             CustomizeOrderItemDetails(),
             NumberOfPortions(),
             Height(25),
-            TotalPrice()
+            TotalPrice(),
+            Height(25),
           ],
         ),
       ),

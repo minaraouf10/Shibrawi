@@ -10,15 +10,18 @@ class ItemDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: Stack(
           children: const [
             Expanded(
               flex: 3,
               child: TopScreenItemDetails(),
             ),
-            Expanded(
-              flex: 7,
-              child: ItemDetailsBody(),
+            Padding(
+              padding: EdgeInsets.only(top: 229),
+              child: Expanded(
+                flex: 7,
+                child: ItemDetailsBody(),
+              ),
             )
           ],
         ),

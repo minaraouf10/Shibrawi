@@ -47,7 +47,7 @@ class ShibrawiLayout extends ConsumerWidget {
                   colorFilter: curr == 0 ? colorIcon : null,
                 ),
                 SvgPicture.asset(
-                  'assets/icons/offers.svg',
+                  'assets/icons/favorite_icon.svg',
                   height: 20,
                   width: 20.0,
                   colorFilter: curr == 1 ? colorIcon : null,
