@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:shibrawi/features/setting/presstion/widget/setting_body.dart';
+import 'package:shibrawi/features/setting/presstion/widget/setting_top.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Text(
-      'setting screen',
-      style: TextStyle(fontSize: 26),
-    ));
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Column(
+          children: const [
+            SettingTop(),
+            SettingBody(),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -31,7 +31,11 @@ class MenuBody extends StatelessWidget {
                 onTap: () {
                   context.pushNamed(RouteNames.subItemScreen);
                 },
-                child: const MenuItem(),
+                child: const MenuItem(
+                  icon: 'assets/images/brger.png',
+                  title: 'Food',
+                  items: '120 Items',
+                ),
               ),
               const Height(40.0),
               InkWell(
@@ -45,11 +49,23 @@ class MenuBody extends StatelessWidget {
                   onTap: () {
                     context.pushNamed(RouteNames.subItemScreen);
                   },
-                  child: const MenuItem()),
+                  child: const MenuItem(
+                    icon: 'assets/images/brger.png',
+                    title: 'Beverages',
+                    items: '220 Items',
+                  )),
               const Height(40.0),
-              const MenuItem(),
+              const MenuItem(
+                icon: 'assets/images/brger.png',
+                title: 'Desserts',
+                items: '155 Items',
+              ),
               const Height(40.0),
-              const MenuItem(),
+              const MenuItem(
+                icon: 'assets/images/brger.png',
+                title: 'Promotions',
+                items: '25 Items',
+              ),
               const Height(35.0),
             ],
           ),

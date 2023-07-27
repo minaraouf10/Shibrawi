@@ -10,11 +10,13 @@ class ProfileScreen extends StatelessWidget {
     return SafeArea(
       child: Column(
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: ProfileTop(),
           ),
-          Expanded(child: ProfileBody())
+          Expanded(
+            child: ProfileBody(),
+          )
         ],
       ),
     );
