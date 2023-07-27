@@ -13,7 +13,7 @@ class MenuBody extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.55,
+          height: MediaQuery.of(context).size.height * 0.601,
           width: MediaQuery.of(context).size.width * 0.27,
           decoration: const BoxDecoration(
               borderRadius: BorderRadiusDirectional.only(
@@ -33,7 +33,7 @@ class MenuBody extends StatelessWidget {
                 },
                 child: const MenuItem(),
               ),
-              const Height(35.0),
+              const Height(40.0),
               InkWell(
                   hoverColor: Colors.transparent,
                   //splashColor:AppColors.orange,
@@ -46,9 +46,9 @@ class MenuBody extends StatelessWidget {
                     context.pushNamed(RouteNames.subItemScreen);
                   },
                   child: const MenuItem()),
-              const Height(35.0),
+              const Height(40.0),
               const MenuItem(),
-              const Height(35.0),
+              const Height(40.0),
               const MenuItem(),
               const Height(35.0),
             ],

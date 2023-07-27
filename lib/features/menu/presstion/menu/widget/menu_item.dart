@@ -20,7 +20,7 @@ class MenuItem extends StatelessWidget {
               horizontal: 40.0,
               vertical: 10.0,
             ),
-            height: 70.0,
+            height: 80.0,
             width: MediaQuery.of(context).size.width * 0.75,
             decoration: BoxDecoration(
               color: AppColors.white,
