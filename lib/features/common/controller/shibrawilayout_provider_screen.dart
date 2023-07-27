@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
-import 'package:shibrawi/features/Cart/presstion/cart_screen.dart';
 import 'package:shibrawi/features/Home/home_screen.dart';
+import 'package:shibrawi/features/Profile/presstion/profile_screen.dart';
 import 'package:shibrawi/features/favorites/presstion/favorites_screen.dart';
 import 'package:shibrawi/features/menu/presstion/menu/menu_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting_screen.dart';
@@ -18,7 +18,7 @@ class ShibrawiLayoutLogic extends ShibrawiLayoutStates {
     const MenuScreen(),
     const FavoritesScreen(),
     const HomeScreen(),
-    const CartScreen(),
+    const ProfileScreen(),
     const SettingScreen(),
   ];
 

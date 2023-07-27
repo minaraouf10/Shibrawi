@@ -47,11 +47,14 @@ class FavoritesTop extends StatelessWidget {
               ),
               child: const Align(
                 alignment: Alignment.center,
-                child: Text('Check Offers',style: TextStyle(
-                  color: AppColors.white,
-                  fontSize: 11.0,
-                  fontWeight: FontWeight.w400,
-                ),),
+                child: Text(
+                  'Check Offers',
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: 11.0,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
               ),
             )
           ],
