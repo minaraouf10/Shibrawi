@@ -44,6 +44,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const ItemDetailsScreen(),
         );
+
+      case RouteNames.paymentScreen:
+        return MaterialPageRoute(
+          builder: (context) => const PaymentScreen(),
+        );
     }
   }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shibrawi/features/setting/presstion/widget/setting_body.dart';
-import 'package:shibrawi/features/setting/presstion/widget/setting_top.dart';
+import 'package:shibrawi/features/setting/presstion/setting/setting_screen/widget/setting_body.dart';
+import 'package:shibrawi/features/setting/presstion/setting/setting_screen/widget/setting_top.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});

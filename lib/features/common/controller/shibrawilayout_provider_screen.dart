@@ -5,7 +5,7 @@ import 'package:shibrawi/features/Home/home_screen.dart';
 import 'package:shibrawi/features/Profile/presstion/profile_screen.dart';
 import 'package:shibrawi/features/favorites/presstion/favorites_screen.dart';
 import 'package:shibrawi/features/menu/presstion/menu/menu_screen.dart';
-import 'package:shibrawi/features/setting/presstion/setting_screen.dart';
+import 'package:shibrawi/features/setting/presstion/setting/setting_screen/setting_screen.dart';
 
 final shibrawilayoutProviderScreen = Provider<ShibrawiLayoutLogic>(
   (ref) => ShibrawiLayoutLogic(ref: ref),

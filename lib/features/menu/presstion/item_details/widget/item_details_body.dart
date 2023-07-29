@@ -24,8 +24,8 @@ class ItemDetailsBody extends StatelessWidget {
           ),
         ],
         borderRadius: const BorderRadiusDirectional.only(
-          topEnd: Radius.circular(50),
-          topStart: Radius.circular(50),
+          topEnd: Radius.circular(30),
+          topStart: Radius.circular(30),
         ),
       ),
       child: Padding(
@@ -36,10 +36,10 @@ class ItemDetailsBody extends StatelessWidget {
           children: [
             const TitlePriceItemDetails(),
             CustomizeOrderItemDetails(),
-            NumberOfPortions(),
-            Height(25),
-            TotalPrice(),
-            Height(25),
+            const NumberOfPortions(),
+            const Height(25),
+            const TotalPrice(),
+            const Height(25),
           ],
         ),
       ),

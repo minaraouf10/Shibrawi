@@ -12,16 +12,12 @@ class ItemDetailsScreen extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: const [
-            Expanded(
-              flex: 3,
-              child: TopScreenItemDetails(),
-            ),
+            SizedBox(
+              height: 245,
+                child: TopScreenItemDetails(),),
             Padding(
-              padding: EdgeInsets.only(top: 229),
-              child: Expanded(
-                flex: 7,
-                child: ItemDetailsBody(),
-              ),
+              padding: EdgeInsets.only(top: 225),
+              child: ItemDetailsBody(),
             )
           ],
         ),

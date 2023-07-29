@@ -8,5 +8,6 @@ import 'package:shibrawi/features/common/bottom_nav/shibrawi_layout.dart';
 import 'package:shibrawi/features/intro/first_screen/first_screen.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/item_details_screen.dart';
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/sub_item_screen.dart';
+import 'package:shibrawi/features/setting/presstion/setting/payment/payment_screen.dart';
 
 part 'app_router.dart';

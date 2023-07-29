@@ -14,7 +14,8 @@ class MenuBody extends StatelessWidget {
       children: [
         Container(
           height: MediaQuery.of(context).size.height * 0.601,
-          width: MediaQuery.of(context).size.width * 0.27,
+          width: context.width * 0.27,
+          //MediaQuery.of(context).size.width * 0.27,
           decoration: const BoxDecoration(
               borderRadius: BorderRadiusDirectional.only(
                 topEnd: Radius.circular(30),
