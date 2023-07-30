@@ -2,20 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 
 class TextForm extends StatelessWidget {
-  const TextForm(
-      {Key? key,
-      required this.controller,
-      this.color = AppColors.gryFormField,
-      this.textType = TextInputType.text,
-      this.isPassword = false,
-      required this.labelText,
-      this.suffix,
-      this.suffixPressed,
-      this.width = double.infinity,
-      this.onSubmitted,
-      required this.validate,
-      this.onChange})
-      : super(key: key);
+  const TextForm({
+    Key? key,
+    required this.controller,
+    this.color = AppColors.gryFormField,
+    this.textType = TextInputType.text,
+    this.isPassword = false,
+    required this.labelText,
+    this.suffix,
+    this.suffixPressed,
+    this.width = double.infinity,
+    this.onSubmitted,
+    required this.validate,
+    this.onChange,
+    this.textAlign = TextAlign.start,
+  }) : super(key: key);
 
   final TextEditingController controller;
   final Color color;
@@ -28,6 +29,7 @@ class TextForm extends StatelessWidget {
   final FormFieldValidator<String>? validate;
   final FormFieldValidator<String>? onSubmitted;
   final ValueChanged<String>? onChange;
+  final TextAlign textAlign;
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,7 @@ class TextForm extends StatelessWidget {
         border: Border.all(color: Colors.white, width: 2.0),
       ),
       child: TextFormField(
+        //textAlign: textAlign,
         controller: controller,
         keyboardType: textType,
         obscureText: isPassword,

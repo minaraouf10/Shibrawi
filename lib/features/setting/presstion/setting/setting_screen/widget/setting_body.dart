@@ -12,6 +12,8 @@ class SettingBody extends StatelessWidget {
     return Column(
       children:  [
         InkWell(
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
           onTap: (){
             context.pushNamed(RouteNames.paymentScreen);
           },
