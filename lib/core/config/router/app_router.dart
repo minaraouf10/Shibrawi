@@ -59,6 +59,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const AboutUsScreen(),
         );
+
+      case RouteNames.inboxScreen:
+        return MaterialPageRoute(
+          builder: (context) => const InboxScreen(),
+        );
     }
   }
 

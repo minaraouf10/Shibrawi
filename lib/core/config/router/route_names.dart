@@ -13,6 +13,7 @@ class RouteNames {
   static const paymentScreen = '/PaymentScreen';
   static const notificationScreen = '/NotificationScreen';
   static const aboutUsScreen = '/AboutUsScreen';
+  static const inboxScreen = '/InboxScreen';
 
   // static const profileSettings = '/profile-settings';
   static const accountSettings = '/account-settings';

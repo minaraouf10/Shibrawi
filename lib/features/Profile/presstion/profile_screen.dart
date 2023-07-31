@@ -8,16 +8,17 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: ProfileTop(),
-          ),
-          Expanded(
-            child: ProfileBody(),
-          )
-        ],
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: ProfileTop(),
+            ),
+            ProfileBody()
+          ],
+        ),
       ),
     );
   }

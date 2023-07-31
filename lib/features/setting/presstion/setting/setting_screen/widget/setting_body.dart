@@ -40,9 +40,16 @@ class SettingBody extends StatelessWidget {
           ),
         ),
         const Height(20.0),
-        const SettingItem(
-          icon: 'assets/icons/inbox-mail.svg',
-          title: 'Inbox',
+        InkWell(
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          onTap: () {
+            context.pushNamed(RouteNames.inboxScreen);
+          },
+          child: const SettingItem(
+            icon: 'assets/icons/inbox-mail.svg',
+            title: 'Inbox',
+          ),
         ),
         const Height(20.0),
         InkWell(

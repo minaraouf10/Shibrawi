@@ -9,6 +9,7 @@ import 'package:shibrawi/features/intro/first_screen/first_screen.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/item_details_screen.dart';
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/sub_item_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/AboutUs/about_us_screen.dart';
+import 'package:shibrawi/features/setting/presstion/setting/inbox/inbox_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/notification/notification_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/payment/payment_screen.dart';
 
