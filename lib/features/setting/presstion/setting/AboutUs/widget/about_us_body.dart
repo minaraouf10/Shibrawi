@@ -13,51 +13,24 @@ class AboutUsBody extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          SvgPicture.asset('assets/images/orange_point.svg'),
+            SvgPicture.asset('assets/images/orange_point.svg'),
             const Width(10.0),
             const Expanded(
-              child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
-                  'sed do eiusmod tempor incididunt ut labore et '
+              child: Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+                'sed do eiusmod tempor incididunt ut labore et '
                 'dolore magna aliqua. Ut enim ad minim veniam, '
                 'quis nostrud exercitation ullamco laboris nisi ut '
                 'aliquip ex ea commodo consequat. Duis aute irure '
                 'dolor in reprehenderit in voluptate velit esse cillum '
                 'dolore eu fugiat nulla pariatur. Excepteur sint '
                 'occaecat cupidatat non proident, sunt in culpa qui '
-                'officia deserunt mollit anim id est laborum. '
-                ,
+                'officia deserunt mollit anim id est laborum. ',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: AppColors.loginBlack,
-                  height: 17/14,
-                ),
-              ),
-            ),
-        ],
-        ),
-        const Height(30.0),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SvgPicture.asset('assets/images/orange_point.svg'),
-            const Width(10.0),
-            const Expanded(
-              child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
-                  'sed do eiusmod tempor incididunt ut labore et '
-                  'dolore magna aliqua. Ut enim ad minim veniam, '
-                  'quis nostrud exercitation ullamco laboris nisi ut '
-                  'aliquip ex ea commodo consequat. Duis aute irure '
-                  'dolor in reprehenderit in voluptate velit esse cillum '
-                  'dolore eu fugiat nulla pariatur. Excepteur sint '
-                  'occaecat cupidatat non proident, sunt in culpa qui '
-                  'officia deserunt mollit anim id est laborum. '
-                ,
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.loginBlack,
-                  height: 17/14,
+                  height: 17 / 14,
                 ),
               ),
             ),
@@ -70,21 +43,48 @@ class AboutUsBody extends StatelessWidget {
             SvgPicture.asset('assets/images/orange_point.svg'),
             const Width(10.0),
             const Expanded(
-              child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
-                  'sed do eiusmod tempor incididunt ut labore et '
-                  'dolore magna aliqua. Ut enim ad minim veniam, '
-                  'quis nostrud exercitation ullamco laboris nisi ut '
-                  'aliquip ex ea commodo consequat. Duis aute irure '
-                  'dolor in reprehenderit in voluptate velit esse cillum '
-                  'dolore eu fugiat nulla pariatur. Excepteur sint '
-                  'occaecat cupidatat non proident, sunt in culpa qui '
-                  'officia deserunt mollit anim id est laborum. '
-                ,
+              child: Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+                'sed do eiusmod tempor incididunt ut labore et '
+                'dolore magna aliqua. Ut enim ad minim veniam, '
+                'quis nostrud exercitation ullamco laboris nisi ut '
+                'aliquip ex ea commodo consequat. Duis aute irure '
+                'dolor in reprehenderit in voluptate velit esse cillum '
+                'dolore eu fugiat nulla pariatur. Excepteur sint '
+                'occaecat cupidatat non proident, sunt in culpa qui '
+                'officia deserunt mollit anim id est laborum. ',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                   color: AppColors.loginBlack,
-                  height: 17/14,
+                  height: 17 / 14,
+                ),
+              ),
+            ),
+          ],
+        ),
+        const Height(30.0),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SvgPicture.asset('assets/images/orange_point.svg'),
+            const Width(10.0),
+            const Expanded(
+              child: Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, '
+                'sed do eiusmod tempor incididunt ut labore et '
+                'dolore magna aliqua. Ut enim ad minim veniam, '
+                'quis nostrud exercitation ullamco laboris nisi ut '
+                'aliquip ex ea commodo consequat. Duis aute irure '
+                'dolor in reprehenderit in voluptate velit esse cillum '
+                'dolore eu fugiat nulla pariatur. Excepteur sint '
+                'occaecat cupidatat non proident, sunt in culpa qui '
+                'officia deserunt mollit anim id est laborum. ',
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: AppColors.loginBlack,
+                  height: 17 / 14,
                 ),
               ),
             ),

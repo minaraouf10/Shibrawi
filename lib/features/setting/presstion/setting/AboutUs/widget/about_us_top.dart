@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart';
 
 class AboutUsTop extends StatelessWidget {
   const AboutUsTop({super.key});
@@ -11,7 +10,7 @@ class AboutUsTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsetsDirectional.only(top: 25.0),
+      padding: const EdgeInsetsDirectional.only(top: 25.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -29,7 +28,7 @@ class AboutUsTop extends StatelessWidget {
                   fontSize: 24,
                   fontWeight: FontWeight.w400,
                   color: AppColors.loginBlack,
-                  height: 29/24,
+                  height: 29 / 24,
                 ),
               ),
               const Spacer(),

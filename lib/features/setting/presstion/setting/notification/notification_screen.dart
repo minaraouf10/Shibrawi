@@ -17,7 +17,7 @@ class NotificationScreen extends StatelessWidget {
               Expanded(
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  itemBuilder: (context,index) => const NotificationItem(),
+                  itemBuilder: (context, index) => const NotificationItem(),
                   itemCount: 12,
                 ),
               ),

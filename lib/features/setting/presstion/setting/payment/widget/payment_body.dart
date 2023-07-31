@@ -104,7 +104,6 @@ class PaymentBody extends StatelessWidget {
           ),
         ),
         const Height(20.0),
-
       ],
     );
   }

@@ -11,7 +11,7 @@ class PaymentTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  const EdgeInsetsDirectional.only(top: 25.0),
+      padding: const EdgeInsetsDirectional.only(top: 25.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -29,7 +29,7 @@ class PaymentTop extends StatelessWidget {
                   fontSize: 24,
                   fontWeight: FontWeight.w400,
                   color: AppColors.loginBlack,
-                  height: 29/24,
+                  height: 29 / 24,
                 ),
               ),
               const Spacer(),
@@ -43,7 +43,7 @@ class PaymentTop extends StatelessWidget {
               fontSize: 16,
               fontWeight: FontWeight.w700,
               color: AppColors.loginBlack,
-              height: 19/16,
+              height: 19 / 16,
             ),
             textAlign: TextAlign.left,
           ),

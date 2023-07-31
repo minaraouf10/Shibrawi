@@ -14,7 +14,8 @@ class ItemDetailsScreen extends StatelessWidget {
           children: const [
             SizedBox(
               height: 245,
-                child: TopScreenItemDetails(),),
+              child: TopScreenItemDetails(),
+            ),
             Padding(
               padding: EdgeInsets.only(top: 225),
               child: ItemDetailsBody(),

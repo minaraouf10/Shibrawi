@@ -7,7 +7,8 @@ import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart
 import 'package:shibrawi/core/config/widgets/primary_widget/text_form_field.dart';
 
 class AddCardBottom extends StatelessWidget {
-   AddCardBottom({super.key});
+  AddCardBottom({super.key});
+
   final cardNumberController = TextEditingController();
   final monthNumberController = TextEditingController();
   final yearNumberController = TextEditingController();
@@ -58,11 +59,11 @@ class AddCardBottom extends StatelessWidget {
                   children: [
                     const Text(
                       "Expiry",
-                      style:  TextStyle(
+                      style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: AppColors.loginBlack,
-                        height: 17/14,
+                        height: 17 / 14,
                       ),
                     ),
                     const Width(56.0),
@@ -116,14 +117,14 @@ class AddCardBottom extends StatelessWidget {
                 ),
                 const Height(30.0),
                 Row(
-                  children: const[
-                     Text(
+                  children: const [
+                    Text(
                       "You can remove this card",
-                      style:  TextStyle(
+                      style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
                         color: AppColors.loginBlack,
-                        height: 17/14,
+                        height: 17 / 14,
                       ),
                     )
                   ],
@@ -142,7 +143,7 @@ class AddCardBottom extends StatelessWidget {
                     child: Row(
                       children: const [
                         Padding(
-                          padding:  EdgeInsetsDirectional.only(start: 75.0),
+                          padding: EdgeInsetsDirectional.only(start: 75.0),
                           child: Icon(
                             Icons.add,
                             color: AppColors.white,
@@ -152,11 +153,11 @@ class AddCardBottom extends StatelessWidget {
                         Width(45.0),
                         Text(
                           "Add Card",
-                          style:  TextStyle(
+                          style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w400,
                             color: AppColors.white,
-                            height: 19/16,
+                            height: 19 / 16,
                           ),
                         )
                       ],

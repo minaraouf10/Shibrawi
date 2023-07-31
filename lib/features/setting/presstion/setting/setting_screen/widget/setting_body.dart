@@ -10,11 +10,11 @@ class SettingBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:  [
+      children: [
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
-          onTap: (){
+          onTap: () {
             context.pushNamed(RouteNames.paymentScreen);
           },
           child: const SettingItem(
@@ -31,7 +31,7 @@ class SettingBody extends StatelessWidget {
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
-          onTap: (){
+          onTap: () {
             context.pushNamed(RouteNames.notificationScreen);
           },
           child: const SettingItem(
@@ -48,7 +48,7 @@ class SettingBody extends StatelessWidget {
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
-          onTap: (){
+          onTap: () {
             context.pushNamed(RouteNames.aboutUsScreen);
           },
           child: const SettingItem(
