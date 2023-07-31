@@ -28,9 +28,16 @@ class SettingBody extends StatelessWidget {
           title: 'My Orders',
         ),
         const Height(20.0),
-        const SettingItem(
-          icon: 'assets/icons/notifications.svg',
-          title: 'Notifications',
+        InkWell(
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          onTap: (){
+            context.pushNamed(RouteNames.notificationScreen);
+          },
+          child: const SettingItem(
+            icon: 'assets/icons/notifications.svg',
+            title: 'Notifications',
+          ),
         ),
         const Height(20.0),
         const SettingItem(
@@ -38,9 +45,16 @@ class SettingBody extends StatelessWidget {
           title: 'Inbox',
         ),
         const Height(20.0),
-        const SettingItem(
-          icon: 'assets/icons/aboutUs.svg',
-          title: 'About Us',
+        InkWell(
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          onTap: (){
+            context.pushNamed(RouteNames.aboutUsScreen);
+          },
+          child: const SettingItem(
+            icon: 'assets/icons/aboutUs.svg',
+            title: 'About Us',
+          ),
         ),
         const Height(20.0),
       ],
