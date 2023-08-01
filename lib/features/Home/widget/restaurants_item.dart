@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 
 class RestaurantsItem extends StatelessWidget {
@@ -32,7 +33,7 @@ class RestaurantsItem extends StatelessWidget {
         ),
         Row(
           children: [
-            Image.asset('assets/icons/star.png'),
+            SvgPicture.asset('assets/icons/orange-star.svg'),
             const SizedBox(
               width: 5.0,
             ),
