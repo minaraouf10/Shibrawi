@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class DefaultDivider extends StatelessWidget {
-  const DefaultDivider({super.key});
+  const DefaultDivider({super.key,this.height = 1.0 ,});
+
+  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class DefaultDivider extends StatelessWidget {
           ),
       child: Container(
         width: double.infinity,
-        height: 1.0,
+        height: height,
         color: Colors.grey[300],
       ),
     );

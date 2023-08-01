@@ -69,6 +69,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const OrdersScreen(),
         );
+
+      case RouteNames.checkoutScreen:
+        return MaterialPageRoute(
+          builder: (context) => const CheckoutScreen(),
+        );
     }
   }
 

@@ -12,8 +12,8 @@ class OrderItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children:  [
         SizedBox(
-            width: 90,
-            height: 90.0,
+            width: 120,
+            height: 120.0,
             child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuiUueP0D3BaOjGbnCKffAnAhx4vinElH0vw&usqp=CAU',
             fit: BoxFit.cover,
             ),
