@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
+import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_button.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
@@ -38,7 +40,10 @@ class EmailPassword extends ConsumerWidget {
             return DefaultButton(
               isLoading: ref.watch(loginProvider.isLoading.provider),
               text: tr.login,
-              function: loginProvider.userLogin,
+              function: () {
+                context.pushNamed(RouteNames.shibrawiLayout);
+              },
+              //loginProvider.userLogin,
               background: AppColors.primary,
             );
           },

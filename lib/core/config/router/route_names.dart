@@ -14,6 +14,7 @@ class RouteNames {
   static const notificationScreen = '/NotificationScreen';
   static const aboutUsScreen = '/AboutUsScreen';
   static const inboxScreen = '/InboxScreen';
+  static const ordersScreen = '/OrdersScreen';
 
   // static const profileSettings = '/profile-settings';
   static const accountSettings = '/account-settings';

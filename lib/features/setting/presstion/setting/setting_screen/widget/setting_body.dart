@@ -23,9 +23,16 @@ class SettingBody extends StatelessWidget {
           ),
         ),
         const Height(20.0),
-        const SettingItem(
-          icon: 'assets/icons/orders.svg',
-          title: 'My Orders',
+        InkWell(
+          highlightColor: Colors.transparent,
+          splashColor: Colors.transparent,
+          onTap: () {
+            context.pushNamed(RouteNames.ordersScreen);
+          },
+          child: const SettingItem(
+            icon: 'assets/icons/orders.svg',
+            title: 'My Orders',
+          ),
         ),
         const Height(20.0),
         InkWell(
