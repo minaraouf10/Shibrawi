@@ -206,8 +206,6 @@ class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
 
   String get address_not_empty => 'address must not empty';
 
-  String get ahmed => 'Ahmed';
-
   String get already_have_an_account => 'Already have an Account?';
 
   String get confirm_password => 'Confirm Password';
@@ -306,9 +304,6 @@ class _TranslationsAr implements _TranslationsEn {
 
   @override
   String get address_not_empty => 'يجب ألا يكون العنوان فارغًا';
-
-  @override
-  String get ahmed => 'احمد';
 
   @override
   String get already_have_an_account => 'هل لديك حساب؟';
