@@ -27,10 +27,17 @@ class EmailPassword extends ConsumerWidget {
         const SizedBox(
           height: 25.0,
         ),
-        TextForm(
-          controller: loginProvider.passwordController,
-          validate: loginProvider.passwordValidation,
-          labelText: tr.password,
+        Consumer(
+          builder: (BuildContext context, WidgetRef ref, Widget? child) {
+            return TextForm(
+            controller: loginProvider.passwordController,
+            validate: loginProvider.passwordValidation,
+            onSubmitted:(value) {
+               loginProvider.userLogin();
+            } ,
+            labelText: tr.password,
+          );
+            },
         ),
         const SizedBox(
           height: 30.0,
@@ -40,10 +47,11 @@ class EmailPassword extends ConsumerWidget {
             return DefaultButton(
               isLoading: ref.watch(loginProvider.isLoading.provider),
               text: tr.login,
-              function: () {
-                context.pushNamed(RouteNames.shibrawiLayout);
-              },
-              //loginProvider.userLogin,
+              function:
+              //     () {
+              //   context.pushNamed(RouteNames.shibrawiLayout);
+              // },
+              loginProvider.userLogin,
               background: AppColors.primary,
             );
           },

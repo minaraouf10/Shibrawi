@@ -4,6 +4,8 @@ abstract class Endpoints {
   static const baseUrl = host;
   static const register = 'register';
   static const login = 'login';
+  static const profile = 'profile';
+  static const home = 'home';
   static const otp = '/auth/continue/login';
   static const projectsHome = '/project/mobile/list';
   static const projectDetails = '/project/single/';

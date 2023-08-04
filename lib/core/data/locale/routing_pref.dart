@@ -1,14 +1,14 @@
+import 'package:shibrawi/core/config/router/route_names.dart';
+import 'package:shibrawi/core/data/locale/user_pref.dart';
+
 class RoutingPrefs {
   RoutingPrefs._();
 
   //
-  static String initial = '/';
+  static String initial =
+  UserPrefs.isUserLoggedIn ? RouteNames.shibrawiLayout
+      : RouteNames.onBoarding;
 
-  //     globalRefContainer.read(onBoardingPrefsProvider).getOnBoarding()
-  //         ? globalRefContainer.read(userPrefsProvider).isUserLoggedIn
-  //             ? AppNameRoutes.homeRoute
-  //             : AppNameRoutes.welcomeRoute
-  //         : AppNameRoutes.onBoardingRoute;
 
   static String get initialRoute => initial;
 }

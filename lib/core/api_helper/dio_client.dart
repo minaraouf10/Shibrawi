@@ -19,7 +19,7 @@ class DioClient {
     required this.langPrefs,
   });
 
-  Future<String> get userToken async => userPrefs.getUserToken();
+  Future<String> get userToken async => UserPrefs.getUserToken();
 
   /// sends a [GET] request to the given [url]
 

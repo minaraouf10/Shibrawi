@@ -110,6 +110,7 @@ extension ShowBottomSheet on BuildContext {
   }) {
     showModalBottomSheet(
       isScrollControlled: true,
+      useSafeArea: true,
       backgroundColor: Colors.transparent,
       builder: (context) => Padding(
         padding:
@@ -123,20 +124,22 @@ extension ShowBottomSheet on BuildContext {
               topRight: Radius.circular(20),
             ),
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: width * .30,
-                height: 6,
-                margin: const EdgeInsets.symmetric(vertical: 20),
-                decoration: BoxDecoration(
-                  color: AppColors.textPlaceholder,
-                  borderRadius: BorderRadius.circular(16),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: width * .30,
+                  height: 6,
+                  margin: const EdgeInsets.symmetric(vertical: 20),
+                  decoration: BoxDecoration(
+                    color: AppColors.textPlaceholder,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
-              ),
-              bottomSheetBody,
-            ],
+                bottomSheetBody,
+              ],
+            ),
           ),
         ),
       ),

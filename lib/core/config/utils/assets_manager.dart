@@ -19,6 +19,7 @@ class AssetsManger {
   static const onboardingLv3Path = '${onBoardingPath}onboarding_list_3.png';
   static const onboardingLv4Path = '${onBoardingPath}onboarding_list_4.png';
   static const skipArrowPath = '${iconsPath}skip_arrow.svg';
+  static const exit = '${iconsPath}exit.svg';
 
   //#endregion
 

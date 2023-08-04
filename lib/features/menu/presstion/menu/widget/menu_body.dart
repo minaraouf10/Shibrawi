@@ -13,7 +13,7 @@ class MenuBody extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: MediaQuery.of(context).size.height * 0.601,
+          height: context.height * 0.601,
           width: context.width * 0.27,
           decoration: const BoxDecoration(
               borderRadius: BorderRadiusDirectional.only(

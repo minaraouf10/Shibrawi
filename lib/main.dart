@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/router/router_imports.dart';
 import 'package:shibrawi/core/data/locale/pref.dart';
+import 'package:shibrawi/core/data/locale/routing_pref.dart';
 import 'package:shibrawi/generated/translations.g.dart';
 
 void main() {
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: LocaleSettings.supportedLocales,
       locale: TranslationProvider.of(context).flutterLocale,
       onGenerateRoute: AppRouter.onGenerateRoute,
-      initialRoute: RouteNames.firstScreen,
+      initialRoute: RoutingPrefs.initial,
     );
   }
 }

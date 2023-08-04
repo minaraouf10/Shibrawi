@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/api_helper/custom_response.dart';
 import 'package:shibrawi/core/api_helper/dio_client.dart';
@@ -30,7 +29,7 @@ class AuthService {
     if (res.isError) throw res.message;
     final data = res.data as Json;
     final userModel = UserModel.fromJson(data);
-    prefs.setUserToken(userModel.token);
+    UserPrefs.setUserToken(userModel.token);
     return userModel;
   }
 

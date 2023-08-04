@@ -8,14 +8,14 @@ final userPrefsProvider = Provider<UserPrefs>((ref) {
 const sharedTokenId = 'token';
 
 class UserPrefs {
-  final prefs = SharedPrefs.instance;
+  static final prefs = SharedPrefs.instance;
 
-  Future<void> setUserToken(String token) =>
+  static Future<void> setUserToken(String token) =>
       prefs.setString(sharedTokenId, token);
 
-  String getUserToken() => prefs.getString(sharedTokenId) ?? '';
+  static String getUserToken() => prefs.getString(sharedTokenId) ?? '';
 
-  Future<void> deleteUserToken() async => prefs.remove(sharedTokenId);
+  static Future<void> deleteUserToken() async => prefs.remove(sharedTokenId);
 
-  bool get isUserLoggedIn => prefs.getString('token') != null;
+  static bool get isUserLoggedIn => prefs.getString('token') != null;
 }
