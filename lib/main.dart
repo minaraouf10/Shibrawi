@@ -6,9 +6,9 @@ import 'package:shibrawi/core/data/locale/pref.dart';
 import 'package:shibrawi/core/data/locale/routing_pref.dart';
 import 'package:shibrawi/generated/translations.g.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPrefs.init();
+  await SharedPrefs.init();
   runApp(
     // DevicePreview(
     // enabled: true,

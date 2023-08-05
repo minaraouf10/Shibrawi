@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class FavoritesTop extends StatelessWidget {
@@ -25,7 +26,7 @@ class FavoritesTop extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                SvgPicture.asset('assets/icons/shopping-cart.svg'),
+                SvgPicture.asset(AssetsManger.shoppingCart),
               ],
             ),
             const Height(18.0),

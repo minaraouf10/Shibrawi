@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class TotalPriceItem extends StatelessWidget {
@@ -77,13 +78,13 @@ class TotalPriceItem extends StatelessWidget {
                           Transform.scale(
                             scale: 1,
                             child: SvgPicture.asset(
-                              'assets/images/Group 8089.svg',
+                              AssetsManger.group,
                             ),
                           ),
                           const Width(18.0),
                           const Text(
                             'Add to Cart',
-                            style: TextStyle(
+                              style: TextStyle(
                               fontSize: 11.0,
                               fontWeight: FontWeight.w400,
                               color: AppColors.white,
@@ -117,7 +118,7 @@ class TotalPriceItem extends StatelessWidget {
             child: Transform.scale(
               scale: 0.5,
               child: SvgPicture.asset(
-                'assets/icons/shopping-cart-orange.svg',
+                AssetsManger.shoppingCardOrange,
               ),
             ),
           ),

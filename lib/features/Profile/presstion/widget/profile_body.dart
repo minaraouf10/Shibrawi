@@ -6,14 +6,14 @@ import 'package:shibrawi/features/Profile/presstion/controller/profile_provider_
 import 'package:shibrawi/generated/translations.g.dart';
 
 class ProfileBody extends ConsumerWidget {
-  ProfileBody({super.key});
-  
+  const ProfileBody({super.key});
+
 
   @override
   Widget build(BuildContext context,ref) {
-    
+
     final profileBodyProvider = ref.read(profileProviderScreen);
-    
+
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
@@ -98,16 +98,16 @@ class ProfileBody extends ConsumerWidget {
           ),
           Consumer(
               builder: (BuildContext context, WidgetRef ref, Widget? child) {
-            return DefaultButton(
-              // isLoading: ref.watch(signUpProvider.isLoading.provider),
-              function: () {
-                // signUpProvider.signUp();
-              },
-              text: 'Save',
-              fontSize: 16.0,
-              isUpperCase: false,
-            );
-          }),
+                return DefaultButton(
+                  // isLoading: ref.watch(signUpProvider.isLoading.provider),
+                  function: () {
+                    // signUpProvider.signUp();
+                  },
+                  text: 'Save',
+                  fontSize: 16.0,
+                  isUpperCase: false,
+                );
+              }),
           const SizedBox(
             height: 80.0,
           ),

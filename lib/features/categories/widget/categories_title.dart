@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 
 class CategoriesTitle extends StatelessWidget {
   const CategoriesTitle({super.key});
@@ -19,7 +20,7 @@ class CategoriesTitle extends StatelessWidget {
                 style: TextStyle(fontSize: 24),
               ),
               const Spacer(),
-              SvgPicture.asset('assets/icons/shopping-cart.svg')
+              SvgPicture.asset(AssetsManger.shoppingCart)
             ],
           ),
           const SizedBox(

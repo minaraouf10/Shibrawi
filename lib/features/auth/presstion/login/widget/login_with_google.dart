@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
 import 'package:shibrawi/generated/translations.g.dart';
 
@@ -33,7 +34,7 @@ class LoginWithGoogle extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset('assets/icons/faceBook.svg'),
+              SvgPicture.asset(AssetsManger.faceBook),
               const SizedBox(
                 width: 10.0,
               ),
@@ -64,7 +65,7 @@ class LoginWithGoogle extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset('assets/icons/google.svg'),
+              SvgPicture.asset(AssetsManger.google),
               const SizedBox(
                 width: 10.0,
               ),

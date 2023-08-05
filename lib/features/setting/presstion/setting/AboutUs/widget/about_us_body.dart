@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class AboutUsBody extends StatelessWidget {
@@ -13,7 +14,7 @@ class AboutUsBody extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SvgPicture.asset('assets/images/orange_point.svg'),
+            SvgPicture.asset(AssetsManger.orangePoint),
             const Width(10.0),
             const Expanded(
               child: Text(
@@ -40,7 +41,7 @@ class AboutUsBody extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SvgPicture.asset('assets/images/orange_point.svg'),
+            SvgPicture.asset(AssetsManger.orangePoint),
             const Width(10.0),
             const Expanded(
               child: Text(
@@ -67,7 +68,7 @@ class AboutUsBody extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SvgPicture.asset('assets/images/orange_point.svg'),
+            SvgPicture.asset(AssetsManger.orangePoint),
             const Width(10.0),
             const Expanded(
               child: Text(

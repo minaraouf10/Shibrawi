@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class OrderItem extends StatelessWidget {
@@ -35,7 +36,7 @@ class OrderItem extends StatelessWidget {
             const Height(8.0),
             Row(
               children: [
-                SvgPicture.asset('assets/icons/orange-star.svg'),
+                SvgPicture.asset(AssetsManger.orangeStar),
                 const Width(5.0),
                 const Text(
                   "4.9",
@@ -71,7 +72,7 @@ class OrderItem extends StatelessWidget {
             const Height(8.0),
             Row(
               children: [
-                SvgPicture.asset('assets/icons/location-pin.svg'),
+                SvgPicture.asset(AssetsManger.locationPin),
                 const Width(5.0),
                 const Text(
                   "No 03, 4th Lane, Newyork",

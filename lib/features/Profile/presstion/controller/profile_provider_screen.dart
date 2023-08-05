@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/Profile/data/service/profile_service.dart';
+import 'package:shibrawi/features/auth/data/model/user_model.dart';
 
 final profileProviderScreen = Provider<ProfileLogic>(
       (ref) => ProfileLogic(
@@ -16,10 +17,13 @@ class ProfileLogic extends _ProfileStates {
 
   ProfileLogic(this.profileService, {required super.ref});
 
+
   final addressController = TextEditingController();
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final phoneController = TextEditingController();
+
+
 
 
   getProfileData() async {
@@ -27,6 +31,7 @@ class ProfileLogic extends _ProfileStates {
       isLoading.state = true;
 
       await profileService.profileServices();
+
       isSuccess.state = true;
 
     }catch(e,s)

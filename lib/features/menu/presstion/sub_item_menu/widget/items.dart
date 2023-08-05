@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class Items extends StatelessWidget {
@@ -62,7 +63,7 @@ class Items extends StatelessWidget {
                         const Height(5.0),
                         Row(
                           children: [
-                            SvgPicture.asset('assets/icons/orange-star.svg'),
+                            SvgPicture.asset(AssetsManger.orangeStar),
                             const Width(5.0),
                             const Text(
                               'Minute by tuk tuk esserts',

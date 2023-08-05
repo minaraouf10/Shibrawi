@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart';
 
@@ -18,7 +19,7 @@ class NotificationItem extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SvgPicture.asset('assets/images/orange_point.svg'),
+                SvgPicture.asset(AssetsManger.orangePoint),
                 const Width(30.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

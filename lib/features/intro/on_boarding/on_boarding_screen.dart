@@ -40,7 +40,7 @@ class BoardingScreenState extends State<BoardingScreen> {
     } else {
       Navigator.pushReplacementNamed(
         context,
-        RouteNames.loginScreen,
+        RouteNames.firstScreen,
       );
     }
   }

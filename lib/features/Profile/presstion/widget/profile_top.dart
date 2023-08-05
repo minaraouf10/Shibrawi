@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class ProfileTop extends StatelessWidget {
@@ -24,7 +25,7 @@ class ProfileTop extends StatelessWidget {
                   ),
                 ),
                 const Spacer(),
-                SvgPicture.asset('assets/icons/shopping-cart.svg')
+                SvgPicture.asset(AssetsManger.shoppingCart)
               ],
             ),
             const Height(25.0),
@@ -35,13 +36,13 @@ class ProfileTop extends StatelessWidget {
               radius: 60.0,
               child: Align(
                   alignment: Alignment.bottomCenter,
-                  child: SvgPicture.asset('assets/images/Profile_picture.svg')),
+                  child: SvgPicture.asset(AssetsManger.profilePicture)),
             ),
             const Height(10.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/icons/edit_icon.svg'),
+                SvgPicture.asset(AssetsManger.editIcon),
                 const Width(5.0),
                 const Text(
                   'Edit Profile',

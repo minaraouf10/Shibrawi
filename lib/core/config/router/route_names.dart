@@ -1,7 +1,6 @@
 class RouteNames {
   static const bottomNavBar = '/';
-  static const onBoarding = '/onBoarding';
-  static const faqs = '/faqs';
+  static const onBoarding = '/BoardingScreen';
   static const firstScreen = '/FirstScreen';
   static const loginScreen = '/LoginScreen';
   static const signUpScreen = '/SignUpScreen';

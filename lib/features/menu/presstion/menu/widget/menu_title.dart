@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 
 class MenuTitle extends StatelessWidget {
   const MenuTitle({super.key});
@@ -20,7 +21,7 @@ class MenuTitle extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            SvgPicture.asset('assets/icons/shopping-cart.svg')
+            SvgPicture.asset(AssetsManger.shoppingCart)
           ],
         ),
       ),

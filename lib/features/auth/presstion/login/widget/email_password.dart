@@ -47,11 +47,7 @@ class EmailPassword extends ConsumerWidget {
             return DefaultButton(
               isLoading: ref.watch(loginProvider.isLoading.provider),
               text: tr.login,
-              function:
-              //     () {
-              //   context.pushNamed(RouteNames.shibrawiLayout);
-              // },
-              loginProvider.userLogin,
+              function: loginProvider.userLogin,
               background: AppColors.primary,
             );
           },

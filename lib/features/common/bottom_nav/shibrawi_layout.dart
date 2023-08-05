@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/features/common/controller/shibrawilayout_provider_screen.dart';
 
 class ShibrawiLayout extends ConsumerWidget {
@@ -41,31 +42,31 @@ class ShibrawiLayout extends ConsumerWidget {
               height: 65,
               items: [
                 SvgPicture.asset(
-                  'assets/icons/menu.svg',
+                  AssetsManger.menu,
                   height: 20,
                   width: 20.0,
                   colorFilter: curr == 0 ? colorIcon : null,
                 ),
                 SvgPicture.asset(
-                  'assets/icons/favorite_icon.svg',
+                  AssetsManger.favoriteIcon,
                   height: 20,
                   width: 20.0,
                   colorFilter: curr == 1 ? colorIcon : null,
                 ),
                 SvgPicture.asset(
-                  'assets/icons/home.svg',
+                  AssetsManger.home,
                   height: 30,
                   width: 30.0,
                   colorFilter: curr == 2 ? colorIcon : null,
                 ),
                 SvgPicture.asset(
-                  'assets/icons/profile.svg',
+                  AssetsManger.profile,
                   height: 20,
                   width: 20.0,
                   colorFilter: curr == 3 ? colorIcon : null,
                 ),
                 SvgPicture.asset(
-                  'assets/icons/more_icon.svg',
+                  AssetsManger.moreIcon,
                   height: 20,
                   width: 20.0,
                   colorFilter: curr == 4 ? colorIcon : null,

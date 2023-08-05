@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart';
 
@@ -15,7 +16,7 @@ class InboxItem extends StatelessWidget {
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SvgPicture.asset('assets/images/orange_point.svg'),
+            SvgPicture.asset(AssetsManger.orangePoint),
             const Width(5.0),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +56,7 @@ class InboxItem extends StatelessWidget {
                   ),
                 ),
                 const Height(35.0),
-                SvgPicture.asset('assets/icons/star_white.svg')
+                SvgPicture.asset(AssetsManger.starWhite)
               ],
             ),
           ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/setting/presstion/setting/setting_screen/widget/setting_item.dart';
 
@@ -18,7 +19,7 @@ class SettingBody extends StatelessWidget {
             context.pushNamed(RouteNames.paymentScreen);
           },
           child: const SettingItem(
-            icon: 'assets/icons/payment.svg',
+            icon: AssetsManger.payment,
             title: 'Payment Details',
           ),
         ),
@@ -30,7 +31,7 @@ class SettingBody extends StatelessWidget {
             context.pushNamed(RouteNames.ordersScreen);
           },
           child: const SettingItem(
-            icon: 'assets/icons/orders.svg',
+            icon: AssetsManger.orders,
             title: 'My Orders',
           ),
         ),
@@ -42,7 +43,7 @@ class SettingBody extends StatelessWidget {
             context.pushNamed(RouteNames.notificationScreen);
           },
           child: const SettingItem(
-            icon: 'assets/icons/notifications.svg',
+            icon: AssetsManger.notifications,
             title: 'Notifications',
           ),
         ),
@@ -54,7 +55,7 @@ class SettingBody extends StatelessWidget {
             context.pushNamed(RouteNames.inboxScreen);
           },
           child: const SettingItem(
-            icon: 'assets/icons/inbox-mail.svg',
+            icon: AssetsManger.inboxMail,
             title: 'Inbox',
           ),
         ),
@@ -66,7 +67,7 @@ class SettingBody extends StatelessWidget {
             context.pushNamed(RouteNames.aboutUsScreen);
           },
           child: const SettingItem(
-            icon: 'assets/icons/aboutUs.svg',
+            icon: AssetsManger.aboutUs,
             title: 'About Us',
           ),
         ),

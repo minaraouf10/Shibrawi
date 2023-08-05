@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_styled_toast/flutter_styled_toast.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/utils/assets_manager.dart';
 
 extension ErrorToast on BuildContext {
   void showErrorToast(
@@ -21,7 +22,7 @@ extension ErrorToast on BuildContext {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(width: 8),
-            SvgPicture.asset('assets/icons/wrong.svg'),
+            SvgPicture.asset(AssetsManger.wrong),
             const SizedBox(width: 8),
             Expanded(
               child: Text(
