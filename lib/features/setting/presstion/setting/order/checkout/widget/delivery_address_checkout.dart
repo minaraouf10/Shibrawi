@@ -12,11 +12,11 @@ class DeliveryAddressCheckout extends StatelessWidget {
       children: [
         const Text(
           "Delivery Address",
-          style:  TextStyle(
+          style: TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w400,
             color: AppColors.lightBlack,
-            height: 16/13,
+            height: 16 / 13,
           ),
         ),
         const Height(17.0),
@@ -26,12 +26,12 @@ class DeliveryAddressCheckout extends StatelessWidget {
               child: Text(
                 "653 Nostrand Ave., "
                 'Brooklyn, NY 11216',
-                style:  TextStyle(
+                style: TextStyle(
                   fontFamily: "Inter",
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
                   color: Color(0xff4a4b4d),
-                  height: 18/15,
+                  height: 18 / 15,
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -39,12 +39,12 @@ class DeliveryAddressCheckout extends StatelessWidget {
             Width(147.0),
             Text(
               "Change",
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: "Inter",
                 fontSize: 13,
                 fontWeight: FontWeight.w700,
                 color: Color(0xfffc6011),
-                height: 16/13,
+                height: 16 / 13,
               ),
             )
           ],

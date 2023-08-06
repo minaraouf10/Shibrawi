@@ -7,7 +7,7 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: const [
         Image(
           image: NetworkImage(
               'https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?w=996&t=st=1688048074~exp=1688048674~hmac=4a507d1cafa27f59203cbff19455a6beedea882d54cf1ccbc07aac28db121297'),

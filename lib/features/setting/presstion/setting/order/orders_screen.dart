@@ -13,7 +13,7 @@ class OrdersScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children:  const [
+          children: const [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: OrdersTop(),

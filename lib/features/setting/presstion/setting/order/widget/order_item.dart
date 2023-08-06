@@ -11,26 +11,27 @@ class OrderItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      children:  [
+      children: [
         SizedBox(
-            width: 120,
-            height: 120.0,
-            child: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuiUueP0D3BaOjGbnCKffAnAhx4vinElH0vw&usqp=CAU',
+          width: 120,
+          height: 120.0,
+          child: Image.network(
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuiUueP0D3BaOjGbnCKffAnAhx4vinElH0vw&usqp=CAU',
             fit: BoxFit.cover,
-            ),
+          ),
         ),
         const Width(10.0),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:  [
+          children: [
             const Text(
               "King Burgers",
-              style:  TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: AppColors.loginBlack,
-                height: 19/16,
+                height: 19 / 16,
               ),
             ),
             const Height(8.0),
@@ -40,21 +41,21 @@ class OrderItem extends StatelessWidget {
                 const Width(5.0),
                 const Text(
                   "4.9",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w400,
                     color: AppColors.primary,
-                    height: 13/11,
+                    height: 13 / 11,
                   ),
                 ),
                 const Width(5.0),
                 const Text(
                   "(124 ratings)",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
                     color: AppColors.lightBlack,
-                    height: 15/12,
+                    height: 15 / 12,
                   ),
                 )
               ],
@@ -62,11 +63,11 @@ class OrderItem extends StatelessWidget {
             const Height(8.0),
             const Text(
               "Burger estern Food",
-              style:  TextStyle(
+              style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
                 color: AppColors.lightBlack,
-                height: 15/12,
+                height: 15 / 12,
               ),
             ),
             const Height(8.0),
@@ -76,11 +77,11 @@ class OrderItem extends StatelessWidget {
                 const Width(5.0),
                 const Text(
                   "No 03, 4th Lane, Newyork",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
-                   color: AppColors.lightBlack,
-                    height: 15/12,
+                    color: AppColors.lightBlack,
+                    height: 15 / 12,
                   ),
                 )
               ],

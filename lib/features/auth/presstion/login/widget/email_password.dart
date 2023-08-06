@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shibrawi/core/config/extensions/context_extensions.dart';
-import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_button.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
@@ -30,14 +28,14 @@ class EmailPassword extends ConsumerWidget {
         Consumer(
           builder: (BuildContext context, WidgetRef ref, Widget? child) {
             return TextForm(
-            controller: loginProvider.passwordController,
-            validate: loginProvider.passwordValidation,
-            onSubmitted:(value) {
-               loginProvider.userLogin();
-            } ,
-            labelText: tr.password,
-          );
-            },
+              controller: loginProvider.passwordController,
+              validate: loginProvider.passwordValidation,
+              onSubmitted: (value) {
+                loginProvider.userLogin();
+              },
+              labelText: tr.password,
+            );
+          },
         ),
         const SizedBox(
           height: 30.0,

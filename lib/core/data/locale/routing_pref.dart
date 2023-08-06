@@ -5,10 +5,9 @@ class RoutingPrefs {
   RoutingPrefs._();
 
   //
-  static String initial =
-  UserPrefs.isUserLoggedIn ? RouteNames.shibrawiLayout
+  static String initial = UserPrefs.isUserLoggedIn
+      ? RouteNames.shibrawiLayout
       : RouteNames.onBoarding;
-
 
   static String get initialRoute => initial;
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
+import 'package:shibrawi/features/Profile/presstion/controller/profile_provider_screen.dart';
 
 class ProfileTop extends StatelessWidget {
   const ProfileTop({super.key});
@@ -55,20 +57,31 @@ class ProfileTop extends StatelessWidget {
               ],
             ),
             const Height(10.0),
-            const Text(
-              'Mina Raouf Fawzi',
-              style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.loginBlack),
+            Consumer(
+              builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                final profileTopProvider = ref.watch(profileProviderScreen);
+                return Text(
+                  profileTopProvider.nameController.text,
+                  style: const TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.loginBlack,
+                  ),
+                );
+              },
             ),
             const Height(10.0),
-            const Text(
-              'Sign Out',
-              style: TextStyle(
-                fontSize: 11.0,
-                fontWeight: FontWeight.w400,
-                color: AppColors.lightBlack,
+            InkWell(
+              highlightColor: Colors.transparent,
+              splashColor: Colors.transparent,
+              onTap: () {},
+              child: const Text(
+                'Sign Out',
+                style: TextStyle(
+                  fontSize: 11.0,
+                  fontWeight: FontWeight.w400,
+                  color: AppColors.lightBlack,
+                ),
               ),
             ),
           ],

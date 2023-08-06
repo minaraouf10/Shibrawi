@@ -5,6 +5,7 @@ abstract class Endpoints {
   static const register = 'register';
   static const login = 'login';
   static const profile = 'profile';
+  static const logout = 'logout';
   static const home = 'home';
   static const otp = '/auth/continue/login';
   static const projectsHome = '/project/mobile/list';

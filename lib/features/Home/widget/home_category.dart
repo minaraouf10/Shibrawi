@@ -6,7 +6,7 @@ class HomeCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 135.0,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,

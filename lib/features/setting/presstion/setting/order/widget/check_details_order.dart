@@ -13,33 +13,34 @@ class CheckDetailsOrder extends StatelessWidget {
     return Column(
       children: [
         Row(
-          children:  [
+          children: [
             const Text(
               "Delivery Instrusctions",
-              style:  TextStyle(
+              style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w700,
                 color: AppColors.loginBlack,
-                height: 16/13,
+                height: 16 / 13,
               ),
             ),
             const Spacer(),
             const Icon(
-              Icons.add,color: AppColors.primary,
+              Icons.add,
+              color: AppColors.primary,
               size: 20.0,
             ),
             const Width(10.0),
             InkWell(
               highlightColor: Colors.transparent,
               splashColor: Colors.transparent,
-              onTap: (){},
+              onTap: () {},
               child: const Text(
                 "Add Notes",
-                style:  TextStyle(
+                style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w400,
                   color: AppColors.primary,
-                  height: 16/13,
+                  height: 16 / 13,
                 ),
               ),
             )
@@ -54,21 +55,21 @@ class CheckDetailsOrder extends StatelessWidget {
               children: const [
                 Text(
                   "Sub Total",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 ),
                 Spacer(),
                 Text(
                   "\$68",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primary,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 )
               ],
@@ -78,21 +79,21 @@ class CheckDetailsOrder extends StatelessWidget {
               children: const [
                 Text(
                   "Delivery Cost",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 ),
                 Spacer(),
                 Text(
                   "\$2",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primary,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 )
               ],
@@ -106,21 +107,21 @@ class CheckDetailsOrder extends StatelessWidget {
           children: const [
             Text(
               "Total",
-              style:  TextStyle(
+              style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w700,
                 color: AppColors.loginBlack,
-                height: 16/13,
+                height: 16 / 13,
               ),
             ),
             Spacer(),
             Text(
               "\$70",
-              style:  TextStyle(
+              style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
                 color: AppColors.primary,
-                height: 27/22,
+                height: 27 / 22,
               ),
             )
           ],
@@ -129,24 +130,23 @@ class CheckDetailsOrder extends StatelessWidget {
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
-          onTap: (){
+          onTap: () {
             context.pushNamed(RouteNames.checkoutScreen);
           },
           child: Container(
             height: 55.0,
             width: context.width,
             decoration: BoxDecoration(
-              color: AppColors.primary,
-              borderRadius: BorderRadius.circular(30.0)
-            ),
+                color: AppColors.primary,
+                borderRadius: BorderRadius.circular(30.0)),
             alignment: AlignmentDirectional.center,
             child: const Text(
               "Checkout",
-              style:  TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColors.white,
-                height: 19/16,
+                height: 19 / 16,
               ),
             ),
           ),

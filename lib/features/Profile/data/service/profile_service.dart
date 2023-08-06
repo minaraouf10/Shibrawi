@@ -18,13 +18,13 @@ class ProfileService {
 
   ProfileService(this.client, this.prefs);
 
-  Future<UserModel> profileServices()
-   async {
-    final res = CustomResponse(await client.get(Endpoints.profile,));
+  Future<UserModel> profileServices() async {
+    final res = CustomResponse(await client.get(
+      Endpoints.profile,
+    ));
     if (res.isError) throw res.message;
     final data = res.data as Json;
     final userModel = UserModel.fromJson(data);
     return userModel;
   }
-
 }

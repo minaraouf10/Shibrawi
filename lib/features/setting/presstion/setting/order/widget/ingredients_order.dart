@@ -12,22 +12,20 @@ class IngredientsOrder extends StatelessWidget {
     return Container(
       height: 230.0,
       width: context.width,
-      decoration: const BoxDecoration(
-        color: Color(0xffF6F6F6)
-      ),
+      decoration: const BoxDecoration(color: Color(0xffF6F6F6)),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 15.0),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),
         child: Column(
           children: [
             Row(
               children: const [
                 Text(
                   "Beef Burger x1",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w400,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 ),
                 Spacer(),
@@ -37,7 +35,7 @@ class IngredientsOrder extends StatelessWidget {
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 )
               ],
@@ -49,11 +47,11 @@ class IngredientsOrder extends StatelessWidget {
               children: const [
                 Text(
                   "Classic Burger x1",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w400,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 ),
                 Spacer(),
@@ -63,7 +61,7 @@ class IngredientsOrder extends StatelessWidget {
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 )
               ],
@@ -71,16 +69,15 @@ class IngredientsOrder extends StatelessWidget {
             const Height(16.0),
             const DefaultDivider(),
             const Height(13.0),
-
             Row(
               children: const [
                 Text(
                   "Cheese Chicken Burger x1",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w400,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 ),
                 Spacer(),
@@ -90,7 +87,7 @@ class IngredientsOrder extends StatelessWidget {
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 )
               ],
@@ -98,16 +95,15 @@ class IngredientsOrder extends StatelessWidget {
             const Height(16.0),
             const DefaultDivider(),
             const Height(13.0),
-
             Row(
               children: const [
                 Text(
                   "Chicken Legs Basket x1",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w400,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 ),
                 Spacer(),
@@ -117,7 +113,7 @@ class IngredientsOrder extends StatelessWidget {
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 )
               ],
@@ -129,11 +125,11 @@ class IngredientsOrder extends StatelessWidget {
               children: const [
                 Text(
                   "French Fries Large x1",
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w400,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 ),
                 Spacer(),
@@ -143,7 +139,7 @@ class IngredientsOrder extends StatelessWidget {
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.loginBlack,
-                    height: 16/13,
+                    height: 16 / 13,
                   ),
                 )
               ],

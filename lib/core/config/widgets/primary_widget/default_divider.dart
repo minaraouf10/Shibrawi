@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class DefaultDivider extends StatelessWidget {
-  const DefaultDivider({super.key,this.height = 1.0 ,});
+  const DefaultDivider({
+    super.key,
+    this.height = 1.0,
+  });
 
   final double height;
 

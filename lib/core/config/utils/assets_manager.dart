@@ -2,7 +2,6 @@ class AssetsManger {
   static const iconsPath = 'assets/icons/';
   static const imagePath = 'assets/images/';
 
-
   static const skipArrowPath = '${iconsPath}skip_arrow.svg';
   static const wrong = '${iconsPath}wrong.svg';
   static const profilePicture = '${imagePath}Profile_picture.svg';
@@ -19,7 +18,7 @@ class AssetsManger {
 
   //#region Mostafa
   static const orangeStar = '${iconsPath}orange-star.svg';
-  static const editIcon = '${iconsPath}edit_icon';
+  static const editIcon = '${iconsPath}edit_icon.svg';
   static const shoppingCart = '${iconsPath}shopping-cart.svg';
   static const exit = '${iconsPath}exit.svg';
   static const favoritesIcon = '${iconsPath}favorites_icon.svg';
@@ -40,6 +39,4 @@ class AssetsManger {
   static const notifications = '${iconsPath}notifications.svg';
   static const inboxMail = '${iconsPath}inbox-mail.svg';
   static const aboutUs = '${iconsPath}aboutUs.svg';
-
-
 }

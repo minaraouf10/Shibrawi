@@ -25,6 +25,7 @@ class CheckoutScreen extends StatelessWidget {
               height: 12.0,
             ),
             Height(20.0),
+
             /// payment method
           ],
         ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/router/router_imports.dart';
 import 'package:shibrawi/core/data/locale/pref.dart';
 import 'package:shibrawi/core/data/locale/routing_pref.dart';
