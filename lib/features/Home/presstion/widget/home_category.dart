@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shibrawi/features/Home/widget/category_item.dart';
+import 'package:shibrawi/features/Home/presstion/widget/category_item.dart';
 
 class HomeCategory extends StatelessWidget {
   const HomeCategory({super.key});

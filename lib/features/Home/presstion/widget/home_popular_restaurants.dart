@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
-import 'package:shibrawi/features/Home/widget/restaurants_item.dart';
+import 'package:shibrawi/features/Home/presstion/widget/restaurants_item.dart';
 
 class HomePopularRestaurants extends StatelessWidget {
   const HomePopularRestaurants({super.key});

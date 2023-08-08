@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/features/Home/widget/home_category.dart';
-import 'package:shibrawi/features/Home/widget/home_popular_restaurants.dart';
-import 'package:shibrawi/features/Home/widget/home_search_bar.dart';
-import 'package:shibrawi/features/Home/widget/home_title.dart';
+import 'package:shibrawi/features/Home/presstion/widget/home_category.dart';
+import 'package:shibrawi/features/Home/presstion/widget/home_popular_restaurants.dart';
+import 'package:shibrawi/features/Home/presstion/widget/home_search_bar.dart';
+import 'package:shibrawi/features/Home/presstion/widget/home_title.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
