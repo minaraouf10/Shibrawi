@@ -29,7 +29,7 @@ class MenuScreen extends StatelessWidget {
                 const MenuBody(),
               ],
             ),
-            Height(75.0)
+            const Height(75.0)
           ],
         ),
       ),

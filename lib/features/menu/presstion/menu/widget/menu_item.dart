@@ -87,7 +87,7 @@ class MenuItem extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Image.asset(
+              child: Image.network(
                 icon,
                 fit: BoxFit.cover,
               ),

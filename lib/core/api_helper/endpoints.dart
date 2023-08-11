@@ -7,7 +7,7 @@ abstract class Endpoints {
   static const profile = 'profile';
   static const logout = 'logout';
   static const home = 'home';
-  static const otp = '/auth/continue/login';
+  static const categories = '/categories';
   static const projectsHome = '/project/mobile/list';
   static const projectDetails = '/project/single/';
   static const sendMeetingRequest = '/request/sendMeetingRequest';
