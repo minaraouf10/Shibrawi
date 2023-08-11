@@ -9,7 +9,5 @@ abstract class Endpoints {
   static const home = 'home';
   static const categories = '/categories';
   static const products = '/products';
-  static const projectsHome = '/project/mobile/list';
-  static const projectDetails = '/project/single/';
-  static const sendMeetingRequest = '/request/sendMeetingRequest';
+
 }

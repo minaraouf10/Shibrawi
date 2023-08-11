@@ -20,18 +20,8 @@ class SubItemScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: MenuSearchBar(),
             ),
-            Expanded(
-              child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                shrinkWrap: true,
-                padding: const EdgeInsetsDirectional.only(
-                  start: 20.0,
-                  end: 20.0,
-                  top: 15.0,
-                ),
-                itemCount: 5,
-                itemBuilder: (context, index) =>  Items(44),
-              ),
+            const Expanded(
+              child: Items(42),
             ),
           ],
         ),

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
@@ -46,6 +48,7 @@ class MenuBody extends ConsumerWidget {
                             RouteNames.subItemScreen,
                             arguments: data[index].id,
                           );
+                          log(data[index].id.toString(),name: 'category id');
                         },
                         child: MenuItem(
                           icon: data[index].image,
