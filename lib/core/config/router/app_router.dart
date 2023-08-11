@@ -41,8 +41,9 @@ class AppRouter {
         );
 
       case RouteNames.subItemScreen:
+        final int id = settings.arguments as int ;
         return MaterialPageRoute(
-          builder: (context) => const SubItemScreen(),
+          builder: (context) =>  SubItemScreen(id),
         );
 
       case RouteNames.itemDetailsScreen:

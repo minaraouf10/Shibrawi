@@ -24,7 +24,7 @@ class FavoritesScreen extends StatelessWidget {
                 // top: 20.0,
               ),
               itemCount: 2,
-              itemBuilder: (context, index) => const Items(),
+              itemBuilder: (context, index) =>  Items(5),
             ),
           ),
         ],

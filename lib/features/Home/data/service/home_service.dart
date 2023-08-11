@@ -16,14 +16,14 @@ class HomeService {
 
   HomeService(this.client);
 
-  Future<HomeDataModel> getHomeData() async {
-    final res = CustomResponse(
-      await client.get(Endpoints.home),
-    );
-    if (res.isError) throw res.message;
-    final data = res.data as Json;
-    final homeModel = HomeDataModel.fromJson(data);
-    log(homeModel.toString());
-    return homeModel;
-  }
+  // Future<HomeDataModel> getHomeData() async {
+  //   final res = CustomResponse(
+  //     await client.get(Endpoints.home),
+  //   );
+  //   if (res.isError) throw res.message;
+  //   final data = res.data as Json;
+  //   final homeModel = HomeDataModel.fromJson(data);
+  //   log(homeModel.toString());
+  //   return homeModel;
+  // }
 }

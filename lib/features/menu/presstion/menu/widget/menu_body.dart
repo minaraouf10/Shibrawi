@@ -36,19 +36,23 @@ class MenuBody extends ConsumerWidget {
               child: SizedBox(
                 height: 120 * data.length + 1,
                 child: ListView.separated(
-                  physics: const NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
                       return InkWell(
-                          highlightColor: Colors.transparent,
-                          splashColor: Colors.transparent,
-                          onTap: () {
-                            context.pushNamed(RouteNames.subItemScreen);
-                          },
-                          child: MenuItem(
-                            icon: data[index].image,
-                            title: data[index].name,
-                            items: '45 Items',
-                          ));
+                        highlightColor: Colors.transparent,
+                        splashColor: Colors.transparent,
+                        onTap: () {
+                          context.pushNamed(
+                            RouteNames.subItemScreen,
+                            arguments: data[index].id,
+                          );
+                        },
+                        child: MenuItem(
+                          icon: data[index].image,
+                          title: data[index].name,
+                          items: '45 Items',
+                        ),
+                      );
                     },
                     separatorBuilder: (context, index) {
                       return const Height(40.0);
@@ -70,8 +74,5 @@ class MenuBody extends ConsumerWidget {
         );
       },
     );
-
-    // return
-    //;
   }
 }

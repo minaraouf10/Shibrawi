@@ -4,7 +4,7 @@ import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/items.dart
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/sub_item_menu_title.dart';
 
 class SubItemScreen extends StatelessWidget {
-  const SubItemScreen({Key? key}) : super(key: key);
+  const SubItemScreen(id, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class SubItemScreen extends StatelessWidget {
                   top: 15.0,
                 ),
                 itemCount: 5,
-                itemBuilder: (context, index) => const Items(),
+                itemBuilder: (context, index) =>  Items(44),
               ),
             ),
           ],

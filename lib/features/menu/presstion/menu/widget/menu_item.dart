@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
@@ -30,7 +31,7 @@ class MenuItem extends StatelessWidget {
               vertical: 10.0,
             ),
             height: 80.0,
-            width: MediaQuery.of(context).size.width * 0.75,
+            width: context.width * 0.75,
             decoration: BoxDecoration(
               color: AppColors.white,
               borderRadius: BorderRadius.circular(10),

@@ -11,6 +11,7 @@ class MenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -27,9 +28,10 @@ class MenuScreen extends StatelessWidget {
                 ),
                 const Height(25.0),
                 const MenuBody(),
+                const Height(75.0)
               ],
             ),
-            const Height(75.0)
+
           ],
         ),
       ),
