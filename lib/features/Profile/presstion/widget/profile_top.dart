@@ -59,7 +59,8 @@ class ProfileTop extends StatelessWidget {
             const Height(10.0),
             Consumer(
               builder: (BuildContext context, WidgetRef ref, Widget? child) {
-                final profileTopProvider = ref.watch(profileProviderScreen);
+                final profileTopProvider = ref.read(profileProviderScreen);
+                ref.watch(profileTopProvider.isSuccess.provider);
                 return Text(
                   profileTopProvider.nameController.text,
                   style: const TextStyle(

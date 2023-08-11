@@ -6,24 +6,30 @@ import 'package:shibrawi/core/api_helper/dio_client.dart';
 import 'package:shibrawi/core/api_helper/dio_providers.dart';
 import 'package:shibrawi/core/api_helper/endpoints.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
-import 'package:shibrawi/features/Home/data/model/home_model.dart';
+import 'package:shibrawi/features/menu/data/model/menu_model.dart';
 
-final homeServiceProvider =
-    Provider<HomeService>((ref) => HomeService(ref.read(dioClientProvider)));
+final menuServiceProvider =
+    Provider<MenuService>((ref) => MenuService(ref.read(dioClientProvider)));
 
-class HomeService {
+class MenuService {
   final DioClient client;
 
-  HomeService(this.client);
+  MenuService(this.client);
 
-  Future<HomeDataModel> getHomeData() async {
+  Map<int, bool> favorite = {};
+
+
+  Future<MenuDataModel> getProductData() async {
     final res = CustomResponse(
       await client.get(Endpoints.home),
     );
     if (res.isError) throw res.message;
     final data = res.data as Json;
-    final homeModel = HomeDataModel.fromJson(data);
-    log(homeModel.toString());
-    return homeModel;
+    final menuModel = MenuDataModel.fromJson(data);
+    for (var element in menuModel.products) {
+      favorite.addAll({element.id: element.inFavorites});
+    }
+    log(favorite.toString());
+    return menuModel;
   }
 }

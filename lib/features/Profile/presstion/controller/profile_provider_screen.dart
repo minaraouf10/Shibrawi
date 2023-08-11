@@ -31,7 +31,7 @@ class ProfileLogic extends _ProfileStates {
       isSuccess.state = true;
     } catch (e, s) {
       isError.state = e.toString();
-      log(isError.state, stackTrace: s);
+      log(isError.state, stackTrace: s,name: 'nana');
     } finally {
       isLoading.state = false;
     }

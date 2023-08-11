@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_button.dart';
@@ -12,6 +15,9 @@ class ProfileBody extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final profileBodyProvider = ref.read(profileProviderScreen);
+    log('enter function 0');
+
+    //Future.delayed(const Duration(milliseconds: 2000),() =>  ,);
 
     return Padding(
       padding: const EdgeInsets.all(20.0),
@@ -89,9 +95,9 @@ class ProfileBody extends ConsumerWidget {
           Consumer(
               builder: (BuildContext context, WidgetRef ref, Widget? child) {
             return DefaultButton(
-               isLoading: ref.watch(profileBodyProvider.isLoading.provider),
+               //isLoading: ref.watch(profileBodyProvider.isLoading.provider),
               function: () {
-                profileBodyProvider.getProfileData();
+               // profileBodyProvider.getProfileData();
               },
               text: 'Save',
               fontSize: 16.0,

@@ -14,14 +14,15 @@ class MenuBody extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: context.height * 0.601,
+          height: 120 * 4 + 20 ,
           width: context.width * 0.27,
           decoration: const BoxDecoration(
               borderRadius: BorderRadiusDirectional.only(
                 topEnd: Radius.circular(30),
                 bottomEnd: Radius.circular(30.0),
               ),
-              color: AppColors.primary),
+              color: AppColors.primary,
+          ),
         ),
         Padding(
           padding: const EdgeInsetsDirectional.only(
