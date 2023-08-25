@@ -4,7 +4,8 @@ import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/items.dart
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/sub_item_menu_title.dart';
 
 class SubItemScreen extends StatelessWidget {
-  const SubItemScreen(id, {Key? key}) : super(key: key);
+  final int id;
+  const SubItemScreen(this.id, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +21,8 @@ class SubItemScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: MenuSearchBar(),
             ),
-            const Expanded(
-              child: Items(42),
+             Expanded(
+              child: Items(id),
             ),
           ],
         ),

@@ -1,11 +1,9 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
-import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/common/future_provider_screen.dart';
 import 'package:shibrawi/features/menu/presstion/controller/categories_provider.dart';
@@ -53,7 +51,7 @@ class MenuBody extends ConsumerWidget {
                         child: MenuItem(
                           icon: data[index].image,
                           title: data[index].name,
-                          items: '45 Items',
+                          items: data[index].id.toString(),
                         ),
                       );
                     },

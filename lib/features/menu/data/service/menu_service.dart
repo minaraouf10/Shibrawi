@@ -48,7 +48,7 @@ class MenuService {
     };
 
     final res =
-        CustomResponse(await client.get(Endpoints.products, query: query));
+        CustomResponse(await client.get(Endpoints.productsDetails, query: query));
     if (res.isError) throw res.message;
     final data = (res.data as Json)['data'] as List<dynamic>;
     final productModel =

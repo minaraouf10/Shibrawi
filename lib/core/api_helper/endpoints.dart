@@ -8,6 +8,6 @@ abstract class Endpoints {
   static const logout = 'logout';
   static const home = 'home';
   static const categories = '/categories';
-  static const products = '/products';
+  static const productsDetails = '/products';
 
 }

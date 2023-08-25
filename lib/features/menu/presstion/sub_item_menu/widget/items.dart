@@ -12,7 +12,9 @@ import 'package:shibrawi/features/common/future_provider_screen.dart';
 import 'package:shibrawi/features/menu/presstion/controller/product_provider.dart';
 
 class Items extends ConsumerWidget {
-  const Items(int id, {super.key});
+  const Items(this.categoryId, {super.key});
+
+  final int categoryId;
 
   @override
   Widget build(BuildContext context, ref) {
