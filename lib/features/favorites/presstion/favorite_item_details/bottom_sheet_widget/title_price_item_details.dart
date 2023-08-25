@@ -4,26 +4,22 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart';
-import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
-class TitlePriceItemDetails extends StatelessWidget {
-  const TitlePriceItemDetails(this.data,{super.key});
+class TitlePriceFavoriteItemDetails extends StatelessWidget {
+  const TitlePriceFavoriteItemDetails({super.key});
 
-final ProductModel data;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
-          data.name,
-          style: const TextStyle(
+        const Text(
+          'Tandoori Chicken Pizza',
+          style: TextStyle(
             fontSize: 22.0,
             fontWeight: FontWeight.w400,
             color: AppColors.loginBlack,
           ),
-           //maxLines: 2,
-          // overflow: TextOverflow.ellipsis,
         ),
         const Height(7.0),
         Row(
@@ -50,9 +46,9 @@ final ProductModel data;
                   fontWeight: FontWeight.w700,
                   color: AppColors.loginBlack),
             ),
-             Text(
-              data.price.toString(),
-              style: const TextStyle(
+            const Text(
+              '750',
+              style: TextStyle(
                   fontSize: 31.0,
                   fontWeight: FontWeight.w700,
                   color: AppColors.loginBlack),
@@ -68,9 +64,16 @@ final ProductModel data;
               color: AppColors.loginBlack),
         ),
         const Height(15.0),
-         Text(
-          data.description,
-          style: const TextStyle(
+        const Text(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+          style: TextStyle(
+              fontSize: 12.0,
+              fontWeight: FontWeight.w400,
+              color: AppColors.lightBlack),
+        ),
+        const Text(
+          'Ornare leo non mollis id cursus. Eu euismod faucibus in leo ',
+          style: TextStyle(
               fontSize: 12.0,
               fontWeight: FontWeight.w400,
               color: AppColors.lightBlack),

@@ -9,5 +9,6 @@ abstract class Endpoints {
   static const home = 'home';
   static const categories = '/categories';
   static const productsDetails = '/products';
+  static const favorites = 'favorites';
 
 }

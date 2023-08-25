@@ -47,8 +47,15 @@ class AppRouter {
         );
 
       case RouteNames.itemDetailsScreen:
+        final ProductModel itemDetailsData = settings.arguments as ProductModel;
         return MaterialPageRoute(
-          builder: (context) => const ItemDetailsScreen(),
+          builder: (context) =>  ItemDetailsScreen(itemDetailsData),
+        );
+
+      case RouteNames.favoriteItemDetailsScreen:
+        final Product itemDetailsData = settings.arguments as Product;
+        return MaterialPageRoute(
+          builder: (context) =>  FavoriteItemDetailsScreen(itemDetailsData),
         );
 
       case RouteNames.paymentScreen:

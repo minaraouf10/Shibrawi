@@ -28,10 +28,10 @@ extension ContextExtentions on BuildContext {
   }
 
   Future pushNamedAndRemoveUntil(
-    String routeName,
-    RoutePredicate predicate, {
-    Object? arguments,
-  }) async {
+      String routeName,
+      RoutePredicate predicate, {
+        Object? arguments,
+      }) async {
     return navigator.pushNamedAndRemoveUntil(
       routeName,
       predicate,
@@ -42,7 +42,7 @@ extension ContextExtentions on BuildContext {
   Future pushNamedAndRemoveAll(String routeName, {Object? arguments}) {
     return pushNamedAndRemoveUntil(
       routeName,
-      (route) => false,
+          (route) => false,
       arguments: arguments,
     );
   }
@@ -114,7 +114,7 @@ extension ShowBottomSheet on BuildContext {
       backgroundColor: Colors.transparent,
       builder: (context) => Padding(
         padding:
-            EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+        EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
         child: Container(
           width: width,
           decoration: const BoxDecoration(

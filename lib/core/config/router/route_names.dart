@@ -9,6 +9,7 @@ class RouteNames {
   static const homeScreen = '/HomeScreen';
   static const subItemScreen = '/SubItemScreen';
   static const itemDetailsScreen = '/ItemDetailsScreen';
+  static const favoriteItemDetailsScreen = '/FavoriteItemDetailsScreen';
   static const paymentScreen = '/PaymentScreen';
   static const notificationScreen = '/NotificationScreen';
   static const aboutUsScreen = '/AboutUsScreen';

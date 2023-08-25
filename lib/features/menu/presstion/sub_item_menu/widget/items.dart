@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,7 +18,7 @@ class Items extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     return ref.watchWhen(
-      provider: productProvider,
+      provider: productProvider(categoryId),
       data: (data) {
         return SizedBox(
           height: 500.0,
@@ -37,6 +36,7 @@ class Items extends ConsumerWidget {
                     onTap: () {
                       context.pushNamed(
                         RouteNames.itemDetailsScreen,
+                        arguments: data[index]
                       );
                     },
                     child: Stack(
@@ -82,17 +82,16 @@ class Items extends ConsumerWidget {
                                     maxLines: 1,
                                   ),
                                   const Height(5.0),
-                                  SingleChildScrollView(
-                                    scrollDirection: Axis.horizontal,
-                                    child: Row(
-                                      children: [
-                                        (data[index].inFavorites)
-                                            ? SvgPicture.asset(
-                                                AssetsManger.orangeStar)
-                                            : SvgPicture.asset(
-                                                AssetsManger.starWhite),
-                                        const Width(5.0),
-                                        Text(
+                                  Row(
+                                    children: [
+                                      (data[index].inFavorites)
+                                          ? SvgPicture.asset(
+                                              AssetsManger.orangeStar)
+                                          : SvgPicture.asset(
+                                              AssetsManger.starWhite),
+                                      const Width(5.0),
+                                      Expanded(
+                                        child: Text(
                                           data[index].description,
                                           style: const TextStyle(
                                             fontSize: 12.0,
@@ -100,9 +99,9 @@ class Items extends ConsumerWidget {
                                             color: AppColors.white,
                                           ),
                                           maxLines: 1,
-                                        )
-                                      ],
-                                    ),
+                                        ),
+                                      )
+                                    ],
                                   )
                                 ],
                               ),
@@ -126,7 +125,7 @@ class Items extends ConsumerWidget {
       error: (error, stackTrace) {
         return Center(
           child: Builder(builder: (context) {
-            log(error.toString(), name: 'mina', stackTrace: stackTrace);
+            log(error.toString(), stackTrace: stackTrace);
             return Text(
               error.toString(),
             );
