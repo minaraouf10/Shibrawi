@@ -12,8 +12,7 @@ import 'package:shibrawi/features/common/future_provider_screen.dart';
 import 'package:shibrawi/features/favorites/presstion/controller/favorite_provider.dart';
 
 class FavoriteItem extends ConsumerWidget {
-  const FavoriteItem( {super.key});
-
+  const FavoriteItem({super.key});
 
   @override
   Widget build(BuildContext context, ref) {
@@ -30,95 +29,88 @@ class FavoriteItem extends ConsumerWidget {
             ),
             physics: const BouncingScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
-              return
-                   Column(
+              return Column(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      context.pushNamed(RouteNames.favoriteItemDetailsScreen,
+                          arguments: data[index],);
+                    },
+                    child: Stack(
                       children: [
-                        InkWell(
-                          onTap: () {
-                            context.pushNamed(
-                              RouteNames.favoriteItemDetailsScreen,
-                              arguments: data[index]
-                            );
-                          },
-                          child: Stack(
-                            children: [
-                              Image.network(
-                                data[index].image,
-                                fit: BoxFit.cover,
-                                width: context.width,
-                                height: 200,
+                        Image.network(
+                          data[index].image,
+                          fit: BoxFit.cover,
+                          width: context.width,
+                          height: 200,
+                        ),
+                        Container(
+                          width: context.width,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.bottomCenter,
+                              end: Alignment.topCenter,
+                              stops: const [0, 0.3],
+                              colors: [
+                                Colors.black.withOpacity(0.7799999713897705),
+                                Colors.transparent
+                              ],
+                            ),
+                          ),
+                          child: Align(
+                            alignment: AlignmentDirectional.bottomStart,
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.only(
+                                start: 21,
+                                bottom: 10.0,
                               ),
-                              Container(
-                                width: context.width,
-                                height: 200,
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(
-                                    begin: Alignment.bottomCenter,
-                                    end: Alignment.topCenter,
-                                    stops: const [0, 0.3],
-                                    colors: [
-                                      Colors.black
-                                          .withOpacity(0.7799999713897705),
-                                      Colors.transparent
-                                    ],
-                                  ),
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional.bottomStart,
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.only(
-                                      start: 21,
-                                      bottom: 10.0,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Text(
+                                    data[index].name,
+                                    style: const TextStyle(
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.w700,
+                                      color: AppColors.white,
                                     ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Text(
-                                          data[index].name,
+                                    maxLines: 1,
+                                  ),
+                                  const Height(5.0),
+                                  Row(
+                                    children: [
+                                      // (data[index].inFavorites)
+                                      //        ?
+                                      SvgPicture.asset(AssetsManger.orangeStar),
+                                      // : SvgPicture.asset(
+                                      //     AssetsManger.starWhite),
+                                      const Width(5.0),
+                                      Expanded(
+                                        child: Text(
+                                          data[index].description,
                                           style: const TextStyle(
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.w700,
+                                            fontSize: 12.0,
+                                            fontWeight: FontWeight.w400,
                                             color: AppColors.white,
                                           ),
                                           maxLines: 1,
                                         ),
-                                        const Height(5.0),
-                                        Row(
-                                          children: [
-                                           // (data[index].inFavorites)
-                                        //        ?
-                                        SvgPicture.asset(
-                                                    AssetsManger.orangeStar),
-                                                // : SvgPicture.asset(
-                                                //     AssetsManger.starWhite),
-                                            const Width(5.0),
-                                            Expanded(
-                                              child: Text(
-                                                data[index].description,
-                                                style: const TextStyle(
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.w400,
-                                                  color: AppColors.white,
-                                                ),
-                                                maxLines: 1,
-                                              ),
-                                            ),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                      ),
+                                    ],
+                                  )
+                                ],
                               ),
-                            ],
+                            ),
                           ),
                         ),
-                        const Height(8.0)
                       ],
-                    );
-
+                    ),
+                  ),
+                  const Height(8.0)
+                ],
+              );
             },
             separatorBuilder: (context, index) {
               return const Height(20.0);

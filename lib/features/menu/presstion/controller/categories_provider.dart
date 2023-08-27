@@ -7,6 +7,6 @@ import 'package:shibrawi/features/menu/data/service/menu_service.dart';
 final categoriesProvider = FutureProvider<List<CategoryModel>>((ref) async {
   final menuService = ref.read(menuServiceProvider);
   final categories = await menuService.getCategoryData();
-  log(categories.toString(),name: 'categoriesProvider');
+  log(categories.toString(), name: 'categoriesProvider');
   return categories;
 });

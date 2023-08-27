@@ -4,19 +4,18 @@ import 'package:shibrawi/features/menu/presstion/item_details/widget/item_detail
 import 'package:shibrawi/features/menu/presstion/item_details/widget/top_screen.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
-  const ItemDetailsScreen(this.itemDetailsData,{Key? key})
+  const ItemDetailsScreen(this.itemDetailsData, {Key? key})
       : super(key: key); // Fix the super(key) argument
 
   final ProductModel itemDetailsData;
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Stack(
-          children:  [
-             SizedBox(
+          children: [
+            SizedBox(
               height: 245,
               child: TopScreenItemDetails(itemDetailsData),
             ),

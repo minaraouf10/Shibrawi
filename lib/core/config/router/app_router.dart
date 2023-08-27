@@ -41,21 +41,21 @@ class AppRouter {
         );
 
       case RouteNames.subItemScreen:
-        final int id = settings.arguments as int ;
+        final CategoryModel categoryData = settings.arguments as CategoryModel;
         return MaterialPageRoute(
-          builder: (context) =>  SubItemScreen(id),
+          builder: (context) => SubItemScreen(categoryData),
         );
 
       case RouteNames.itemDetailsScreen:
         final ProductModel itemDetailsData = settings.arguments as ProductModel;
         return MaterialPageRoute(
-          builder: (context) =>  ItemDetailsScreen(itemDetailsData),
+          builder: (context) => ItemDetailsScreen(itemDetailsData),
         );
 
       case RouteNames.favoriteItemDetailsScreen:
         final Product itemDetailsData = settings.arguments as Product;
         return MaterialPageRoute(
-          builder: (context) =>  FavoriteItemDetailsScreen(itemDetailsData),
+          builder: (context) => FavoriteItemDetailsScreen(itemDetailsData),
         );
 
       case RouteNames.paymentScreen:

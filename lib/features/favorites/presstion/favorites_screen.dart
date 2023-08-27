@@ -16,7 +16,7 @@ class FavoritesScreen extends StatelessWidget {
             child: FavoritesTop(),
           ),
           Expanded(
-            child:  FavoriteItem(),
+            child: FavoriteItem(),
           ),
           Height(65.0)
         ],

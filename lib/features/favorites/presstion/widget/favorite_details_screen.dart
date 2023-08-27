@@ -4,18 +4,17 @@ import 'package:shibrawi/features/favorites/presstion/favorite_item_details/widg
 import 'package:shibrawi/features/favorites/presstion/favorite_item_details/widget/favorite_top_screen.dart';
 
 class FavoriteItemDetailsScreen extends StatelessWidget {
-  const FavoriteItemDetailsScreen(this.itemDetailsData,{Key? key})
+  const FavoriteItemDetailsScreen(this.itemDetailsData, {Key? key})
       : super(key: key); // Fix the super(key) argument
 
   final Product itemDetailsData;
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Stack(
-          children:  [
+          children: [
             SizedBox(
               height: 245,
               child: TopScreenItemFavoriteDetails(itemDetailsData),

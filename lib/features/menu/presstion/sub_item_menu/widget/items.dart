@@ -1,4 +1,5 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -34,10 +35,8 @@ class Items extends ConsumerWidget {
                 children: [
                   InkWell(
                     onTap: () {
-                      context.pushNamed(
-                        RouteNames.itemDetailsScreen,
-                        arguments: data[index]
-                      );
+                      context.pushNamed(RouteNames.itemDetailsScreen,
+                          arguments: data[index]);
                     },
                     child: Stack(
                       children: [

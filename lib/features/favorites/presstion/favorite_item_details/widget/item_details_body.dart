@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/title_price_item_details.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/customize_order_item_details.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/number_of_portions.dart';
@@ -10,7 +9,7 @@ import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widge
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/total_price.dart';
 
 class ItemDetailsBody extends StatelessWidget {
-  const ItemDetailsBody(this.data,{super.key});
+  const ItemDetailsBody(this.data, {super.key});
 
   final ProductModel data;
 
@@ -39,7 +38,7 @@ class ItemDetailsBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const TitlePriceFavoriteItemDetails(),
+            TitlePriceItemDetails(data),
             CustomizeOrderItemDetails(),
             const NumberOfPortions(),
             const Height(25),

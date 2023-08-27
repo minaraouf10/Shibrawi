@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
+import 'package:shibrawi/features/menu/presstion/controller/menu_provider_screen.dart';
 
-class NumberOfPortions extends StatelessWidget {
+class NumberOfPortions extends ConsumerWidget {
   const NumberOfPortions({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,ref) {
+    final numberOfPiece = ref.read(menuProviderScreen);
+
     return Row(
       children: [
         const Text(

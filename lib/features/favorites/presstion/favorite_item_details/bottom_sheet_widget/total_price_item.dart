@@ -84,7 +84,7 @@ class TotalPriceItem extends StatelessWidget {
                           const Width(18.0),
                           const Text(
                             'Add to Cart',
-                              style: TextStyle(
+                            style: TextStyle(
                               fontSize: 11.0,
                               fontWeight: FontWeight.w400,
                               color: AppColors.white,

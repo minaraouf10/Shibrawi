@@ -20,8 +20,8 @@ extension ONExt on WidgetRef {
       data: data,
       error: error ??
           (e, s) {
-              log(e.toString(), stackTrace: s, name: 'watchWhen');
-              return Text(e.toString());
+            log(e.toString(), stackTrace: s, name: 'watchWhen');
+            return Text(e.toString());
           },
       loading: loading ??
           () => const Center(child: CircularProgressIndicator.adaptive()),

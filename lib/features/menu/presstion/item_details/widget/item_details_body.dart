@@ -9,7 +9,7 @@ import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widge
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/total_price.dart';
 
 class ItemDetailsBody extends StatelessWidget {
-  const ItemDetailsBody(this.data,{super.key});
+  const ItemDetailsBody(this.data, {super.key});
 
   final ProductModel data;
 
@@ -40,7 +40,7 @@ class ItemDetailsBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               TitlePriceItemDetails(data),
+              TitlePriceItemDetails(data),
               CustomizeOrderItemDetails(),
               const NumberOfPortions(),
               const Height(25),

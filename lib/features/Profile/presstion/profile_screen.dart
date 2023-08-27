@@ -19,10 +19,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
     // Call getProfileData() when the widget is built
 
-
-
-    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {profileProvider.getProfileData(); });
-
+    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+      profileProvider.getProfileData();
+    });
 
     return SafeArea(
       child: SingleChildScrollView(

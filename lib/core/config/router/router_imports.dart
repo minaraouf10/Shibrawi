@@ -9,6 +9,7 @@ import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
 import 'package:shibrawi/features/favorites/presstion/widget/favorite_details_screen.dart';
 import 'package:shibrawi/features/intro/first_screen/first_screen.dart';
 import 'package:shibrawi/features/intro/on_boarding/on_boarding_screen.dart';
+import 'package:shibrawi/features/menu/data/model/category_model.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/item_details_screen.dart';
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/sub_item_screen.dart';

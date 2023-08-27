@@ -3,10 +3,9 @@ import 'package:shibrawi/features/menu/data/model/product_model.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/widget/item_details_screen_title.dart';
 
 class TopScreenItemDetails extends StatelessWidget {
- const TopScreenItemDetails(this.data,{super.key});
+  const TopScreenItemDetails(this.data, {super.key});
 
   final ProductModel data;
-
 
   @override
   Widget build(BuildContext context) {

@@ -9,7 +9,7 @@ import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bott
 import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/total_price.dart';
 
 class FavoriteItemDetailsBody extends StatelessWidget {
-  const FavoriteItemDetailsBody(this.data,{super.key});
+  const FavoriteItemDetailsBody(this.data, {super.key});
 
   final Product data;
 
@@ -35,16 +35,18 @@ class FavoriteItemDetailsBody extends StatelessWidget {
       child: Padding(
         padding:
             const EdgeInsetsDirectional.only(top: 30, start: 20, end: 20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const TitlePriceFavoriteItemDetails(),
-            CustomizeOrderFavoriteItemDetails(),
-            const NumberOfPortionsFavorite(),
-            const Height(25),
-             const FavoriteTotalPrice(),
-            const Height(25),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+               TitlePriceFavoriteItemDetails(data),
+              CustomizeOrderFavoriteItemDetails(),
+              const NumberOfPortionsFavorite(),
+              const Height(25),
+              const FavoriteTotalPrice(),
+              const Height(25),
+            ],
+          ),
         ),
       ),
     );

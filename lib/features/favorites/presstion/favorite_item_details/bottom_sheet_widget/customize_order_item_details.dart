@@ -11,7 +11,7 @@ class CustomizeOrderFavoriteItemDetails extends StatelessWidget {
     'item 3 ',
   ];
 
-   String? portionSelectedItem = '- Select the size of portion -';
+  String? portionSelectedItem = '- Select the size of portion -';
 
   final List<String> ingredientsItems = [
     '- Select the ingredients -',

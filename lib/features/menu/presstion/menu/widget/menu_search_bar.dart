@@ -28,7 +28,7 @@ class MenuSearchBar extends StatelessWidget {
         onChanged: (context) {},
         decoration: const InputDecoration(
           contentPadding: EdgeInsetsDirectional.only(start: 35, end: 10),
-          labelText: 'Search food',
+          labelText: 'Search ',
           enabled: false,
           prefixIcon: Padding(
             padding: EdgeInsetsDirectional.only(start: 10, end: 10),

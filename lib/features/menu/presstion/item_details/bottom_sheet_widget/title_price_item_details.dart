@@ -7,22 +7,23 @@ import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
 class TitlePriceItemDetails extends StatelessWidget {
-  const TitlePriceItemDetails(this.data,{super.key});
+  const TitlePriceItemDetails(this.data, {super.key});
 
-final ProductModel data;
+  final ProductModel data;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
+        Text(
           data.name,
           style: const TextStyle(
             fontSize: 22.0,
             fontWeight: FontWeight.w400,
             color: AppColors.loginBlack,
           ),
-           //maxLines: 2,
+          //maxLines: 2,
           // overflow: TextOverflow.ellipsis,
         ),
         const Height(7.0),
@@ -50,7 +51,7 @@ final ProductModel data;
                   fontWeight: FontWeight.w700,
                   color: AppColors.loginBlack),
             ),
-             Text(
+            Text(
               data.price.toString(),
               style: const TextStyle(
                   fontSize: 31.0,
@@ -68,7 +69,7 @@ final ProductModel data;
               color: AppColors.loginBlack),
         ),
         const Height(15.0),
-         Text(
+        Text(
           data.description,
           style: const TextStyle(
               fontSize: 12.0,

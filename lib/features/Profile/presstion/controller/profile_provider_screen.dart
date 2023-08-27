@@ -12,7 +12,8 @@ final profileProviderScreen = Provider<ProfileLogic>(
 class ProfileLogic extends _ProfileStates {
   final ProfileService profileService;
 
-  ProfileLogic(this.profileService, {required super.ref,Function()? getProfileData});
+  ProfileLogic(this.profileService,
+      {required super.ref, Function()? getProfileData});
 
   final addressController = TextEditingController();
   final nameController = TextEditingController();
@@ -31,7 +32,7 @@ class ProfileLogic extends _ProfileStates {
       isSuccess.state = true;
     } catch (e, s) {
       isError.state = e.toString();
-      log(isError.state, stackTrace: s,name: 'nana');
+      log(isError.state, stackTrace: s, name: 'nana');
     } finally {
       isLoading.state = false;
     }

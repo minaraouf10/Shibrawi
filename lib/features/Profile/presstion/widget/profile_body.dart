@@ -90,13 +90,13 @@ class ProfileBody extends ConsumerWidget {
           //     return null;
           //   },
           // ),
-           const Height(60.0),
+          const Height(60.0),
           Consumer(
               builder: (BuildContext context, WidgetRef ref, Widget? child) {
             return DefaultButton(
-               //isLoading: ref.watch(profileBodyProvider.isLoading.provider),
+              //isLoading: ref.watch(profileBodyProvider.isLoading.provider),
               function: () {
-               // profileBodyProvider.getProfileData();
+                // profileBodyProvider.getProfileData();
               },
               text: 'Save',
               fontSize: 16.0,

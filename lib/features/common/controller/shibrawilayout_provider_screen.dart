@@ -18,7 +18,7 @@ class ShibrawiLayoutLogic extends ShibrawiLayoutStates {
     const MenuScreen(),
     const FavoritesScreen(),
     const HomeScreen(),
-     const ProfileScreen(),
+    const ProfileScreen(),
     const SettingScreen(),
   ];
 

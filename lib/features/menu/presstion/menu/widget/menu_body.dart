@@ -1,4 +1,5 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
@@ -44,9 +45,9 @@ class MenuBody extends ConsumerWidget {
                         onTap: () {
                           context.pushNamed(
                             RouteNames.subItemScreen,
-                            arguments: data[index].id,
+                            arguments: data[index],
                           );
-                          log(data[index].id.toString(),name: 'category id');
+                          log(data[index].id.toString(), name: 'category id');
                         },
                         child: MenuItem(
                           icon: data[index].image,
@@ -58,7 +59,7 @@ class MenuBody extends ConsumerWidget {
                     separatorBuilder: (context, index) {
                       return const Height(40.0);
                     },
-                    itemCount: data.length),
+                    itemCount: data.length,),
               ),
             )
           ],
