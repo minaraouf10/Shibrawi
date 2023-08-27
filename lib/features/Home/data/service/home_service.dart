@@ -16,7 +16,7 @@ class HomeService {
 
   HomeService(this.client);
 
-  Future<HomeDataModel> getHomeProductData() async {
+  Future<HomeDataModel> getHomeData() async {
     final res = CustomResponse(
       await client.get(Endpoints.home),
     );

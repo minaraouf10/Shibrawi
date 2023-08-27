@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
+import 'package:shibrawi/features/Home/data/model/home_model.dart';
 
-class RestaurantsItem extends StatelessWidget {
-  const RestaurantsItem({super.key});
+class RestaurantsItem extends ConsumerWidget {
+  final HomeProductModel homeProduct;
+
+  const RestaurantsItem(this.homeProduct, {super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
-          image: const NetworkImage(
-              'https://www.attractionsinsrilanka.com/wp-content/uploads/2019/07/A-Minute-by-Tuk-Tuk.jpg'),
+          image: NetworkImage(
+            homeProduct.image,
+          ),
           height: 150.0,
           width: MediaQuery.of(context).size.width,
           fit: BoxFit.cover,
@@ -21,9 +26,9 @@ class RestaurantsItem extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const Text(
-          'Minute by tuk tuk',
-          style: TextStyle(
+        Text(
+          homeProduct.name,
+          style: const TextStyle(
             color: AppColors.loginBlack,
             fontSize: 16.0,
             fontWeight: FontWeight.w700,
@@ -34,7 +39,9 @@ class RestaurantsItem extends StatelessWidget {
         ),
         Row(
           children: [
-            SvgPicture.asset(AssetsManger.orangeStar),
+            (homeProduct.inFavorites)
+                ? SvgPicture.asset(AssetsManger.orangeStar)
+                : SvgPicture.asset(AssetsManger.starWhite),
             const SizedBox(
               width: 5.0,
             ),
@@ -47,10 +54,14 @@ class RestaurantsItem extends StatelessWidget {
             const SizedBox(
               width: 5.0,
             ),
-            const Text(
-              '(124 ratings) Café estern Food',
-              style: TextStyle(
-                color: Color(0xfffb6b7b7),
+            Expanded(
+              child: Text(
+                '(124 ratings) ${homeProduct.description}',
+                style: const TextStyle(
+                  color: AppColors.foreground,
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ],

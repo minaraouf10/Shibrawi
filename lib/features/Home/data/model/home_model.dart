@@ -30,6 +30,7 @@ class HomeProductModel {
   late dynamic discount;
   late String image;
   late String name;
+  late String description;
   late bool inFavorites;
   late bool inCart;
 
@@ -40,6 +41,7 @@ class HomeProductModel {
     discount = json['discount'];
     image = json['image'];
     name = json['name'];
+    description = json['description'];
     inFavorites = json['in_favorites'];
     inCart = json['in_cart'];
   }
