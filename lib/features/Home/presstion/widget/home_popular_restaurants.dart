@@ -1,4 +1,5 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
@@ -11,54 +12,53 @@ class HomePopularRestaurants extends ConsumerWidget {
   const HomePopularRestaurants({super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     return ref.watchWhen(
-      provider: homeProvider,
-      data: (data){
-        return Column(
-          children: [
-            Row(
-              children: [
-                const Text(
-                  'Popular Products',
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.loginBlack,
-                  ),
-                ),
-                const Spacer(),
-                DefaultTextButton(
-                  text: 'View all',
-                  fontSize: 13.0,
-                  color: AppColors.primary,
-                  fontWeight: FontWeight.w400,
-                  function: () {},
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            ...List.generate(
-              data.products.length,
-                  (index) => Column(
+        provider: homeProvider,
+        data: (data) {
+          return Column(
+            children: [
+              Row(
                 children: [
-                   RestaurantsItem(data.products[index]),
-                //  if (index != 3) const Height(20),
+                  const Text(
+                    'Popular Products',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.loginBlack,
+                    ),
+                  ),
+                  const Spacer(),
+                  DefaultTextButton(
+                    text: 'View all',
+                    fontSize: 13.0,
+                    color: AppColors.primary,
+                    fontWeight: FontWeight.w400,
+                    function: () {},
+                  ),
                 ],
               ),
-            ),
-          ],
-        );
-      },
-      error: (error, stackTrace) {
-        log(error.toString(),stackTrace: stackTrace);
-        return Text(error.toString());
-      },
-      loading: (){
-        return const Center(child: CircularProgressIndicator());
-      }
-    );
+              const SizedBox(
+                height: 20,
+              ),
+              ...List.generate(
+                data.products.length,
+                (index) => Column(
+                  children: [
+                    RestaurantsItem(data.products[index]),
+                    //  if (index != 3) const Height(20),
+                  ],
+                ),
+              ),
+            ],
+          );
+        },
+        error: (error, stackTrace) {
+          log(error.toString(), stackTrace: stackTrace);
+          return Text(error.toString());
+        },
+        loading: () {
+          return const Center(child: CircularProgressIndicator());
+        });
   }
 }

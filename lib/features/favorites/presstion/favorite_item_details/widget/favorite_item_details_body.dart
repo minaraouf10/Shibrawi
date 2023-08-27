@@ -39,7 +39,7 @@ class FavoriteItemDetailsBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               TitlePriceFavoriteItemDetails(data),
+              TitlePriceFavoriteItemDetails(data),
               CustomizeOrderFavoriteItemDetails(),
               const NumberOfPortionsFavorite(),
               const Height(25),

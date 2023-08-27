@@ -8,7 +8,8 @@ import 'package:shibrawi/features/setting/data/model/notification/notification_m
 
 class NotificationItem extends StatelessWidget {
   final NotificationData notificationData;
-  const NotificationItem(this.notificationData,{super.key});
+
+  const NotificationItem(this.notificationData, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class NotificationItem extends StatelessWidget {
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children:  [
+                  children: [
                     Text(
                       notificationData.title,
                       style: const TextStyle(

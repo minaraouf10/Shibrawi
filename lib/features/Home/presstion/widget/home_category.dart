@@ -17,7 +17,7 @@ class HomeCategory extends ConsumerWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
-            itemBuilder: (context, index) =>  CategoryItem(data.banners[index]),
+            itemBuilder: (context, index) => CategoryItem(data.banners[index]),
             separatorBuilder: (context, index) => const SizedBox(
               width: 10,
             ),

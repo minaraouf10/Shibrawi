@@ -37,29 +37,30 @@ class MenuBody extends ConsumerWidget {
               child: SizedBox(
                 height: 120 * data.length + 1,
                 child: ListView.separated(
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      return InkWell(
-                        highlightColor: Colors.transparent,
-                        splashColor: Colors.transparent,
-                        onTap: () {
-                          context.pushNamed(
-                            RouteNames.subItemScreen,
-                            arguments: data[index],
-                          );
-                          log(data[index].id.toString(), name: 'category id');
-                        },
-                        child: MenuItem(
-                          icon: data[index].image,
-                          title: data[index].name,
-                          items: data[index].id.toString(),
-                        ),
-                      );
-                    },
-                    separatorBuilder: (context, index) {
-                      return const Height(40.0);
-                    },
-                    itemCount: data.length,),
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    return InkWell(
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
+                      onTap: () {
+                        context.pushNamed(
+                          RouteNames.subItemScreen,
+                          arguments: data[index],
+                        );
+                        log(data[index].id.toString(), name: 'category id');
+                      },
+                      child: MenuItem(
+                        icon: data[index].image,
+                        title: data[index].name,
+                        items: data[index].id.toString(),
+                      ),
+                    );
+                  },
+                  separatorBuilder: (context, index) {
+                    return const Height(40.0);
+                  },
+                  itemCount: data.length,
+                ),
               ),
             )
           ],

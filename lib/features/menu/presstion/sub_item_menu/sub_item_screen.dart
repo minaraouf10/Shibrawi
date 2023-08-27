@@ -15,7 +15,7 @@ class SubItemScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-             Padding(
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: SubItemMenuTitle(categoryData.name),
             ),

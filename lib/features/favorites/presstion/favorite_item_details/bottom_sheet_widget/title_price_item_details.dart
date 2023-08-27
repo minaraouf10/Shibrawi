@@ -8,14 +8,15 @@ import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
 
 class TitlePriceFavoriteItemDetails extends StatelessWidget {
   final Product data;
-  const TitlePriceFavoriteItemDetails(this.data,{super.key});
+
+  const TitlePriceFavoriteItemDetails(this.data, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text(
+        Text(
           data.name,
           style: const TextStyle(
             fontSize: 22.0,
@@ -48,7 +49,7 @@ class TitlePriceFavoriteItemDetails extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   color: AppColors.loginBlack),
             ),
-             Text(
+            Text(
               data.price.toString(),
               style: const TextStyle(
                   fontSize: 31.0,
@@ -66,14 +67,13 @@ class TitlePriceFavoriteItemDetails extends StatelessWidget {
               color: AppColors.loginBlack),
         ),
         const Height(15.0),
-         Text(
+        Text(
           data.description,
           style: const TextStyle(
               fontSize: 12.0,
               fontWeight: FontWeight.w400,
               color: AppColors.lightBlack),
         ),
-
         const Height(15.5),
         const DefaultDivider(),
       ],

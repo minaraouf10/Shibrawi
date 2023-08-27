@@ -41,7 +41,7 @@ class MenuLogic extends _MenuStates {
     } finally {
       isLoading.state = false;
     }
-    return pieceController ;
+    return pieceController;
   }
 
   Future<int> minusNumberOfPiece(pieceController) async {

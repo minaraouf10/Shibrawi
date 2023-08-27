@@ -6,7 +6,8 @@ import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
 class SubItemMenuTitle extends StatelessWidget {
   final String categoryName;
-  const SubItemMenuTitle(this.categoryName,{super.key});
+
+  const SubItemMenuTitle(this.categoryName, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class SubItemMenuTitle extends StatelessWidget {
                 },
                 child: const Icon(Icons.arrow_back_ios_new_outlined)),
             const Width(20.4),
-             Text(
+            Text(
               categoryName,
               style: const TextStyle(
                 fontSize: 24,

@@ -8,7 +8,7 @@ class NumberOfPortions extends ConsumerWidget {
   const NumberOfPortions({super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     final numberOfPiece = ref.read(menuProviderScreen);
 
     return Row(

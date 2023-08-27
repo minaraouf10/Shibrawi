@@ -9,30 +9,31 @@ class NotificationScreen extends ConsumerWidget {
   const NotificationScreen({super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     return ref.watchWhen(
-      provider: notificationProvider,
-      data: (data){
-        return Scaffold(
-          body: SafeArea(
-            child: Padding(
-              padding: const EdgeInsetsDirectional.symmetric(horizontal: 20.0),
-              child: Column(
-                children: [
-                  const NotificationTop(),
-                  Expanded(
-                    child: ListView.builder(
-                      physics: const BouncingScrollPhysics(),
-                      itemBuilder: (context, index) =>  NotificationItem(data.notification[index]),
-                      itemCount: data.notification.length,
+        provider: notificationProvider,
+        data: (data) {
+          return Scaffold(
+            body: SafeArea(
+              child: Padding(
+                padding:
+                    const EdgeInsetsDirectional.symmetric(horizontal: 20.0),
+                child: Column(
+                  children: [
+                    const NotificationTop(),
+                    Expanded(
+                      child: ListView.builder(
+                        physics: const BouncingScrollPhysics(),
+                        itemBuilder: (context, index) =>
+                            NotificationItem(data.notification[index]),
+                        itemCount: data.notification.length,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-        );
-      }
-    );
+          );
+        });
   }
 }

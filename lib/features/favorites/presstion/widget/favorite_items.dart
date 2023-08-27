@@ -33,8 +33,10 @@ class FavoriteItem extends ConsumerWidget {
                 children: [
                   InkWell(
                     onTap: () {
-                      context.pushNamed(RouteNames.favoriteItemDetailsScreen,
-                          arguments: data[index],);
+                      context.pushNamed(
+                        RouteNames.favoriteItemDetailsScreen,
+                        arguments: data[index],
+                      );
                     },
                     child: Stack(
                       children: [

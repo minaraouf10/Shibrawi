@@ -1,7 +1,7 @@
-class NotificationModel{
+class NotificationModel {
   late final List<NotificationData> notification = [];
 
-  NotificationModel.fromJson(Map<String, dynamic>json){
+  NotificationModel.fromJson(Map<String, dynamic> json) {
     json['data'].forEach((element) {
       notification.add(NotificationData.fromJson(element));
     });
@@ -13,7 +13,7 @@ class NotificationData {
   late String title;
   late String message;
 
-  NotificationData.fromJson(Map<String,dynamic>json){
+  NotificationData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['title'];
     message = json['message'];
