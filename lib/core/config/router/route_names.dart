@@ -16,6 +16,8 @@ class RouteNames {
   static const inboxScreen = '/InboxScreen';
   static const ordersScreen = '/OrdersScreen';
   static const checkoutScreen = '/CheckoutScreen';
+  static const editProfile = '/EditProfileScreen';
+  static const searchScreen = '/SearchScreen';
 
   // static const profileSettings = '/profile-settings';
   static const accountSettings = '/account-settings';
@@ -26,7 +28,7 @@ class RouteNames {
 
   static const updatePassword = '/update_password';
   static const deleteAccount = '/delete_user';
-  static const editProfile = '/edit_profile';
+
 
 //RouteNames._();
 }

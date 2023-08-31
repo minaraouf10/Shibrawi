@@ -27,4 +27,18 @@ class ProfileService {
     final userModel = UserModel.fromJson(data);
     return userModel;
   }
+
+  Future<void> logOutService() async => UserPrefs.deleteUserToken();
+
+  Future<UserModel> editProfile(String name, String email, String phone) async {
+    final body = {"name": name, "phone": phone, "email": email};
+
+    final res = CustomResponse(
+      await client.put(Endpoints.updateProfile, body: body),
+    );
+    if(res.isError) throw res.message;
+    final data = res.data as Json;
+    final userModel = UserModel.fromJson(data);
+    return userModel;
+  }
 }

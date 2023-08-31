@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/features/Profile/presstion/controller/profile_provider_screen.dart';
-import 'package:shibrawi/features/Profile/presstion/widget/profile_body.dart';
-import 'package:shibrawi/features/Profile/presstion/widget/profile_top.dart';
+import 'package:shibrawi/features/Profile/presstion/profile/widget/profile_body.dart';
+import 'package:shibrawi/features/Profile/presstion/profile/widget/profile_top.dart';
 
 class ProfileScreen extends ConsumerStatefulWidget {
   const ProfileScreen({super.key});

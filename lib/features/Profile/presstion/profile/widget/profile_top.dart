@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
+import 'package:shibrawi/core/config/router/route_names.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
@@ -46,14 +48,19 @@ class ProfileTop extends StatelessWidget {
               children: [
                 SvgPicture.asset(AssetsManger.editIcon),
                 const Width(5.0),
-                const Text(
-                  'Edit Profile',
-                  style: TextStyle(
-                    fontSize: 10.0,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.primary,
-                  ),
+                 InkWell(
+                   highlightColor: Colors.transparent,
+                   splashColor: Colors.transparent,
+                   onTap: () => context.pushNamed(RouteNames.editProfile) ,
+                   child: const Text(
+                    'Edit Profile',
+                    style: TextStyle(
+                      fontSize: 10.0,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.primary,
+                    ),
                 ),
+                 ),
               ],
             ),
             const Height(10.0),
@@ -72,18 +79,26 @@ class ProfileTop extends StatelessWidget {
               },
             ),
             const Height(10.0),
-            InkWell(
-              highlightColor: Colors.transparent,
-              splashColor: Colors.transparent,
-              onTap: () {},
-              child: const Text(
-                'Sign Out',
-                style: TextStyle(
-                  fontSize: 11.0,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.lightBlack,
-                ),
-              ),
+            Consumer(
+              builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                final profileTopProvider = ref.read(profileProviderScreen);
+                return InkWell(
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  onTap: () {
+                    profileTopProvider.logOut();
+                    context.pushNamed(RouteNames.loginScreen);
+                  },
+                  child: const Text(
+                    'Sign Out',
+                    style: TextStyle(
+                      fontSize: 11.0,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.lightBlack,
+                    ),
+                  ),
+                );
+              },
             ),
           ],
         ),

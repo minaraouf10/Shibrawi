@@ -87,9 +87,18 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => const CheckoutScreen(),
         );
+
+      case RouteNames.editProfile:
+        return MaterialPageRoute(
+          builder: (context) => const EditProfileScreen(),
+        );
+
+      case RouteNames.searchScreen:
+        return MaterialPageRoute(
+          builder: (context) => const  SearchScreen(),
+        );
     }
   }
-
 // MaterialPageRoute get onBoarding => MaterialPageRoute(
 //       builder: (_) => OnBoardingScreen(),
 //     );

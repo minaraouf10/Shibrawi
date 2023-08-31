@@ -37,6 +37,42 @@ class ProfileLogic extends _ProfileStates {
       isLoading.state = false;
     }
   }
+
+  editProfileData() async {
+    try {
+      isLoading.state = true;
+
+      final userModel = await profileService.editProfile(
+        nameController.text,
+        emailController.text,
+        phoneController.text,
+      );
+      nameController.text = userModel.name;
+      emailController.text = userModel.email;
+      phoneController.text = userModel.phone;
+      getProfileData();
+      log(userModel.name, name: 'edit profile');
+      isSuccess.state = true;
+    } catch (e, s) {
+      isError.state = e.toString();
+      log(isError.state, stackTrace: s, name: 'nana');
+    } finally {
+      isLoading.state = false;
+    }
+  }
+
+  logOut() async {
+    try {
+      isLoading.state = true;
+      profileService.logOutService();
+      isSuccess.state = true;
+    } catch (e, s) {
+      isError.state = e.toString();
+      log(isError.state, stackTrace: s, name: 'nana');
+    } finally {
+      isLoading.state = false;
+    }
+  }
 }
 
 class _ProfileStates {

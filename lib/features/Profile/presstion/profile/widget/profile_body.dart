@@ -25,6 +25,7 @@ class ProfileBody extends ConsumerWidget {
           TextForm(
             controller: profileBodyProvider.nameController,
             labelText: tr.name,
+            readOnly: true,
             validate: (String? value) {
               if (value!.isEmpty) {
                 return tr.name_not_empty;
@@ -36,6 +37,7 @@ class ProfileBody extends ConsumerWidget {
           TextForm(
             controller: profileBodyProvider.emailController,
             labelText: tr.email,
+            readOnly: true,
             validate: (String? value) {
               if (value!.isEmpty) {
                 return tr.email_not_empty;
@@ -47,6 +49,7 @@ class ProfileBody extends ConsumerWidget {
           TextForm(
             controller: profileBodyProvider.phoneController,
             labelText: tr.mobile,
+            readOnly: true,
             validate: (String? value) {
               if (value!.isEmpty) {
                 return tr.email_not_empty;
@@ -91,21 +94,21 @@ class ProfileBody extends ConsumerWidget {
           //   },
           // ),
           const Height(60.0),
-          Consumer(
-              builder: (BuildContext context, WidgetRef ref, Widget? child) {
-            return DefaultButton(
-              //isLoading: ref.watch(profileBodyProvider.isLoading.provider),
-              function: () {
-                // profileBodyProvider.getProfileData();
-              },
-              text: 'Save',
-              fontSize: 16.0,
-              isUpperCase: false,
-            );
-          }),
-          const SizedBox(
-            height: 80.0,
-          ),
+          // Consumer(
+          //     builder: (BuildContext context, WidgetRef ref, Widget? child) {
+          //   return DefaultButton(
+          //     //isLoading: ref.watch(profileBodyProvider.isLoading.provider),
+          //     function: () {
+          //       // profileBodyProvider.getProfileData();
+          //     },
+          //     text: 'Save',
+          //     fontSize: 16.0,
+          //     isUpperCase: false,
+          //   );
+          // }),
+          // const SizedBox(
+          //   height: 80.0,
+          // ),
         ],
       ),
     );

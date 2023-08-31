@@ -15,6 +15,7 @@ class TextForm extends StatelessWidget {
     this.onSubmitted,
     required this.validate,
     this.onChange,
+    this.readOnly = false,
     this.textAlign = TextAlign.start,
   }) : super(key: key);
 
@@ -30,6 +31,7 @@ class TextForm extends StatelessWidget {
   final FormFieldValidator<String>? onSubmitted;
   final ValueChanged<String>? onChange;
   final TextAlign textAlign;
+  final bool readOnly;
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +53,7 @@ class TextForm extends StatelessWidget {
         obscureText: isPassword,
         enableSuggestions: false,
         autocorrect: false,
+        readOnly: readOnly,
         validator: validate,
         onChanged: onChange,
         onFieldSubmitted: onSubmitted,

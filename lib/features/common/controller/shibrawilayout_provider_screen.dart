@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/Home/presstion/home_screen.dart';
-import 'package:shibrawi/features/Profile/presstion/profile_screen.dart';
+import 'package:shibrawi/features/Profile/presstion/profile/profile_screen.dart';
 import 'package:shibrawi/features/favorites/presstion/favorites_screen.dart';
 import 'package:shibrawi/features/menu/presstion/menu/menu_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/setting_screen/setting_screen.dart';
