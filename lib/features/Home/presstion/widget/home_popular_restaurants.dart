@@ -58,7 +58,7 @@ class HomePopularRestaurants extends ConsumerWidget {
           return Text(error.toString());
         },
         loading: () {
-          return const Center(child: CircularProgressIndicator());
+          return Container();
         });
   }
 }

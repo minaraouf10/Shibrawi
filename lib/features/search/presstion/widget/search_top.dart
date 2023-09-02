@@ -11,7 +11,7 @@ class SearchTop extends ConsumerWidget {
   const SearchTop({super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     final searchTopProvider = ref.read(searchProviderScreen);
 
     return Padding(
@@ -69,7 +69,6 @@ class SearchTop extends ConsumerWidget {
                     size: 27,
                   ),
                 ),
-                //prefixIcon: SvgPicture.asset('assets/icons/search_icon.svg',width: 5,height: 5,),
                 border: InputBorder.none,
               ),
             ),

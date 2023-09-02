@@ -48,19 +48,19 @@ class ProfileTop extends StatelessWidget {
               children: [
                 SvgPicture.asset(AssetsManger.editIcon),
                 const Width(5.0),
-                 InkWell(
-                   highlightColor: Colors.transparent,
-                   splashColor: Colors.transparent,
-                   onTap: () => context.pushNamed(RouteNames.editProfile) ,
-                   child: const Text(
+                InkWell(
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  onTap: () => context.pushNamed(RouteNames.editProfile),
+                  child: const Text(
                     'Edit Profile',
                     style: TextStyle(
                       fontSize: 10.0,
                       fontWeight: FontWeight.w400,
                       color: AppColors.primary,
                     ),
+                  ),
                 ),
-                 ),
               ],
             ),
             const Height(10.0),

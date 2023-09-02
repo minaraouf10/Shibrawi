@@ -9,6 +9,7 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/common/future_provider_screen.dart';
+import 'package:shibrawi/features/favorites/presstion/controller/add_favorite_provider_screen.dart';
 import 'package:shibrawi/features/favorites/presstion/controller/favorite_provider.dart';
 
 class FavoriteItem extends ConsumerWidget {
@@ -16,6 +17,8 @@ class FavoriteItem extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
+    final changeFavorite = ref.watch(addFavoriteProviderScreen);
+    ref.watch(changeFavorite.isLoading.provider);
     return ref.watchWhen(
       provider: favoriteProvider,
       data: (data) {
@@ -29,6 +32,7 @@ class FavoriteItem extends ConsumerWidget {
             ),
             physics: const BouncingScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
+              log(data[index].id.toString(),name: 'Favorite Item');
               return Column(
                 children: [
                   InkWell(
@@ -85,7 +89,10 @@ class FavoriteItem extends ConsumerWidget {
                                     children: [
                                       // (data[index].inFavorites)
                                       //        ?
-                                      SvgPicture.asset(AssetsManger.orangeStar),
+                                      InkWell(
+                                        onTap: () => changeFavorite.changeFavorite(data[index].id),
+                                          child:
+                                          SvgPicture.asset(AssetsManger.orangeStar)),
                                       // : SvgPicture.asset(
                                       //     AssetsManger.starWhite),
                                       const Width(5.0),

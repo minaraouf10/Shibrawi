@@ -36,7 +36,7 @@ class ProfileService {
     final res = CustomResponse(
       await client.put(Endpoints.updateProfile, body: body),
     );
-    if(res.isError) throw res.message;
+    if (res.isError) throw res.message;
     final data = res.data as Json;
     final userModel = UserModel.fromJson(data);
     return userModel;

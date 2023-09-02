@@ -95,7 +95,14 @@ class AppRouter {
 
       case RouteNames.searchScreen:
         return MaterialPageRoute(
-          builder: (context) => const  SearchScreen(),
+          builder: (context) => const SearchScreen(),
+        );
+
+      case RouteNames.itemSearchDetailsScreen:
+        final SearchData itemSearchDetailsData =
+            settings.arguments as SearchData;
+        return MaterialPageRoute(
+          builder: (context) => ItemSearchDetailsScreen(itemSearchDetailsData),
         );
     }
   }

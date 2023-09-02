@@ -16,45 +16,33 @@ class MenuLogic extends _MenuStates {
   final MenuService menuService;
   List<CategoryModel> categories = [];
 
-  final TextEditingController pieceController = TextEditingController();
+  final TextEditingController pieceController =
+      TextEditingController(text: '0');
 
-// void getCategories() async{
-//   try{
-//     isLoading.state = true;
-//     categories = await menuService.getCategoryData();
-//     isSuccess.state = true;
-//   } catch(e,s){
-//     isError.state = e.toString();
-//     log(isError.state, stackTrace: s);
-//   } finally{
-//     isLoading.state = false;
-//   }
-// }
-
-  Future<int> addNumberOfPiece(pieceController) async {
+  Future<void> addNumberOfPiece() async {
     try {
       isLoading.state = true;
-      ref.watch(pieceController.notifier).state++;
+      final oldCount = int.parse(pieceController.text);
+      pieceController.text = (oldCount + 1).toString();
     } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s);
     } finally {
       isLoading.state = false;
     }
-    return pieceController;
   }
 
-  Future<int> minusNumberOfPiece(pieceController) async {
+  Future<void> minusNumberOfPiece() async {
     try {
       isLoading.state = true;
-      ref.watch(pieceController.notifier).state--;
+      final oldCount = int.parse(pieceController.text);
+      pieceController.text = (oldCount - 1).toString();
     } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s);
     } finally {
       isLoading.state = false;
     }
-    return pieceController;
   }
 }
 

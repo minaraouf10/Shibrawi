@@ -59,12 +59,12 @@ class Product {
 
   Product.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    price = json['price'];
-    oldPrice = json['old_price'];
-    discount = json['discount'];
-    image = json['image'];
-    name = json['name'];
-    description = json['description'];
+    price = json['price'] ?? 0;
+    oldPrice = json['old_price'] ?? 0;
+    discount = json['discount'] ?? 0;
+    image = json['image'] ?? '';
+    name = json['name'] ?? '';
+    description = json['description'] ?? '';
   }
 
   Map<String, dynamic> toJson() {

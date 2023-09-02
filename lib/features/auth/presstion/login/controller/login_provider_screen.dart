@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/auth/data/service/auth_service.dart';
@@ -49,6 +49,17 @@ class LoginLogic extends _LoginStates {
     }
     return null;
   }
+
+  IconData suffix = Icons.visibility_outlined;
+
+   changePasswordVisibility() {
+    isLoading.state = true;
+    isPassword.state = !isPassword.state;
+    suffix = isPassword.state
+        ? Icons.visibility_outlined
+        : Icons.visibility_off_outlined;
+    isLoading.state = false;
+  }
 }
 
 class _LoginStates {
@@ -56,9 +67,11 @@ class _LoginStates {
   final CustomState<bool> isLoading;
   final CustomState<String> isError;
   final CustomState<bool> isSuccess;
+  final CustomState<bool> isPassword;
 
   _LoginStates({required this.ref})
       : isLoading = CustomState<bool>(ref, false),
         isError = CustomState<String>(ref, ''),
-        isSuccess = CustomState<bool>(ref, false);
+        isSuccess = CustomState<bool>(ref, false),
+        isPassword = CustomState<bool>(ref, false);
 }

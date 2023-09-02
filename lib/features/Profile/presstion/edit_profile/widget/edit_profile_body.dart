@@ -18,10 +18,8 @@ class EditProfileBody extends ConsumerWidget {
 
     ref.listen(editProfileBodyProvider.isError.provider, (previous, state) {
       context.showCustomSnackBar(
-      message: state,
-      snackBarStatus: SnackBarStatus.error
-      );
-  });
+          message: state, snackBarStatus: SnackBarStatus.error);
+    });
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
@@ -59,19 +57,19 @@ class EditProfileBody extends ConsumerWidget {
               return null;
             },
           ),
-        const Height(40.0),
+          const Height(40.0),
           Consumer(
               builder: (BuildContext context, WidgetRef ref, Widget? child) {
-                return DefaultButton(
-                  isLoading: ref.watch(editProfileBodyProvider.isLoading.provider),
-                  function: () {
-  editProfileBodyProvider.editProfileData();
-                  },
-                  text: 'Save',
-                  fontSize: 16.0,
-                  isUpperCase: false,
-                );
-              }),
+            return DefaultButton(
+              isLoading: ref.watch(editProfileBodyProvider.isLoading.provider),
+              function: () {
+                editProfileBodyProvider.editProfileData();
+              },
+              text: 'Save',
+              fontSize: 16.0,
+              isUpperCase: false,
+            );
+          }),
         ],
       ),
     );

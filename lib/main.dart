@@ -5,6 +5,8 @@ import 'package:shibrawi/core/data/locale/pref.dart';
 import 'package:shibrawi/core/data/locale/routing_pref.dart';
 import 'package:shibrawi/generated/translations.g.dart';
 
+final globalRef = ProviderContainer();
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPrefs.init();
@@ -16,10 +18,10 @@ void main() async {
     //  ],
     // builder: (context) =>
     TranslationProvider(
-      child: const ProviderScope(
-        child: MyApp(),
-      ),
-    ),
+        child: UncontrolledProviderScope(
+      container: globalRef,
+      child: const MyApp(),
+    )),
     //),
   );
 }

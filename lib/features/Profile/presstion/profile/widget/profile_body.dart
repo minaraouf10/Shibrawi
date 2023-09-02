@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/core/config/widgets/primary_widget/default_button.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/text_form_field.dart';
 import 'package:shibrawi/features/Profile/presstion/controller/profile_provider_screen.dart';
 import 'package:shibrawi/generated/translations.g.dart';

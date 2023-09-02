@@ -29,4 +29,14 @@ class FavoritesService {
 
     return models;
   }
+
+  Future<Product> addFavorite(int productId) async {
+    final body = {"product_id": productId};
+    final res = CustomResponse(
+      await client.post(Endpoints.favorites, body: body),
+    );
+    if (res.isError) throw res.message;
+    final product = Product.fromJson(res.data as Json);
+    return product;
+  }
 }

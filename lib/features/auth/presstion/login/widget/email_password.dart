@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
@@ -12,7 +14,8 @@ class EmailPassword extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final loginProvider = ref.read(loginProviderScreen);
+    final loginProvider = ref.watch(loginProviderScreen);
+
 
     return Column(
       children: [
@@ -27,11 +30,19 @@ class EmailPassword extends ConsumerWidget {
         ),
         Consumer(
           builder: (BuildContext context, WidgetRef ref, Widget? child) {
+           ref.watch(loginProvider.isPassword.provider);
             return TextForm(
               controller: loginProvider.passwordController,
               validate: loginProvider.passwordValidation,
+              suffix: loginProvider.suffix,
+              isPassword: loginProvider.isPassword.state,
+              suffixPressed: () {
+                log('change password',name: 'password');
+                loginProvider.changePasswordVisibility();
+              } ,
               onSubmitted: (value) {
                 loginProvider.userLogin();
+                return null;
               },
               labelText: tr.password,
             );
