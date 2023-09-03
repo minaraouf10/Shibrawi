@@ -55,4 +55,14 @@ class MenuService {
         data.map((e) => ProductModel.fromJson(e as Json)).toList();
     return productModel;
   }
+
+  Future<ProductModel> addFavorite(int productId) async {
+    final body = {"product_id": productId};
+    final res = CustomResponse(
+      await client.post(Endpoints.favorites, body: body),
+    );
+    if (res.isError) throw res.message;
+    final product = ProductModel.fromJson(res.data as Json);
+    return product;
+  }
 }

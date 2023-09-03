@@ -1,11 +1,14 @@
 import 'dart:developer';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/favorites/data/service/favorites_service.dart';
 
-
 final addFavoriteProviderScreen = Provider<AddFavoriteLogic>(
-      (ref) => AddFavoriteLogic(ref: ref, ref.watch(favoritesServiceProvider),),
+  (ref) => AddFavoriteLogic(
+    ref: ref,
+    ref.watch(favoritesServiceProvider),
+  ),
 );
 
 class AddFavoriteLogic extends _AddFavoriteStates {
@@ -21,23 +24,21 @@ class AddFavoriteLogic extends _AddFavoriteStates {
 
   Map<int, bool> favorite = {};
 
-
   changeFavorite(productId) async {
     try {
       isLoading.state = true;
 
       //favorite[productId] = !favorite[productId]!;
 
-    await favoritesService.addFavorite(productId);
+      await favoritesService.addFavorite(productId);
 
-
-    isLoading.state = false;
-    isSuccess.state = true;
+      isLoading.state = false;
+      isSuccess.state = true;
     } catch (e, s) {
-    isError.state = e.toString();
-    log(isError.state, stackTrace: s, name: 'change fav');
+      isError.state = e.toString();
+      log(isError.state, stackTrace: s, name: 'change fav');
     } finally {
-    isLoading.state = false;
+      isLoading.state = false;
     }
   }
 }

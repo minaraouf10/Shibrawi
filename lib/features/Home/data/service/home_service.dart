@@ -26,4 +26,12 @@ class HomeService {
     log(homeProductModel.toString());
     return homeProductModel;
   }
+
+  Future<HomeProductModel> changeFavorite(int productId) async{
+    final body = {"product_id": productId};
+    final res = CustomResponse(await client.post(Endpoints.favorites,body: body));
+    if(res.isError) throw res.message;
+    final homeProduct = HomeProductModel.fromJson(res.data as Json);
+    return homeProduct;
+  }
 }

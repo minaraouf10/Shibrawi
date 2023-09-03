@@ -6,6 +6,7 @@ class HomeDataModel {
     json['banners'].forEach((element) {
       banners.add(BannerModel.fromJson(element));
     });
+   // banners = (json['banners']).map((e) => BannerModel.fromJson(e)).toList();
 
     json['products'].forEach((element) {
       products.add(HomeProductModel.fromJson(element));
@@ -39,10 +40,10 @@ class HomeProductModel {
     price = json['price'];
     oldPrice = json['old_price'];
     discount = json['discount'];
-    image = json['image'];
-    name = json['name'];
-    description = json['description'];
-    inFavorites = json['in_favorites'];
-    inCart = json['in_cart'];
+    image = json['image']??'';
+    name = json['name']??'';
+    description = json['description']??'';
+    inFavorites = json['in_favorites']?? false ;
+    inCart = json['in_cart']?? false;
   }
 }

@@ -52,7 +52,7 @@ class LoginLogic extends _LoginStates {
 
   IconData suffix = Icons.visibility_outlined;
 
-   changePasswordVisibility() {
+  changePasswordVisibility() {
     isLoading.state = true;
     isPassword.state = !isPassword.state;
     suffix = isPassword.state

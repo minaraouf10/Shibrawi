@@ -11,6 +11,8 @@ import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/common/future_provider_screen.dart';
 import 'package:shibrawi/features/menu/presstion/controller/product_provider.dart';
 
+import '../../controller/menu_provider_screen.dart';
+
 class Items extends ConsumerWidget {
   const Items(this.categoryId, {super.key});
 
@@ -83,11 +85,29 @@ class Items extends ConsumerWidget {
                                   const Height(5.0),
                                   Row(
                                     children: [
-                                      (data[index].inFavorites)
-                                          ? SvgPicture.asset(
-                                              AssetsManger.orangeStar)
-                                          : SvgPicture.asset(
-                                              AssetsManger.starWhite),
+                                      Consumer(
+                                        builder: (BuildContext context,
+                                            WidgetRef ref, Widget? child) {
+                                          final changeFavorite =
+                                              ref.watch(menuProviderScreen);
+                                          ref.watch(changeFavorite
+                                              .isLoading.provider);
+                                          return InkWell(
+                                            onTap: () async {
+                                              changeFavorite.changeFavorite(
+                                                data[index],
+                                              );
+                                            },
+                                            child: (data[index].inFavorites)
+                                                ? SvgPicture.asset(
+                                                    AssetsManger.orangeStar,
+                                                  )
+                                                : SvgPicture.asset(
+                                                    AssetsManger.starWhite,
+                                                  ),
+                                          );
+                                        },
+                                      ),
                                       const Width(5.0),
                                       Expanded(
                                         child: Text(

@@ -16,7 +16,6 @@ class EmailPassword extends ConsumerWidget {
   Widget build(BuildContext context, ref) {
     final loginProvider = ref.watch(loginProviderScreen);
 
-
     return Column(
       children: [
         const SizedBox(height: 40.0),
@@ -30,16 +29,16 @@ class EmailPassword extends ConsumerWidget {
         ),
         Consumer(
           builder: (BuildContext context, WidgetRef ref, Widget? child) {
-           ref.watch(loginProvider.isPassword.provider);
+            ref.watch(loginProvider.isPassword.provider);
             return TextForm(
               controller: loginProvider.passwordController,
               validate: loginProvider.passwordValidation,
               suffix: loginProvider.suffix,
               isPassword: loginProvider.isPassword.state,
               suffixPressed: () {
-                log('change password',name: 'password');
+                log('change password', name: 'password');
                 loginProvider.changePasswordVisibility();
-              } ,
+              },
               onSubmitted: (value) {
                 loginProvider.userLogin();
                 return null;

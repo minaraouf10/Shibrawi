@@ -3,7 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/Home/data/model/home_model.dart';
+
+import '../controller/changefavorite_provider_screen.dart';
 
 class RestaurantsItem extends ConsumerWidget {
   final HomeProductModel homeProduct;
@@ -12,6 +15,8 @@ class RestaurantsItem extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
+    final changeFavoriteProvider = ref.watch(changeFavoriteProviderScreen);
+    ref.watch(changeFavoriteProvider.isLoading.provider);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -23,9 +28,7 @@ class RestaurantsItem extends ConsumerWidget {
           width: MediaQuery.of(context).size.width,
           fit: BoxFit.cover,
         ),
-        const SizedBox(
-          height: 20,
-        ),
+        const Height(20.0),
         Text(
           homeProduct.name,
           style: const TextStyle(
@@ -39,9 +42,12 @@ class RestaurantsItem extends ConsumerWidget {
         ),
         Row(
           children: [
-            (homeProduct.inFavorites)
-                ? SvgPicture.asset(AssetsManger.orangeStar)
-                : SvgPicture.asset(AssetsManger.starWhite),
+            InkWell(
+              onTap: () => changeFavoriteProvider.changeFavorite(homeProduct),
+              child: (homeProduct.inFavorites)
+                  ? SvgPicture.asset(AssetsManger.orangeStar)
+                  : SvgPicture.asset(AssetsManger.starWhite),
+            ),
             const SizedBox(
               width: 5.0,
             ),

@@ -18,10 +18,11 @@ void main() async {
     //  ],
     // builder: (context) =>
     TranslationProvider(
-        child: UncontrolledProviderScope(
-      container: globalRef,
-      child: const MyApp(),
-    )),
+      child: UncontrolledProviderScope(
+        container: globalRef,
+        child: const MyApp(),
+      ),
+    ),
     //),
   );
 }

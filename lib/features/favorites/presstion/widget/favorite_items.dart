@@ -32,7 +32,7 @@ class FavoriteItem extends ConsumerWidget {
             ),
             physics: const BouncingScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
-              log(data[index].id.toString(),name: 'Favorite Item');
+              log(data[index].id.toString(), name: 'Favorite Item');
               return Column(
                 children: [
                   InkWell(
@@ -90,9 +90,10 @@ class FavoriteItem extends ConsumerWidget {
                                       // (data[index].inFavorites)
                                       //        ?
                                       InkWell(
-                                        onTap: () => changeFavorite.changeFavorite(data[index].id),
-                                          child:
-                                          SvgPicture.asset(AssetsManger.orangeStar)),
+                                          onTap: () => changeFavorite
+                                              .changeFavorite(data[index].id),
+                                          child: SvgPicture.asset(
+                                              AssetsManger.orangeStar)),
                                       // : SvgPicture.asset(
                                       //     AssetsManger.starWhite),
                                       const Width(5.0),

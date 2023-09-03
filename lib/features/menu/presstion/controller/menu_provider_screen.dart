@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/menu/data/model/category_model.dart';
+import 'package:shibrawi/features/menu/data/model/product_model.dart';
 import 'package:shibrawi/features/menu/data/service/menu_service.dart';
 
 final menuProviderScreen = Provider<MenuLogic>(
@@ -40,6 +41,22 @@ class MenuLogic extends _MenuStates {
     } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s);
+    } finally {
+      isLoading.state = false;
+    }
+  }
+
+  changeFavorite(ProductModel product) async {
+    try {
+      isLoading.state = true;
+
+      await menuService.addFavorite(product.id);
+      product.inFavorites = !product.inFavorites;
+      isLoading.state = false;
+      isSuccess.state = true;
+    } catch (e, s) {
+      isError.state = e.toString();
+      log(isError.state, stackTrace: s, name: 'change fav');
     } finally {
       isLoading.state = false;
     }

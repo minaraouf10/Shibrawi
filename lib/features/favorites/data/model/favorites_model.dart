@@ -41,9 +41,9 @@ class Data {
 
 class Product {
   late int id;
-  late int price;
-  late int oldPrice;
-  late int discount;
+  late num price;
+  late num oldPrice;
+  late num discount;
   late String image;
   late String name;
   late String description;
