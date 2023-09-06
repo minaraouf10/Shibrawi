@@ -49,7 +49,6 @@ class MenuLogic extends _MenuStates {
   changeFavorite(ProductModel product) async {
     try {
       isLoading.state = true;
-
       await menuService.addFavorite(product.id);
       product.inFavorites = !product.inFavorites;
       isLoading.state = false;

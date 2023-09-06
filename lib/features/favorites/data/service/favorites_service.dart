@@ -30,7 +30,7 @@ class FavoritesService {
     return models;
   }
 
-  Future<Product> addFavorite(int productId) async {
+  Future<Product> deleteFavorite(int productId) async {
     final body = {"product_id": productId};
     final res = CustomResponse(
       await client.post(Endpoints.favorites, body: body),
