@@ -4,9 +4,9 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
 import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/customize_order_item_details.dart';
+import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/favorit_total_price.dart';
 import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/number_of_portions.dart';
 import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/title_price_item_details.dart';
-import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/total_price.dart';
 
 class FavoriteItemDetailsBody extends StatelessWidget {
   const FavoriteItemDetailsBody(this.data, {super.key});
@@ -43,7 +43,7 @@ class FavoriteItemDetailsBody extends StatelessWidget {
               CustomizeOrderFavoriteItemDetails(),
               const NumberOfPortionsFavorite(),
               const Height(25),
-              const FavoriteTotalPrice(),
+               FavoriteTotalPrice(data),
               const Height(25),
             ],
           ),

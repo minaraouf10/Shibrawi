@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
-class NumberOfPortionsFavorite extends StatelessWidget {
+import '../../../../menu/presstion/controller/menu_provider_screen.dart';
+
+class NumberOfPortionsFavorite extends ConsumerWidget {
   const NumberOfPortionsFavorite({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,ref) {
+    final numberOfPiece = ref.watch(menuProviderScreen);
+    ref.watch(numberOfPiece.isLoading.provider);
     return Row(
       children: [
         const Text(
@@ -19,7 +24,7 @@ class NumberOfPortionsFavorite extends StatelessWidget {
         ),
         const Spacer(),
         InkWell(
-          onTap: () {},
+          onTap: ()=> numberOfPiece.minusNumberOfPiece(),
           child: Container(
             width: 50,
             height: 30.0,
@@ -44,10 +49,10 @@ class NumberOfPortionsFavorite extends StatelessWidget {
               width: 1.3,
             ),
           ),
-          child: const Center(
+          child:  Center(
             child: Text(
-              '2',
-              style: TextStyle(
+              numberOfPiece.pieceController.text,
+              style: const TextStyle(
                   fontSize: 14.0,
                   fontWeight: FontWeight.w400,
                   color: AppColors.primary),
@@ -56,7 +61,7 @@ class NumberOfPortionsFavorite extends StatelessWidget {
         ),
         const Width(5),
         InkWell(
-          onTap: () {},
+          onTap: () => numberOfPiece.addNumberOfPiece(),
           child: Container(
             width: 50,
             height: 30.0,

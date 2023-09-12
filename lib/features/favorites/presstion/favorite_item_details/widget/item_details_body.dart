@@ -42,7 +42,7 @@ class ItemDetailsBody extends StatelessWidget {
             CustomizeOrderItemDetails(),
             const NumberOfPortions(),
             const Height(25),
-            const TotalPrice(),
+             TotalPrice(data),
             const Height(25),
           ],
         ),

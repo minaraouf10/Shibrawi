@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
+import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
 
-class TotalPriceItem extends StatelessWidget {
-  const TotalPriceItem({super.key});
+import '../../../../menu/presstion/controller/menu_provider_screen.dart';
+
+class FavoriteTotalPriceItem extends ConsumerWidget {
+  final Product data;
+  const FavoriteTotalPriceItem(this.data,{super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,ref) {
+    final numberOfPiece = ref.watch(menuProviderScreen);
+    ref.watch(numberOfPiece.isLoading.provider);
     return Stack(
       alignment: AlignmentDirectional.centerStart,
       children: [
@@ -55,9 +62,9 @@ class TotalPriceItem extends StatelessWidget {
                     ),
                   ),
                   const Height(7.0),
-                  const Text(
-                    'LKR 1500',
-                    style: TextStyle(
+                   Text(
+                    'LKR ${data.price * int.parse(numberOfPiece.pieceController.text)}',
+                    style: const TextStyle(
                       color: AppColors.loginBlack,
                       fontSize: 21.0,
                       fontWeight: FontWeight.w700,

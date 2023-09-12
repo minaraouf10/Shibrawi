@@ -7,6 +7,8 @@ import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/menu/data/model/category_model.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
+import '../model/card_model.dart';
+
 final menuServiceProvider =
     Provider<MenuService>((ref) => MenuService(ref.read(dioClientProvider)));
 
@@ -64,5 +66,13 @@ class MenuService {
     if (res.isError) throw res.message;
     final product = ProductModel.fromJson(res.data as Json);
     return product;
+  }
+
+  Future<CardModel> addOrRemoveWithCard(int productId) async {
+  final body ={"product_id": productId};
+  final res = CustomResponse(await client.post(Endpoints.carts,body: body));
+  if(res.isError) throw res.message;
+  final product = CardModel.fromJson(res.data as Json);
+  return product;
   }
 }

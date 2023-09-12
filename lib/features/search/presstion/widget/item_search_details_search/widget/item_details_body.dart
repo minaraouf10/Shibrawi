@@ -4,8 +4,8 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/customize_order_item_details.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/number_of_portions.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/total_price.dart';
 import 'package:shibrawi/features/search/data/model/search_model.dart';
+import 'package:shibrawi/features/search/presstion/widget/item_search_details_search/bottom_sheet_widget/search_total_price.dart';
 import 'package:shibrawi/features/search/presstion/widget/item_search_details_search/bottom_sheet_widget/title_price_item_details.dart';
 
 class ItemSearchDetailsBody extends StatelessWidget {
@@ -44,7 +44,7 @@ class ItemSearchDetailsBody extends StatelessWidget {
               CustomizeOrderItemDetails(),
               const NumberOfPortions(),
               const Height(25),
-              const TotalPrice(),
+              const SearchTotalPrice(),
               const Height(25),
             ],
           ),

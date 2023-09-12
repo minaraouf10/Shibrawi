@@ -28,10 +28,21 @@ class ProfileService {
     return userModel;
   }
 
-  Future<void> logOutService() async => UserPrefs.deleteUserToken();
+  Future<void> logOutService() async {
+    final body = {"fcm_token": UserPrefs.getUserToken()};
+    final res = CustomResponse(
+      await client.post(Endpoints.logout, body: body),
+    );
+    if (res.isError) throw res.message;
+    UserPrefs.deleteUserToken();
+  }
 
   Future<UserModel> editProfile(String name, String email, String phone) async {
-    final body = {"name": name, "phone": phone, "email": email};
+    final body = {
+      "name": name,
+      "phone": phone,
+      "email": email,
+    };
 
     final res = CustomResponse(
       await client.put(Endpoints.updateProfile, body: body),

@@ -24,7 +24,7 @@ class LoginScreen extends ConsumerWidget {
 
     ref.listen(loginProvider.isSuccess.provider, (_, state) {
       if (state) {
-        context.pushNamed(RouteNames.shibrawiLayout);
+        context.pushNamedAndRemoveAll(RouteNames.shibrawiLayout);
       }
     });
 

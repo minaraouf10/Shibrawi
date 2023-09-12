@@ -13,4 +13,5 @@ abstract class Endpoints {
   static const favorites = 'favorites';
   static const notifications = 'notifications';
   static const search = 'products/search';
+  static const carts = 'carts';
 }

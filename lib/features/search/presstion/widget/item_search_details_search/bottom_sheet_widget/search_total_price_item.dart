@@ -4,8 +4,8 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
-class TotalPriceItem extends StatelessWidget {
-  const TotalPriceItem({super.key});
+class SearchTotalPriceItem extends StatelessWidget {
+  const SearchTotalPriceItem({super.key});
 
   @override
   Widget build(BuildContext context) {

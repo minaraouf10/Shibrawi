@@ -73,5 +73,5 @@ class _LoginStates {
       : isLoading = CustomState<bool>(ref, false),
         isError = CustomState<String>(ref, ''),
         isSuccess = CustomState<bool>(ref, false),
-        isPassword = CustomState<bool>(ref, false);
+        isPassword = CustomState<bool>(ref, true);
 }

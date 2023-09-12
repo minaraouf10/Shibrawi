@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/total_price_item.dart';
 
+import '../../../data/model/product_model.dart';
+
 class TotalPrice extends StatelessWidget {
-  const TotalPrice({super.key});
+  final ProductModel data;
+
+  const TotalPrice(this.data, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +32,8 @@ class TotalPrice extends StatelessWidget {
                 onTap: () {
                   //context.pushNamed(RouteNames.subItemScreen);
                 },
-                child: const TotalPriceItem(),
+                child: TotalPriceItem(data),
               ),
-              // const Height(20.0),
             ],
           ),
         )

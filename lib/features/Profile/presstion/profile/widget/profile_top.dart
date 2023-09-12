@@ -69,7 +69,7 @@ class ProfileTop extends StatelessWidget {
                 final profileTopProvider = ref.read(profileProviderScreen);
                 ref.watch(profileTopProvider.isSuccess.provider);
                 return Text(
-                  profileTopProvider.nameController.text,
+                  "Hi ${profileTopProvider.nameController.text}",
                   style: const TextStyle(
                     fontSize: 16.0,
                     fontWeight: FontWeight.w700,

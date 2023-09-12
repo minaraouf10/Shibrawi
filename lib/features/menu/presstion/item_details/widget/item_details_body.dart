@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/features/menu/data/model/product_model.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/customize_order_item_details.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/number_of_portions.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/title_price_item_details.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/total_price.dart';
 
+import '../../../../search/presstion/widget/item_search_details_search/bottom_sheet_widget/customize_order_item_details.dart';
+import '../../../../search/presstion/widget/item_search_details_search/bottom_sheet_widget/number_of_portions.dart';
+import '../../../data/model/product_model.dart';
+import '../bottom_sheet_widget/title_price_item_details.dart';
+import '../bottom_sheet_widget/total_price.dart';
 class ItemDetailsBody extends StatelessWidget {
   const ItemDetailsBody(this.data, {super.key});
 
@@ -44,7 +44,7 @@ class ItemDetailsBody extends StatelessWidget {
               CustomizeOrderItemDetails(),
               const NumberOfPortions(),
               const Height(25),
-              const TotalPrice(),
+               TotalPrice(data),
               const Height(25),
             ],
           ),
