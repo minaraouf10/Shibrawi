@@ -4,17 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_text_button.dart';
-import 'package:shibrawi/features/Home/presstion/controller/home_provider.dart';
 import 'package:shibrawi/features/Home/presstion/widget/restaurants_item.dart';
 import 'package:shibrawi/features/common/future_provider_screen.dart';
 
-class HomePopularRestaurants extends ConsumerWidget {
-  const HomePopularRestaurants({super.key});
+import '../controller/home_product_provider.dart';
+
+class HomePopularProducts extends ConsumerWidget {
+  const HomePopularProducts({super.key});
 
   @override
   Widget build(BuildContext context, ref) {
     return ref.watchWhen(
-        provider: homeProvider,
+        provider: homeProductProvider,
         data: (data) {
           return Column(
             children: [
@@ -42,10 +43,10 @@ class HomePopularRestaurants extends ConsumerWidget {
                 height: 20,
               ),
               ...List.generate(
-                data.products.length,
+                data.length,
                 (index) => Column(
                   children: [
-                    RestaurantsItem(data.products[index]),
+                    RestaurantsItem(data[index]),
                     //  if (index != 3) const Height(20),
                   ],
                 ),

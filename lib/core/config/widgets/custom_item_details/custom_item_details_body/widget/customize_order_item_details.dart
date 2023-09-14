@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
-class CustomizeOrderFavoriteItemDetails extends StatelessWidget {
-  CustomizeOrderFavoriteItemDetails({super.key});
+class CustomizeOrderItemDetails extends StatelessWidget {
+  CustomizeOrderItemDetails({super.key});
 
   final List<String> portionItems = [
     '- Select the size of portion -',

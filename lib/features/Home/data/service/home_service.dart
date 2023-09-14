@@ -7,6 +7,7 @@ import 'package:shibrawi/core/api_helper/dio_providers.dart';
 import 'package:shibrawi/core/api_helper/endpoints.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/Home/data/model/home_model.dart';
+import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
 final homeServiceProvider =
     Provider<HomeService>((ref) => HomeService(ref.read(dioClientProvider)));
@@ -16,22 +17,38 @@ class HomeService {
 
   HomeService(this.client);
 
-  Future<HomeDataModel> getHomeData() async {
+  Future<List<BannerModel>> getBannersHomeData() async {
     final res = CustomResponse(
       await client.get(Endpoints.home),
     );
     if (res.isError) throw res.message;
-    final data = res.data as Json;
-    final homeProductModel = HomeDataModel.fromJson(data);
+    final data = (res.data as Json)['banners'] as List<dynamic>;
+    final homeProductModel =
+        data.map((e) => BannerModel.fromJson(e as Json)).toList();
     log(homeProductModel.toString());
     return homeProductModel;
   }
 
-  Future<HomeProductModel> changeFavorite(int productId) async{
+  Future<List<ProductModel>> getProductHomeData() async {
+    final res = CustomResponse(
+      await client.get(Endpoints.home),
+    );
+    if (res.isError) throw res.message;
+    final data = (res.data as Json)['products'] as List<dynamic>;
+    final homeProductModel =
+        data.map((e) => ProductModel.fromJson(e as Json)).toList();
+    log(homeProductModel.toString());
+    return homeProductModel;
+  }
+
+  Future<List<ProductModel>> changeFavorite(int productId) async {
     final body = {"product_id": productId};
-    final res = CustomResponse(await client.post(Endpoints.favorites,body: body));
-    if(res.isError) throw res.message;
-    final homeProduct = HomeProductModel.fromJson(res.data as Json);
+    final res =
+        CustomResponse(await client.post(Endpoints.favorites, body: body));
+    if (res.isError) throw res.message;
+    final data = (res.data as Json) as List<dynamic>;
+    final homeProduct =
+        data.map((e) => ProductModel.fromJson(e as Json)).toList();
     return homeProduct;
   }
 }

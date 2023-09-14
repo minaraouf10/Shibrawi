@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                     const Height(30.0),
                     const HomeCategory(),
                     const Height(30.0),
-                    const HomePopularRestaurants(),
+                    const HomePopularProducts(),
                     const Height(100.0),
                   ],
                 ),

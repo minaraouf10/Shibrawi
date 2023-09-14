@@ -24,7 +24,10 @@ class SearchTotalPriceItem extends StatelessWidget {
               vertical: 5.0,
             ),
             height: 99.0,
-            width: MediaQuery.of(context).size.width * 0.65,
+            width: MediaQuery
+                .of(context)
+                .size
+                .width * 0.65,
             decoration: BoxDecoration(
               color: AppColors.white,
               borderRadius: const BorderRadius.only(

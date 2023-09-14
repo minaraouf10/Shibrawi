@@ -3,17 +3,17 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/shimmer/shimmer_button.dart';
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton(
-      {Key? key,
-      required this.function,
-      required this.text,
-      this.width = double.infinity,
-      this.background = AppColors.primary,
-      this.isUpperCase = true,
-      this.radius = 3.0,
-      this.fontSize = 16.0,
-      this.isLoading = false})
-      : super(key: key);
+  const DefaultButton({
+    Key? key,
+    required this.function,
+    required this.text,
+    this.width = double.infinity,
+    this.background = AppColors.primary,
+    this.isUpperCase = true,
+    this.radius = 3.0,
+    this.fontSize = 16.0,
+    this.isLoading = false,
+  }) : super(key: key);
 
   final double width;
   final Color background;

@@ -10,7 +10,7 @@ class NumberOfPortions extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final numberOfPiece = ref.watch(menuProviderScreen);
-    final add = ref.watch(numberOfPiece.isLoading.provider);
+    ref.watch(numberOfPiece.isLoading.provider);
 
     return Row(
       children: [

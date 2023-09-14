@@ -1,10 +1,10 @@
 class ProductModel {
-  int id;
-  int price;
-  String name;
-  String description;
-  String image;
-  bool inFavorites;
+  late int id;
+  late double price;
+  late String name;
+  late String description;
+  late String image;
+  late bool isFavorites;
 
   ProductModel({
     required this.id,
@@ -12,17 +12,17 @@ class ProductModel {
     required this.name,
     required this.description,
     required this.image,
-    required this.inFavorites,
+    required this.isFavorites,
   });
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-      id: json['id']?.toInt() ?? 0,
-      price: json['price']?.toInt() ?? 0,
+      id: json['id'] ?? 0,
+      price: double.parse((json['price'] ?? 0.0).toString()),
       name: json['name'] ?? '',
       description: json['description'] ?? '',
       image: json['image'] ?? '',
-      inFavorites: json['in_favorites'] ?? false,
+      isFavorites: json['in_favorites'] ?? true,
     );
   }
 }

@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
-import 'package:shibrawi/features/search/data/model/search_model.dart';
+import 'package:shibrawi/features/menu/data/model/product_model.dart';
 import 'package:shibrawi/features/search/data/service/search_service.dart';
 
 final searchProviderScreen = Provider<SearchLogic>(
@@ -18,13 +18,13 @@ class SearchLogic extends _SearchStates {
   final searchController = TextEditingController();
 
   // static  SearchModel? searchModel ; // Initialize with a default value
-  List<SearchData> searchData = [];
+  List<ProductModel> searchData = [];
 
   search() async {
     try {
       isLoading.state = true;
       final res = await searchService.searchData(searchController.text);
-      searchData = res.data;
+      searchData = res;
       //searchModel = (await searchService.searchData(searchController.text)) as List<SearchModel>;
 
       log(searchData.toString(), name: 'search controller');

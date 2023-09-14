@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
-import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
-import 'package:shibrawi/features/favorites/presstion/favorite_item_details/bottom_sheet_widget/favorite_total_price_item.dart';
 
-class FavoriteTotalPrice extends StatelessWidget {
-  final Product data;
-  const FavoriteTotalPrice(this.data,{super.key});
+import '../../../../../../features/menu/data/model/product_model.dart';
+import 'custom_total_price_item.dart';
+
+class CustomTotalPrice extends StatelessWidget {
+  final ProductModel data;
+
+  const CustomTotalPrice(this.data, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +32,8 @@ class FavoriteTotalPrice extends StatelessWidget {
                 onTap: () {
                   //context.pushNamed(RouteNames.subItemScreen);
                 },
-                child:   FavoriteTotalPriceItem(data),
+                child: CustomTotalPriceItem(data),
               ),
-              // const Height(20.0),
             ],
           ),
         )

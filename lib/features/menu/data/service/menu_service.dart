@@ -17,22 +17,6 @@ class MenuService {
 
   MenuService(this.client);
 
-  Map<int, bool> favorite = {};
-
-  // Future<MenuDataModel> getProductData() async {
-  //   final res = CustomResponse(
-  //     await client.get(Endpoints.home),
-  //   );
-  //   if (res.isError) throw res.message;
-  //   final data = res.data as Json;
-  //   final menuModel = MenuDataModel.fromJson(data);
-  //   for (var element in menuModel.products) {
-  //     favorite.addAll({element.id: element.inFavorites});
-  //   }
-  //   log(favorite.toString());
-  //   return menuModel;
-  // }
-
   Future<List<CategoryModel>> getCategoryData() async {
     final res = CustomResponse(
       await client.get(Endpoints.categories),
@@ -69,10 +53,10 @@ class MenuService {
   }
 
   Future<CardModel> addOrRemoveWithCard(int productId) async {
-  final body ={"product_id": productId};
-  final res = CustomResponse(await client.post(Endpoints.carts,body: body));
-  if(res.isError) throw res.message;
-  final product = CardModel.fromJson(res.data as Json);
-  return product;
+    final body = {"product_id": productId};
+    final res = CustomResponse(await client.post(Endpoints.carts, body: body));
+    if (res.isError) throw res.message;
+    final product = CardModel.fromJson(res.data as Json);
+    return product;
   }
 }

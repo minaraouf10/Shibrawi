@@ -1,21 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
 
-import '../../../../menu/presstion/controller/menu_provider_screen.dart';
+import '../../../../../../features/menu/data/model/product_model.dart';
+import '../../../../../../features/menu/presstion/controller/menu_provider_screen.dart';
+import '../../../../enums/snack_bar.dart';
 
-class FavoriteTotalPriceItem extends ConsumerWidget {
-  final Product data;
-  const FavoriteTotalPriceItem(this.data,{super.key});
+class CustomTotalPriceItem extends ConsumerWidget {
+  final ProductModel data;
+
+  const CustomTotalPriceItem(this.data, {super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     final numberOfPiece = ref.watch(menuProviderScreen);
     ref.watch(numberOfPiece.isLoading.provider);
+
+    ref.listen(numberOfPiece.isSuccess.provider, (_, state) {
+      context.showCustomSnackBar(
+        message: 'Added Successfully',
+        snackBarStatus: SnackBarStatus.success,
+      );
+    });
+
     return Stack(
       alignment: AlignmentDirectional.centerStart,
       children: [
@@ -62,7 +73,7 @@ class FavoriteTotalPriceItem extends ConsumerWidget {
                     ),
                   ),
                   const Height(7.0),
-                   Text(
+                  Text(
                     'LKR ${data.price * int.parse(numberOfPiece.pieceController.text)}',
                     style: const TextStyle(
                       color: AppColors.loginBlack,
@@ -80,24 +91,29 @@ class FavoriteTotalPriceItem extends ConsumerWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 17.0),
-                      child: Row(
-                        children: [
-                          Transform.scale(
-                            scale: 1,
-                            child: SvgPicture.asset(
-                              AssetsManger.group,
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () => numberOfPiece.addOrRemoveToCard(data.id),
+                        child: Row(
+                          children: [
+                            Transform.scale(
+                              scale: 1,
+                              child: SvgPicture.asset(
+                                AssetsManger.group,
+                              ),
                             ),
-                          ),
-                          const Width(18.0),
-                          const Text(
-                            'Add to Cart',
-                            style: TextStyle(
-                              fontSize: 11.0,
-                              fontWeight: FontWeight.w400,
-                              color: AppColors.white,
-                            ),
-                          )
-                        ],
+                            const Width(18.0),
+                            const Text(
+                              'Add to Cart',
+                              style: TextStyle(
+                                fontSize: 11.0,
+                                fontWeight: FontWeight.w400,
+                                color: AppColors.white,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),

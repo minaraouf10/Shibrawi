@@ -53,7 +53,7 @@ class AppRouter {
         );
 
       case RouteNames.favoriteItemDetailsScreen:
-        final Product itemDetailsData = settings.arguments as Product;
+        final ProductModel itemDetailsData = settings.arguments as ProductModel;
         return MaterialPageRoute(
           builder: (context) => FavoriteItemDetailsScreen(itemDetailsData),
         );

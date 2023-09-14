@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
-import 'package:shibrawi/features/favorites/presstion/favorite_item_details/widget/favorite_item_details_body.dart';
-import 'package:shibrawi/features/favorites/presstion/favorite_item_details/widget/favorite_top_screen.dart';
+import 'package:shibrawi/features/menu/data/model/product_model.dart';
+
+import '../../../../core/config/widgets/custom_item_details/custom_item_details_body/custom_item_details_body_screen.dart';
+import '../../../../core/config/widgets/custom_item_details/custom_item_details_top/custom_top_item_details.dart';
 
 class FavoriteItemDetailsScreen extends StatelessWidget {
   const FavoriteItemDetailsScreen(this.itemDetailsData, {Key? key})
-      : super(key: key); // Fix the super(key) argument
+      : super(key: key);
 
-  final Product itemDetailsData;
+  final ProductModel itemDetailsData;
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +18,11 @@ class FavoriteItemDetailsScreen extends StatelessWidget {
           children: [
             SizedBox(
               height: 245,
-              child: TopScreenItemFavoriteDetails(itemDetailsData),
+              child: CustomTopItemDetails(itemDetailsData),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 225),
-              child: FavoriteItemDetailsBody(itemDetailsData),
+              child: CustomItemDetailsBody(itemDetailsData),
             )
           ],
         ),

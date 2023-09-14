@@ -5,16 +5,18 @@ import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
+
 import '../../../../../core/config/enums/snack_bar.dart';
 import '../../../data/model/product_model.dart';
 import '../../controller/menu_provider_screen.dart';
 
 class TotalPriceItem extends ConsumerWidget {
   final ProductModel data;
-  const TotalPriceItem(this.data,{super.key});
+
+  const TotalPriceItem(this.data, {super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     final numberOfPiece = ref.watch(menuProviderScreen);
     ref.watch(numberOfPiece.isLoading.provider);
 
@@ -24,7 +26,6 @@ class TotalPriceItem extends ConsumerWidget {
         snackBarStatus: SnackBarStatus.success,
       );
     });
-
 
     return Stack(
       alignment: AlignmentDirectional.centerStart,
@@ -72,7 +73,7 @@ class TotalPriceItem extends ConsumerWidget {
                     ),
                   ),
                   const Height(7.0),
-                   Text(
+                  Text(
                     'LKR ${data.price * int.parse(numberOfPiece.pieceController.text)}',
                     style: const TextStyle(
                       color: AppColors.loginBlack,
@@ -93,7 +94,7 @@ class TotalPriceItem extends ConsumerWidget {
                       child: InkWell(
                         splashColor: Colors.transparent,
                         highlightColor: Colors.transparent,
-                        onTap: () =>numberOfPiece.addOrRemoveToCard(data.id),
+                        onTap: () => numberOfPiece.addOrRemoveToCard(data.id),
                         child: Row(
                           children: [
                             Transform.scale(

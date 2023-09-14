@@ -4,12 +4,12 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart';
-import 'package:shibrawi/features/favorites/data/model/favorites_model.dart';
+import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
-class TitlePriceFavoriteItemDetails extends StatelessWidget {
-  final Product data;
+class CustomTitlePriceItemDetails extends StatelessWidget {
+  const CustomTitlePriceItemDetails(this.data, {super.key});
 
-  const TitlePriceFavoriteItemDetails(this.data, {super.key});
+  final ProductModel data;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,8 @@ class TitlePriceFavoriteItemDetails extends StatelessWidget {
             fontWeight: FontWeight.w400,
             color: AppColors.loginBlack,
           ),
+          //maxLines: 2,
+          // overflow: TextOverflow.ellipsis,
         ),
         const Height(7.0),
         Row(

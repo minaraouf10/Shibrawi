@@ -3,7 +3,7 @@ import 'dart:developer';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/config/utils/custom_state.dart';
-import '../../data/model/home_model.dart';
+import '../../../menu/data/model/product_model.dart';
 import '../../data/service/home_service.dart';
 
 final changeFavoriteProviderScreen = Provider<ChangeFavoriteLogic>(
@@ -15,12 +15,12 @@ class ChangeFavoriteLogic extends _ChangeFavoriteStates {
 
   HomeService homeService;
 
-  changeFavorite(HomeProductModel product) async {
+  changeFavorite(ProductModel product) async {
     try {
       isLoading.state = true;
 
       await homeService.changeFavorite(product.id);
-      product.inFavorites = !product.inFavorites;
+      product.isFavorites = !product.isFavorites;
       isLoading.state = false;
     } catch (e, s) {
       isError.state = e.toString();

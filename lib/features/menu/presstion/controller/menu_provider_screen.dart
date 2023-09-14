@@ -6,7 +6,6 @@ import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/menu/data/model/category_model.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
 import 'package:shibrawi/features/menu/data/service/menu_service.dart';
-import 'package:shibrawi/generated/translations.g.dart';
 
 final menuProviderScreen = Provider<MenuLogic>(
   (ref) => MenuLogic(ref: ref, menuService: ref.read(menuServiceProvider)),
@@ -38,12 +37,11 @@ class MenuLogic extends _MenuStates {
     try {
       isLoading.state = true;
       final oldCount = int.parse(pieceController.text);
-     if(oldCount <= 0)  {
-       pieceController.text = (0).toString();
-     }
-     else{
-       pieceController.text = (oldCount - 1).toString();
-     }
+      if (oldCount <= 0) {
+        pieceController.text = (0).toString();
+      } else {
+        pieceController.text = (oldCount - 1).toString();
+      }
     } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s);
@@ -56,7 +54,7 @@ class MenuLogic extends _MenuStates {
     try {
       isLoading.state = true;
       await menuService.addFavorite(product.id);
-      product.inFavorites = !product.inFavorites;
+      product.isFavorites = !product.isFavorites;
       isLoading.state = false;
       isSuccess.state = true;
     } catch (e, s) {
@@ -67,18 +65,16 @@ class MenuLogic extends _MenuStates {
     }
   }
 
-  addOrRemoveToCard (productId)async{
-    try{
+  addOrRemoveToCard(productId) async {
+    try {
       isLoading.state = true;
       await menuService.addOrRemoveWithCard(productId);
       isLoading.state = false;
       isSuccess.state = true;
-    }
-    catch(e,s){
+    } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s, name: 'addOrRemoveToCard');
-    }
-    finally{
+    } finally {
       isLoading.state = false;
     }
   }

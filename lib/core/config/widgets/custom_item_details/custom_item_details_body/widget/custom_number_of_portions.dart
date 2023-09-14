@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
+import 'package:shibrawi/features/menu/presstion/controller/menu_provider_screen.dart';
 
-import '../../../../menu/presstion/controller/menu_provider_screen.dart';
-
-class NumberOfPortionsFavorite extends ConsumerWidget {
-  const NumberOfPortionsFavorite({super.key});
+class CustomNumberOfPortions extends ConsumerWidget {
+  const CustomNumberOfPortions({super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     final numberOfPiece = ref.watch(menuProviderScreen);
     ref.watch(numberOfPiece.isLoading.provider);
+
     return Row(
       children: [
         const Text(
@@ -24,7 +24,7 @@ class NumberOfPortionsFavorite extends ConsumerWidget {
         ),
         const Spacer(),
         InkWell(
-          onTap: ()=> numberOfPiece.minusNumberOfPiece(),
+          onTap: () => numberOfPiece.minusNumberOfPiece(),
           child: Container(
             width: 50,
             height: 30.0,
@@ -49,7 +49,7 @@ class NumberOfPortionsFavorite extends ConsumerWidget {
               width: 1.3,
             ),
           ),
-          child:  Center(
+          child: Center(
             child: Text(
               numberOfPiece.pieceController.text,
               style: const TextStyle(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/bottom_sheet_widget/total_price_item.dart';
 import 'package:shibrawi/features/search/presstion/widget/item_search_details_search/bottom_sheet_widget/search_total_price_item.dart';
 
 class SearchTotalPrice extends StatelessWidget {

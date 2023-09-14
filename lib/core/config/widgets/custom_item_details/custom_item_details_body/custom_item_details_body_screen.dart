@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
-import 'package:shibrawi/core/config/themes/app_colors.dart';
-import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
+import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_body/widget/custom_number_of_portions.dart';
+import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_body/widget/custom_title_price_item_details.dart';
+import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_body/widget/custom_total_price.dart';
+import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
-import '../../../../search/presstion/widget/item_search_details_search/bottom_sheet_widget/customize_order_item_details.dart';
-import '../../../../search/presstion/widget/item_search_details_search/bottom_sheet_widget/number_of_portions.dart';
-import '../../../data/model/product_model.dart';
-import '../bottom_sheet_widget/title_price_item_details.dart';
-import '../bottom_sheet_widget/total_price.dart';
+import '../../../../../features/menu/presstion/item_details/bottom_sheet_widget/customize_order_item_details.dart';
+import '../../../themes/app_colors.dart';
+import '../../custom_sized_box.dart';
 
-class ItemDetailsBody extends StatelessWidget {
-  const ItemDetailsBody(this.data, {super.key});
+class CustomItemDetailsBody extends StatelessWidget {
+  const CustomItemDetailsBody(this.data, {super.key});
 
   final ProductModel data;
 
@@ -41,11 +41,11 @@ class ItemDetailsBody extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitlePriceItemDetails(data),
+              CustomTitlePriceItemDetails(data),
               CustomizeOrderItemDetails(),
-              const NumberOfPortions(),
+              const CustomNumberOfPortions(),
               const Height(25),
-              TotalPrice(data),
+              CustomTotalPrice(data),
               const Height(25),
             ],
           ),

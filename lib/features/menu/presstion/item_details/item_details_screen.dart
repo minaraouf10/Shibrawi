@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/widget/item_details_body.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/widget/top_screen.dart';
+
+import '../../../../core/config/widgets/custom_item_details/custom_item_details_body/custom_item_details_body_screen.dart';
+import '../../../../core/config/widgets/custom_item_details/custom_item_details_top/custom_top_item_details.dart';
 
 class ItemDetailsScreen extends StatelessWidget {
   const ItemDetailsScreen(this.itemDetailsData, {Key? key})
@@ -17,11 +18,11 @@ class ItemDetailsScreen extends StatelessWidget {
           children: [
             SizedBox(
               height: 245,
-              child: TopScreenItemDetails(itemDetailsData),
+              child: CustomTopItemDetails(itemDetailsData),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 225),
-              child: ItemDetailsBody(itemDetailsData),
+              child: CustomItemDetailsBody(itemDetailsData),
             )
           ],
         ),
