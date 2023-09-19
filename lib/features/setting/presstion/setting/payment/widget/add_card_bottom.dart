@@ -30,12 +30,12 @@ class AddCardBottom extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional.topEnd,
-                    child: SvgPicture.asset(
-                      AssetsManger.exit,
-                    ),
-                  ),
+                  // Align(
+                  //   alignment: AlignmentDirectional.topEnd,
+                  //   child: SvgPicture.asset(
+                  //     AssetsManger.exit,
+                  //   ),
+                  // ),
                   const Text(
                     "Add Credit/Debit Card",
                     style: TextStyle(

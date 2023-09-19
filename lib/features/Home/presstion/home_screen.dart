@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/Home/presstion/widget/home_category.dart';
-import 'package:shibrawi/features/Home/presstion/widget/home_popular_restaurants.dart';
+import 'package:shibrawi/features/Home/presstion/widget/home_popular_product.dart';
 import 'package:shibrawi/features/Home/presstion/widget/home_search_bar.dart';
-import 'package:shibrawi/features/Home/presstion/widget/home_title.dart';
+
+import '../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: HomeTitle(),
+            child: CustomTopScreen(title: 'Good morning Akila!',),
           ),
           Expanded(
             child: SingleChildScrollView(

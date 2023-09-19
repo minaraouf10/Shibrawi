@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shibrawi/core/config/widgets/custom_top_screen/custom_top_screen.dart';
 import 'package:shibrawi/features/search/presstion/controller/search_provider_screen.dart';
-import 'package:shibrawi/features/search/presstion/widget/search_top.dart';
-import 'package:shibrawi/features/search/presstion/widget/sub_item_menu/widget/item_search.dart';
+import 'package:shibrawi/features/search/presstion/widget/item_search.dart';
 import 'package:shibrawi/main.dart';
+import '../../../core/config/widgets/custom_search_bar/custom_search_bar.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -24,10 +25,14 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: const [
+          children:  const [
             Padding(
               padding: EdgeInsetsDirectional.symmetric(horizontal: 20.0),
-              child: SearchTop(),
+              child: CustomTopScreen(title: 'Search',enableBack: true,),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.symmetric(horizontal: 20.0),
+              child: CustomSearchBar(),
             ),
             Expanded(
               child: ItemsSearch(),

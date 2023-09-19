@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/features/menu/data/model/category_model.dart';
-import 'package:shibrawi/features/menu/presstion/menu/widget/menu_search_bar.dart';
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/items.dart';
 import 'package:shibrawi/features/menu/presstion/sub_item_menu/widget/sub_item_menu_title.dart';
+
+import '../../../../core/config/widgets/custom_search_bar/custom_search_bar.dart';
+import '../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 
 class SubItemScreen extends StatelessWidget {
   final CategoryModel categoryData;
@@ -17,11 +19,11 @@ class SubItemScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: SubItemMenuTitle(categoryData.name),
+              child: CustomTopScreen(title: categoryData.name,enableBack: true,),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: MenuSearchBar(),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: CustomSearchBar(),
             ),
             Expanded(
               child: Items(categoryData.id),

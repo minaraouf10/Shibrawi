@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/features/setting/presstion/setting/setting_screen/widget/setting_body.dart';
-import 'package:shibrawi/features/setting/presstion/setting/setting_screen/widget/setting_top.dart';
+import '../../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -12,7 +12,7 @@ class SettingScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: const [
-            SettingTop(),
+            CustomTopScreen(title: 'More'),
             SettingBody(),
           ],
         ),

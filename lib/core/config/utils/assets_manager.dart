@@ -25,7 +25,7 @@ class AssetsManger {
   static const faceBook = '${iconsPath}faceBook.svg';
   static const google = '${iconsPath}google.svg';
   static const menu = '${iconsPath}menu.svg';
-  static const favoriteIcon = '${iconsPath}favorite_icon.svg';
+  static const favoriteIcon = '${iconsPath}un_favorite_heart_icon.svg';
   static const home = '${iconsPath}home.svg';
   static const profile = '${iconsPath}profile.svg';
   static const moreIcon = '${iconsPath}more_icon.svg';
@@ -39,4 +39,7 @@ class AssetsManger {
   static const notifications = '${iconsPath}notifications.svg';
   static const inboxMail = '${iconsPath}inbox-mail.svg';
   static const aboutUs = '${iconsPath}aboutUs.svg';
+  static const backGroundFavorite = '${iconsPath}back_ground_favorite.svg';
+  static const favoriteHeart = '${iconsPath}favorite_heart.svg';
+  static const unFavoriteHeart = '${iconsPath}un_favorite_heart.svg';
 }

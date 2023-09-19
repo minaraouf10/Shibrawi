@@ -8,6 +8,8 @@ import 'package:shibrawi/core/config/widgets/custom_item/custom_item.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/search/presstion/controller/search_provider_screen.dart';
 
+import '../../../menu/presstion/controller/menu_provider_screen.dart';
+
 class ItemsSearch extends ConsumerWidget {
   const ItemsSearch({super.key});
 
@@ -26,21 +28,27 @@ class ItemsSearch extends ConsumerWidget {
           physics: const BouncingScrollPhysics(),
           itemBuilder: (BuildContext context, int index) {
             if (index >= 0 && index < (itemSearchProvider.searchData.length)) {
+              final changeFavorite = ref.watch(menuProviderScreen);
+              ref.watch(changeFavorite.isLoading.provider);
               return Column(
                 children: [
                   InkWell(
-                      onTap: () {
-                        context.pushNamed(RouteNames.itemSearchDetailsScreen,
-                            arguments: itemSearchProvider.searchData[index]);
-                      },
-                      child: CustomItem(
-                        image: itemSearchProvider.searchData[index].image,
-                        name: itemSearchProvider.searchData[index].name,
-                        description:
-                            itemSearchProvider.searchData[index].description,
-                        isFavorites:
-                            itemSearchProvider.searchData[index].isFavorites,
-                      )),
+                    onTap: () {
+                      context.pushNamed(RouteNames.itemDetailsScreen,
+                          arguments: itemSearchProvider.searchData[index]);
+                    },
+                    child: CustomItem(
+                      image: itemSearchProvider.searchData[index].image,
+                      name: itemSearchProvider.searchData[index].name,
+                      description:
+                          itemSearchProvider.searchData[index].description,
+                      isFavorites:
+                          itemSearchProvider.searchData[index].isFavorites,
+                      favoriteFunction: () => changeFavorite.changeFavorite(
+                        itemSearchProvider.searchData[index],
+                      ),
+                    ),
+                  ),
                   const Height(8.0)
                 ],
               );

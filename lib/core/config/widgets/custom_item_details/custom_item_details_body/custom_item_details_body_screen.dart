@@ -3,9 +3,9 @@ import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_body/widget/custom_number_of_portions.dart';
 import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_body/widget/custom_title_price_item_details.dart';
 import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_body/widget/custom_total_price.dart';
+import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_body/widget/customize_order_item_details.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
-import '../../../../../features/menu/presstion/item_details/bottom_sheet_widget/customize_order_item_details.dart';
 import '../../../themes/app_colors.dart';
 import '../../custom_sized_box.dart';
 

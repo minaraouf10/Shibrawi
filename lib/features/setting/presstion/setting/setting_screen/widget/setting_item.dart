@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 
@@ -21,7 +22,7 @@ class SettingItem extends StatelessWidget {
         Padding(
           padding: const EdgeInsetsDirectional.only(end: 15.0),
           child: Container(
-            width: MediaQuery.of(context).size.width,
+            width: context.width,
             height: 75.0,
             decoration: BoxDecoration(
               color: AppColors.gryFormField,

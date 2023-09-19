@@ -44,10 +44,7 @@ class Items extends ConsumerWidget {
                         final changeFavorite = ref.watch(menuProviderScreen);
                         ref.watch(changeFavorite.isLoading.provider);
                         return CustomItem(
-                          favoriteFunction: () {
-                            changeFavorite.changeFavorite(data[index]);
-                          },
-                          //productModel: data[index],
+                          favoriteFunction: () => changeFavorite.changeFavorite(data[index]),
                           image: data[index].image,
                           name: data[index].name,
                           isFavorites: data[index].isFavorites,

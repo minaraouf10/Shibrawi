@@ -5,6 +5,8 @@ import 'package:shibrawi/features/setting/presstion/setting/notification/control
 import 'package:shibrawi/features/setting/presstion/setting/notification/widget/notification_item.dart';
 import 'package:shibrawi/features/setting/presstion/setting/notification/widget/notification_top.dart';
 
+import '../../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
+
 class NotificationScreen extends ConsumerWidget {
   const NotificationScreen({super.key});
 
@@ -20,7 +22,7 @@ class NotificationScreen extends ConsumerWidget {
                     const EdgeInsetsDirectional.symmetric(horizontal: 20.0),
                 child: Column(
                   children: [
-                    const NotificationTop(),
+                    const CustomTopScreen(title: 'Notifications',enableBack: true,),
                     Expanded(
                       child: ListView.builder(
                         physics: const BouncingScrollPhysics(),

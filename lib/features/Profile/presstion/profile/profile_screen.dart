@@ -5,6 +5,8 @@ import 'package:shibrawi/features/Profile/presstion/controller/profile_provider_
 import 'package:shibrawi/features/Profile/presstion/profile/widget/profile_body.dart';
 import 'package:shibrawi/features/Profile/presstion/profile/widget/profile_top.dart';
 
+import '../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
+
 class ProfileScreen extends ConsumerStatefulWidget {
   const ProfileScreen({super.key});
 
@@ -28,6 +30,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: const [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0),
+              child: CustomTopScreen(title: 'Profile'),
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: ProfileTop(),

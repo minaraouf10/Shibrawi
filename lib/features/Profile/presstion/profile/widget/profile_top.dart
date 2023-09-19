@@ -14,25 +14,12 @@ class ProfileTop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 25.0),
+      padding: const EdgeInsets.symmetric(horizontal: 4.0,),
       child: Padding(
         padding: const EdgeInsets.only(bottom: 5.0),
         child: Column(
           children: [
-            Row(
-              children: [
-                const Text(
-                  'Profile',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                const Spacer(),
-                SvgPicture.asset(AssetsManger.shoppingCart)
-              ],
-            ),
-            const Height(25.0),
+            const Height(5.0),
             CircleAvatar(
               backgroundImage: const NetworkImage(
                 'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301',
@@ -67,7 +54,7 @@ class ProfileTop extends StatelessWidget {
             Consumer(
               builder: (BuildContext context, WidgetRef ref, Widget? child) {
                 final profileTopProvider = ref.read(profileProviderScreen);
-                ref.watch(profileTopProvider.isSuccess.provider);
+                ref.watch(profileTopProvider.isLoading.provider);
                 return Text(
                   "Hi ${profileTopProvider.nameController.text}",
                   style: const TextStyle(

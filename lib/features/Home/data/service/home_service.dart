@@ -41,14 +41,13 @@ class HomeService {
     return homeProductModel;
   }
 
-  Future<List<ProductModel>> changeFavorite(int productId) async {
+  Future<ProductModel> changeFavorite(int productId) async {
     final body = {"product_id": productId};
     final res =
         CustomResponse(await client.post(Endpoints.favorites, body: body));
     if (res.isError) throw res.message;
-    final data = (res.data as Json) as List<dynamic>;
-    final homeProduct =
-        data.map((e) => ProductModel.fromJson(e as Json)).toList();
+    final data = (res.data as Json);
+    final homeProduct = ProductModel.fromJson(data);
     return homeProduct;
   }
 }

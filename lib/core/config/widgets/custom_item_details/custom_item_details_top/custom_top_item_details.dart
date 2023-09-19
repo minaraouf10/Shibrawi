@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_top/custom_item_details_title.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
-import 'package:shibrawi/features/menu/presstion/item_details/widget/item_details_screen_title.dart';
+
+import '../../../../../features/menu/presstion/controller/menu_provider_screen.dart';
 
 class CustomTopItemDetails extends StatelessWidget {
   const CustomTopItemDetails(this.data, {super.key});
@@ -33,9 +36,18 @@ class CustomTopItemDetails extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: ItemDetailsScreenTitle(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Consumer(
+                builder: (BuildContext context, WidgetRef ref, Widget? child) {
+                  final changeFavorite = ref.watch(menuProviderScreen);
+                  ref.watch(changeFavorite.isLoading.provider);
+                  return CustomItemDetailsTitle(
+                    favoriteFunction:()=> changeFavorite.changeFavorite(data),
+                    isFavorite: data.isFavorites,
+                  );
+                },
+              ),
             ),
           ],
         )

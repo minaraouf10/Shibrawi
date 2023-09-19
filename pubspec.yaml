@@ -117,10 +117,10 @@ flutter:
 #  ios: true
 flutter_native_splash:
   color: "#FFFFFF"
-  image: assets/icons/Logo.png
-  image_dark: assets/images/Background_icons.png
-  background_image: assets/images/Background_icons.png
-  image_fit: "assets/images/Background_icons.png"
+  image: assets/icons/Logo2.png
+  #image_dark: assets/images/Background_icons.png
+  #background_image: assets/images/Background_icons.png
+ # image_fit: "assets/images/Background_icons.png"
   background_color: "#FFFFFF"
   android_gravity: "center"
   android_disable_fullscreen: false
