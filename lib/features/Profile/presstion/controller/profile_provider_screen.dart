@@ -28,7 +28,6 @@ class ProfileLogic extends _ProfileStates {
       nameController.text = userModel.name;
       emailController.text = userModel.email;
       phoneController.text = userModel.phone;
-
     } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s, name: 'nana');

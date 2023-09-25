@@ -37,7 +37,7 @@ class CustomCartItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-               Text(
+              Text(
                 name,
                 style: const TextStyle(
                   fontSize: 16,
@@ -45,8 +45,8 @@ class CustomCartItem extends StatelessWidget {
                   color: AppColors.loginBlack,
                   height: 19 / 16,
                 ),
-                 maxLines: 1,
-                 overflow:TextOverflow.ellipsis,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
               ),
               const Height(8.0),
               Row(
@@ -75,7 +75,7 @@ class CustomCartItem extends StatelessWidget {
                 ],
               ),
               const Height(8.0),
-               Text(
+              Text(
                 description,
                 style: const TextStyle(
                   fontSize: 12,
@@ -83,15 +83,15 @@ class CustomCartItem extends StatelessWidget {
                   color: AppColors.lightBlack,
                   height: 15 / 12,
                 ),
-                 maxLines: 2,
-                 overflow: TextOverflow.ellipsis,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
               const Height(8.0),
               Row(
                 children: [
                   SvgPicture.asset(AssetsManger.locationPin),
                   const Width(5.0),
-                   Text(
+                  Text(
                     price.toString(),
                     style: const TextStyle(
                       fontSize: 12,

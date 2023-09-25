@@ -43,7 +43,7 @@ class CustomTopItemDetails extends StatelessWidget {
                   final changeFavorite = ref.watch(menuProviderScreen);
                   ref.watch(changeFavorite.isLoading.provider);
                   return CustomItemDetailsTitle(
-                    favoriteFunction:()=> changeFavorite.changeFavorite(data),
+                    favoriteFunction: () => changeFavorite.changeFavorite(data),
                     isFavorite: data.isFavorites,
                   );
                 },

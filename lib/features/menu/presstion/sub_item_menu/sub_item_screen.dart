@@ -18,7 +18,10 @@ class SubItemScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: CustomTopScreen(title: categoryData.name,enableBack: true,),
+              child: CustomTopScreen(
+                title: categoryData.name,
+                enableBack: true,
+              ),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),

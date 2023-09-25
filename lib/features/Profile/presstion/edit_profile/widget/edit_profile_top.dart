@@ -36,7 +36,6 @@ class EditProfileTop extends StatelessWidget {
               SvgPicture.asset(AssetsManger.shoppingCart)
             ],
           ),
-
         ],
       ),
     );

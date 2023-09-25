@@ -15,7 +15,10 @@ class AboutUsScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: const [
-              CustomTopScreen(title: 'About Us',enableBack: true,),
+              CustomTopScreen(
+                title: 'About Us',
+                enableBack: true,
+              ),
               Height(25.0),
               AboutUsBody(),
             ],

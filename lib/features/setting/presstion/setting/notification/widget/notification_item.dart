@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart';
 import 'package:shibrawi/features/setting/data/model/notification/notification_model.dart';
 
 class NotificationItem extends StatelessWidget {
@@ -53,7 +52,6 @@ class NotificationItem extends StatelessWidget {
               )
             ],
           ),
-          const DefaultDivider(),
         ],
       ),
     );

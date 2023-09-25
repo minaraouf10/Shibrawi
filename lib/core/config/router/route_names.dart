@@ -20,6 +20,7 @@ class RouteNames {
   static const editProfile = '/EditProfileScreen';
   static const searchScreen = '/SearchScreen';
   static const cartsScreen = '/CartsScreen';
+  static const customNotificationScreen = '/CustomNotificationScreen';
 
   // static const profileSettings = '/profile-settings';
   static const accountSettings = '/account-settings';

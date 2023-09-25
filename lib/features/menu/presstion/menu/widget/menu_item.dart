@@ -49,7 +49,7 @@ class MenuItem extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Height(15.0),
+                  const Height(14.0),
                   Text(
                     title,
                     style: const TextStyle(

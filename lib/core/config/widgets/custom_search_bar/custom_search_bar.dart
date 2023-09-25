@@ -8,11 +8,11 @@ import '../../themes/app_colors.dart';
 
 class CustomSearchBar extends ConsumerWidget {
   const CustomSearchBar({
-   // required this.readOnly,
+    // required this.readOnly,
     super.key,
   });
 
- // final bool readOnly;
+  // final bool readOnly;
 
   @override
   Widget build(BuildContext context, ref) {

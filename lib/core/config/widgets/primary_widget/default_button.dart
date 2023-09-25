@@ -31,8 +31,6 @@ class DefaultButton extends StatelessWidget {
             width: width,
           )
         : Container(
-            // padding:
-            //     const EdgeInsetsDirectional.only(start: 10, end: 10, top: 5.0),
             margin: const EdgeInsetsDirectional.symmetric(horizontal: 5),
             width: width,
             height: 60.0,

@@ -14,21 +14,18 @@ class EditProfileScreen extends ConsumerWidget {
   const EditProfileScreen({super.key});
 
   @override
-  Widget build(BuildContext context,ref) {
+  Widget build(BuildContext context, ref) {
     final profileBodyProvider = ref.read(profileProviderScreen);
 
     ref.listen(profileBodyProvider.isSuccess.provider, (previous, state) {
       context.showCustomSnackBar(
-        message: 'Updated Successfully',
-        snackBarStatus: SnackBarStatus.success
-      );
+          message: 'Updated Successfully',
+          snackBarStatus: SnackBarStatus.success);
     });
 
     ref.listen(profileBodyProvider.isError.provider, (previous, state) {
       context.showCustomSnackBar(
-          message: state,
-          snackBarStatus: SnackBarStatus.error
-      );
+          message: state, snackBarStatus: SnackBarStatus.error);
     });
 
     return Scaffold(
@@ -39,7 +36,10 @@ class EditProfileScreen extends ConsumerWidget {
             children: [
               const Padding(
                 padding: EdgeInsetsDirectional.symmetric(horizontal: 20.0),
-                child: CustomTopScreen(title: 'Edit Profile',enableBack: true,),
+                child: CustomTopScreen(
+                  title: 'Edit Profile',
+                  enableBack: true,
+                ),
               ),
               const Height(25.0),
               Center(

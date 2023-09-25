@@ -1,9 +1,12 @@
 /// Generated file. Do not edit.
 ///
-/// Locales: 2
-/// Strings: 62 (31 per locale)
+/// Original: assets/lang
+/// To regenerate, run: `dart run slang`
 ///
-/// Built on 2023-06-26 at 13:56 UTC
+/// Locales: 2
+/// Strings: 80 (40 per locale)
+///
+/// Built on 2023-09-25 at 12:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -198,6 +201,24 @@ class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
   late final _TranslationsEn _root = this; // ignore: unused_field
 
   // Translations
+  String get Discover_the_best_foods_from_over =>
+      'Discover the best foods from over 1,000 ';
+
+  String get Fast_Delivery => 'Fast Delivery';
+
+  String get Fast_food_body => 'Fast food delivery to your home, office ';
+
+  String get Fast_food_suBody => 'wherever you are';
+
+  String get Find_Food_You_Love => 'Find Food You Love';
+
+  String get Live_Tracking => 'Live Tracking';
+
+  String get Live_Tracking_body =>
+      'Real time tracking of your food on the app ';
+
+  String get Live_Tracking_suBody => 'once you placed the order';
+
   String get add_details_login => 'Add your details to login';
 
   String get add_your_details_to_sign_up => 'Add your details to sign up';
@@ -205,6 +226,8 @@ class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
   String get address => 'Address';
 
   String get address_not_empty => 'address must not empty';
+
+  String get ahmed => 'Ahmed';
 
   String get already_have_an_account => 'Already have an Account?';
 
@@ -237,7 +260,7 @@ class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
 
   String get mobile => 'Mobile No';
 
-  String get mobile_not_empty => 'mobile number must not empty';
+  String get mobile_not_must_empty => 'mobile number must not empty';
 
   String get name => 'Name';
 
@@ -252,6 +275,9 @@ class _TranslationsEn implements BaseTranslations<AppLocale, _TranslationsEn> {
   String get password_not_empty => 'password must not empty';
 
   String get restaurants_and_fast_delivery =>
+      'restaurants and fast delivery to your doorstep';
+
+  String get restaurants_and_fast_delivery_to_your_doorstep =>
       'restaurants and fast delivery to your doorstep';
 
   String get search_country => 'Search country';
@@ -294,6 +320,31 @@ class _TranslationsAr implements _TranslationsEn {
 
   // Translations
   @override
+  String get Discover_the_best_foods_from_over =>
+      'اكتشاف أفضل الأطعمة من أكثر من 1000';
+
+  @override
+  String get Fast_Delivery => 'توصيل سريع';
+
+  @override
+  String get Fast_food_body => 'توصيل الوجبات السريعة إلى منزلك، مكتبك';
+
+  @override
+  String get Fast_food_suBody => 'أينما تكون';
+
+  @override
+  String get Find_Food_You_Love => 'ابحث عن الطعام الذي تحبه';
+
+  @override
+  String get Live_Tracking => 'تتبع مباشر';
+
+  @override
+  String get Live_Tracking_body => 'تتبع طعامك في الوقت الحقيقي على التطبيق';
+
+  @override
+  String get Live_Tracking_suBody => 'بمجرد تقديم الطلب';
+
+  @override
   String get add_details_login => 'أضف التفاصيل الخاصة بك لتسجيل الدخول';
 
   @override
@@ -304,6 +355,9 @@ class _TranslationsAr implements _TranslationsEn {
 
   @override
   String get address_not_empty => 'يجب ألا يكون العنوان فارغًا';
+
+  @override
+  String get ahmed => 'احمد';
 
   @override
   String get already_have_an_account => 'هل لديك حساب؟';
@@ -352,7 +406,7 @@ class _TranslationsAr implements _TranslationsEn {
   String get mobile => 'رقم المحمول';
 
   @override
-  String get mobile_not_empty => 'يجب ألا يكون رقم الهاتف المحمول فارغًا';
+  String get mobile_not_must_empty => 'يجب ألا يكون رقم الهاتف المحمول فارغًا';
 
   @override
   String get name => 'الاسم';
@@ -376,6 +430,10 @@ class _TranslationsAr implements _TranslationsEn {
   String get restaurants_and_fast_delivery => 'مطاعم و توصيل سريع الي باب بيتك';
 
   @override
+  String get restaurants_and_fast_delivery_to_your_doorstep =>
+      'المطاعم والتوصيل السريع إلى عتبة داركم';
+
+  @override
   String get search_country => 'ابحث عن الدوله';
 
   @override
@@ -391,6 +449,22 @@ class _TranslationsAr implements _TranslationsEn {
 extension on _TranslationsEn {
   dynamic _flatMapFunction(String path) {
     switch (path) {
+      case 'Discover_the_best_foods_from_over':
+        return 'Discover the best foods from over 1,000 ';
+      case 'Fast_Delivery':
+        return 'Fast Delivery';
+      case 'Fast_food_body':
+        return 'Fast food delivery to your home, office ';
+      case 'Fast_food_suBody':
+        return 'wherever you are';
+      case 'Find_Food_You_Love':
+        return 'Find Food You Love';
+      case 'Live_Tracking':
+        return 'Live Tracking';
+      case 'Live_Tracking_body':
+        return 'Real time tracking of your food on the app ';
+      case 'Live_Tracking_suBody':
+        return 'once you placed the order';
       case 'add_details_login':
         return 'Add your details to login';
       case 'add_your_details_to_sign_up':
@@ -431,10 +505,10 @@ extension on _TranslationsEn {
         return 'or Login With';
       case 'mobile':
         return 'Mobile No';
-      case 'mobile_not _empty':
+      case 'mobile_not_must_empty':
         return 'mobile number must not empty';
       case 'name':
-        return 'Add your details to sign up';
+        return 'Name';
       case 'name_not_empty':
         return 'name must not empty';
       case 'next':
@@ -446,6 +520,8 @@ extension on _TranslationsEn {
       case 'password_not_empty':
         return 'password must not empty';
       case 'restaurants_and_fast_delivery':
+        return 'restaurants and fast delivery to your doorstep';
+      case 'restaurants_and_fast_delivery_to_your_doorstep':
         return 'restaurants and fast delivery to your doorstep';
       case 'search_country':
         return 'Search country';
@@ -462,6 +538,22 @@ extension on _TranslationsEn {
 extension on _TranslationsAr {
   dynamic _flatMapFunction(String path) {
     switch (path) {
+      case 'Discover_the_best_foods_from_over':
+        return 'اكتشاف أفضل الأطعمة من أكثر من 1000';
+      case 'Fast_Delivery':
+        return 'توصيل سريع';
+      case 'Fast_food_body':
+        return 'توصيل الوجبات السريعة إلى منزلك، مكتبك';
+      case 'Fast_food_suBody':
+        return 'أينما تكون';
+      case 'Find_Food_You_Love':
+        return 'ابحث عن الطعام الذي تحبه';
+      case 'Live_Tracking':
+        return 'تتبع مباشر';
+      case 'Live_Tracking_body':
+        return 'تتبع طعامك في الوقت الحقيقي على التطبيق';
+      case 'Live_Tracking_suBody':
+        return 'بمجرد تقديم الطلب';
       case 'add_details_login':
         return 'أضف التفاصيل الخاصة بك لتسجيل الدخول';
       case 'add_your_details_to_sign_up':
@@ -502,7 +594,7 @@ extension on _TranslationsAr {
         return 'أو تسجيل الدخول باستخدام';
       case 'mobile':
         return 'رقم المحمول';
-      case 'mobile_not _empty':
+      case 'mobile_not_must_empty':
         return 'يجب ألا يكون رقم الهاتف المحمول فارغًا';
       case 'name':
         return 'الاسم';
@@ -518,6 +610,8 @@ extension on _TranslationsAr {
         return 'يجب ألا تكون كلمة المرور فارغة';
       case 'restaurants_and_fast_delivery':
         return 'مطاعم و توصيل سريع الي باب بيتك';
+      case 'restaurants_and_fast_delivery_to_your_doorstep':
+        return 'المطاعم والتوصيل السريع إلى عتبة داركم';
       case 'search_country':
         return 'ابحث عن الدوله';
       case 'sign_up':

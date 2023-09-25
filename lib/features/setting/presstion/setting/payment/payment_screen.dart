@@ -15,7 +15,10 @@ class PaymentScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
-              const CustomTopScreen(title: 'Payment Details',enableBack: true,),
+              const CustomTopScreen(
+                title: 'Payment Details',
+                enableBack: true,
+              ),
               const Height(18.0),
               const PaymentBody(),
               AddCardBottom(),

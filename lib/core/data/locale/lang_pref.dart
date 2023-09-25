@@ -24,5 +24,6 @@ class LangPrefs {
 
   Future<void> setLangToEnglish() => prefs.setBool(isKeyArabic, false);
 
+  // Locale get locale => isArabic ? const Locale('en') : const Locale('ar');
   Locale get locale => isArabic ? const Locale('ar') : const Locale('en');
 }

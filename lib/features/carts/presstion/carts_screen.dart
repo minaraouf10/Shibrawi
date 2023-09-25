@@ -44,7 +44,7 @@ class CartsScreen extends ConsumerWidget {
                         return Column(
                           children: [
                             InkWell(
-                            highlightColor :Colors.transparent,
+                              highlightColor: Colors.transparent,
                               splashColor: Colors.transparent,
                               onTap: () {
                                 context.pushNamed(

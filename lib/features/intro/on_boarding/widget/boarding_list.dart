@@ -1,20 +1,22 @@
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/features/auth/data/model/on_boarding_model.dart';
 
+import '../../../../generated/translations.g.dart';
+
 List<BoardingModel> boarding = [
   BoardingModel(
       image: AssetsManger.findFoodYouLove,
-      title: 'Find Food You Love',
-      body: 'Discover the best foods from over 1,000 ',
-      subBody: 'restaurants and fast delivery to your doorstep'),
+      title: tr.Find_Food_You_Love,
+      body: tr.Discover_the_best_foods_from_over,
+      subBody: tr.restaurants_and_fast_delivery_to_your_doorstep),
   BoardingModel(
       image: AssetsManger.delivery,
-      title: 'Fast Delivery',
-      body: 'Fast food delivery to your home, office ',
-      subBody: 'wherever you are'),
+      title: tr.Fast_Delivery,
+      body: tr.Fast_food_body,
+      subBody: tr.Fast_food_suBody),
   BoardingModel(
       image: AssetsManger.liveTracking,
-      title: 'Live Tracking',
-      body: 'Real time tracking of your food on the app ',
-      subBody: 'once you placed the order'),
+      title: tr.Live_Tracking,
+      body: tr.Live_Tracking_body,
+      subBody: tr.Live_Tracking_suBody),
 ];

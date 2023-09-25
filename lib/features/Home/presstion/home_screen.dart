@@ -16,7 +16,9 @@ class HomeScreen extends StatelessWidget {
         children: [
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
-            child: CustomTopScreen(title: 'Good morning Akila!',),
+            child: CustomTopScreen(
+              title: 'Good morning Akila!',
+            ),
           ),
           Expanded(
             child: SingleChildScrollView(

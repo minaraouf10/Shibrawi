@@ -26,10 +26,13 @@ class _SearchScreenState extends State<SearchScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children:  const [
+          children: const [
             Padding(
               padding: EdgeInsetsDirectional.symmetric(horizontal: 20.0),
-              child: CustomTopScreen(title: 'Search',enableBack: true,),
+              child: CustomTopScreen(
+                title: 'Search',
+                enableBack: true,
+              ),
             ),
             Padding(
               padding: EdgeInsetsDirectional.symmetric(horizontal: 20.0),

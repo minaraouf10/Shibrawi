@@ -57,7 +57,7 @@ class SignUpLogic extends _SignUpStates {
 
   String? phoneValidation(String? value) {
     if (value!.isEmpty) {
-      return tr.mobile_not_empty;
+      return tr.mobile_not_must_empty;
     }
     return null;
   }

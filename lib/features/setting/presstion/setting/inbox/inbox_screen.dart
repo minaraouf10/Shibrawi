@@ -14,7 +14,10 @@ class InboxScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Column(
             children: [
-              const CustomTopScreen(title: 'Inbox',enableBack: true,),
+              const CustomTopScreen(
+                title: 'Inbox',
+                enableBack: true,
+              ),
               Expanded(
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),

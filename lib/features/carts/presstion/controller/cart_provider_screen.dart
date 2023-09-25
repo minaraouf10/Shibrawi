@@ -6,11 +6,11 @@ import '../../../../core/config/utils/custom_state.dart';
 import '../../data/service/carts_service.dart';
 
 final cartProviderScreen = Provider<CartLogic>(
-  (ref) => CartLogic(ref: ref,ref.read(cartServiceProvider)),
+  (ref) => CartLogic(ref: ref, ref.read(cartServiceProvider)),
 );
 
 class CartLogic extends _CartStates {
-  CartLogic(this.cartService,{required super.ref});
+  CartLogic(this.cartService, {required super.ref});
 
   final CartService cartService;
 
@@ -23,7 +23,7 @@ class CartLogic extends _CartStates {
   getProductWithCart() async {
     try {
       isLoading.state = true;
-     await cartService.getCarTData();
+      await cartService.getCarTData();
 
       isLoading.state = false;
       isSuccess.state = true;

@@ -13,7 +13,7 @@ class FavoritesScreen extends StatelessWidget {
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:  [
+        children: [
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: CustomTopScreen(title: 'Latest Offers'),
