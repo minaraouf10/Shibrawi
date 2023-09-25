@@ -5,7 +5,7 @@ class AssetsManger {
   static const skipArrowPath = '${iconsPath}skip_arrow.svg';
   static const wrong = '${iconsPath}wrong.svg';
   static const profilePicture = '${imagePath}Profile_picture.svg';
-  static const firstPageImage = '${imagePath}first_page_image.svg';
+  static const firstPageImage = '${imagePath}first_image.svg';
   static const brger = '${imagePath}brger.png';
   static const findFoodYouLove = '${imagePath}Find food you love vector.svg';
   static const delivery = '${imagePath}Delivery vector.svg';

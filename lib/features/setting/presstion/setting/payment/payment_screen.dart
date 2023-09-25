@@ -3,7 +3,6 @@ import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/custom_top_screen/custom_top_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/payment/widget/add_card_bottom.dart';
 import 'package:shibrawi/features/setting/presstion/setting/payment/widget/payment_body.dart';
-import 'package:shibrawi/features/setting/presstion/setting/payment/widget/payment_top.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});

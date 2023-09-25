@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/features/common/future_provider_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/notification/controller/notification_provider.dart';
 import 'package:shibrawi/features/setting/presstion/setting/notification/widget/notification_item.dart';
-import 'package:shibrawi/features/setting/presstion/setting/notification/widget/notification_top.dart';
 
 import '../../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 

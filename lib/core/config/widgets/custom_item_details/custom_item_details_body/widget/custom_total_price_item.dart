@@ -13,7 +13,9 @@ import '../../../../enums/snack_bar.dart';
 class CustomTotalPriceItem extends ConsumerWidget {
   final ProductModel data;
 
-  const CustomTotalPriceItem(this.data, {super.key});
+  const CustomTotalPriceItem(this.data, { this.isCard = true, super.key});
+
+  final bool isCard;
 
   @override
   Widget build(BuildContext context, ref) {
@@ -42,7 +44,10 @@ class CustomTotalPriceItem extends ConsumerWidget {
               vertical: 5.0,
             ),
             height: 99.0,
-            width: MediaQuery.of(context).size.width * 0.65,
+            width: MediaQuery
+                .of(context)
+                .size
+                .width * 0.65,
             decoration: BoxDecoration(
               color: AppColors.white,
               borderRadius: const BorderRadius.only(
@@ -74,7 +79,8 @@ class CustomTotalPriceItem extends ConsumerWidget {
                   ),
                   const Height(7.0),
                   Text(
-                    'LKR ${data.price * int.parse(numberOfPiece.pieceController.text)}',
+                    'LKR ${data.price *
+                        int.parse(numberOfPiece.pieceController.text)}',
                     style: const TextStyle(
                       color: AppColors.loginBlack,
                       fontSize: 21.0,
@@ -95,7 +101,8 @@ class CustomTotalPriceItem extends ConsumerWidget {
                         splashColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () => numberOfPiece.addOrRemoveToCard(data.id),
-                        child: Row(
+                        child: (isCard) ?
+                        Row(
                           children: [
                             Transform.scale(
                               scale: 1,
@@ -113,6 +120,14 @@ class CustomTotalPriceItem extends ConsumerWidget {
                               ),
                             )
                           ],
+                        ) :
+                        const Text(
+                          'Checkout',
+                          style: TextStyle(
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.white,
+                          ),
                         ),
                       ),
                     ),

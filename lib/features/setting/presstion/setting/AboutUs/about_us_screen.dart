@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/features/setting/presstion/setting/AboutUs/widget/about_us_body.dart';
-import 'package:shibrawi/features/setting/presstion/setting/AboutUs/widget/about_us_top.dart';
 
 import '../../../../../core/config/widgets/custom_sized_box.dart';
 import '../../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';

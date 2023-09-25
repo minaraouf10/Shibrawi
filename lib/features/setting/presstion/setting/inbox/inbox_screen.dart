@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/features/setting/presstion/setting/inbox/widget/inbox_item.dart';
-import 'package:shibrawi/features/setting/presstion/setting/inbox/widget/inbox_top.dart';
 
 import '../../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 

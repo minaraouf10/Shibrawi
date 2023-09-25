@@ -5,6 +5,7 @@ import 'package:shibrawi/core/config/enums/snack_bar.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/widgets/custom_top_screen/custom_top_screen.dart';
 import 'package:shibrawi/features/Profile/presstion/edit_profile/widget/edit_profile_body.dart';
+
 import '../../../../core/config/utils/assets_manager.dart';
 import '../../../../core/config/widgets/custom_sized_box.dart';
 import '../controller/profile_provider_screen.dart';

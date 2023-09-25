@@ -33,7 +33,6 @@ class CartsScreen extends ConsumerWidget {
                 ),
                 Expanded(
                   child: SizedBox(
-                    //  height: 500.0,
                     child: ListView.separated(
                       padding: const EdgeInsetsDirectional.only(
                         start: 20.0,

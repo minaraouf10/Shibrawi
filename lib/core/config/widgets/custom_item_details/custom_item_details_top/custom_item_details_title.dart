@@ -5,7 +5,6 @@ import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
 import '../../../../../features/menu/presstion/controller/menu_provider_screen.dart';
 

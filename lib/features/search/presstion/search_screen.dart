@@ -3,6 +3,7 @@ import 'package:shibrawi/core/config/widgets/custom_top_screen/custom_top_screen
 import 'package:shibrawi/features/search/presstion/controller/search_provider_screen.dart';
 import 'package:shibrawi/features/search/presstion/widget/item_search.dart';
 import 'package:shibrawi/main.dart';
+
 import '../../../core/config/widgets/custom_search_bar/custom_search_bar.dart';
 
 class SearchScreen extends StatefulWidget {

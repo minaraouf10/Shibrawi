@@ -50,8 +50,8 @@ dependencies:
   slang_flutter: ^3.19.0
   slang: ^3.19.0
   smooth_page_indicator: ^1.1.0
-  flutter_native_splash: ^2.2.19
   curved_navigation_bar: ^1.0.3
+  flutter_native_splash: ^2.2.19
 
 dev_dependencies:
   flutter_test:
@@ -108,25 +108,25 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-#flutter_native_splash:
-#  color: "#FFFFFF"
-#  #color_dark: "#FFFFFF"
-#  image: assets/icons/Logo.png
-#  background_image: assets/images/Background_icons.png
-#  android: true
-#  ios: true
 flutter_native_splash:
   color: "#FFFFFF"
   image: assets/icons/Logo2.png
-  #image_dark: assets/images/Background_icons.png
-  #background_image: assets/images/Background_icons.png
- # image_fit: "assets/images/Background_icons.png"
-  background_color: "#FFFFFF"
-  android_gravity: "center"
-  android_disable_fullscreen: false
-  android_disable_transparent_statusbar: true
-  ios_content_mode: "scaleAspectFill"
-  ios_hide_status_bar: false
-  ios_disable_fullscreen: false
+  background_image: assets/images/Background_icons.png
   android: true
   ios: true
+
+#flutter_native_splash:
+#  color: "#FFFFFF"
+#  image: assets/icons/Logo2.png
+#  #image_dark: assets/images/Background_icons.png
+#  #background_image: assets/images/Background_icons.png
+# # image_fit: "assets/images/Background_icons.png"
+#  background_color: "#FFFFFF"
+#  android_gravity: "center"
+#  android_disable_fullscreen: false
+#  android_disable_transparent_statusbar: true
+#  ios_content_mode: "scaleAspectFill"
+#  ios_hide_status_bar: false
+#  ios_disable_fullscreen: false
+#  android: true
+#  ios: true
