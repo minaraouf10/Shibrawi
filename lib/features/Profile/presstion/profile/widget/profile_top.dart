@@ -23,13 +23,26 @@ class ProfileTop extends StatelessWidget {
           children: [
             const Height(5.0),
             CircleAvatar(
+              backgroundColor: Colors.white,
               backgroundImage: const NetworkImage(
                 'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301',
               ),
               radius: 60.0,
               child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: SvgPicture.asset(AssetsManger.profilePicture)),
+                alignment: Alignment.bottomCenter,
+                child: Consumer(
+                  builder:
+                      (BuildContext context, WidgetRef ref, Widget? child) {
+                    final profileProvider = ref.read(profileProviderScreen);
+                    return InkWell(
+                      highlightColor: Colors.transparent,
+                      splashColor: Colors.transparent,
+                      onTap: () => profileProvider.getProfileImage(),
+                      child: SvgPicture.asset(AssetsManger.profilePicture),
+                    );
+                  },
+                ),
+              ),
             ),
             const Height(10.0),
             Row(

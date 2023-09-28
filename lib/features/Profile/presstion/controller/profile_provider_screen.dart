@@ -1,7 +1,8 @@
 import 'dart:developer';
-
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/features/Profile/data/service/profile_service.dart';
 
@@ -19,6 +20,29 @@ class ProfileLogic extends _ProfileStates {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final phoneController = TextEditingController();
+
+  File? profileImage;
+  //final picker = ImagePicker();
+
+  final ImagePicker picker = ImagePicker();
+
+
+
+  Future<void> getProfileImage() async {
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+
+    if (pickedFile != null) {
+      profileImage = File(pickedFile.path);
+      getImage.state = true;
+      //emit(SocialProfileImagePickedSuccessState());
+    } else {
+      log('No image selected.');
+      getImage.state = false;
+      //emit(SocialProfileImagePickedErrorState());
+    }
+  }
+
+
 
   getProfileData() async {
     try {
@@ -78,9 +102,11 @@ class _ProfileStates {
   final CustomState<bool> isLoading;
   final CustomState<String> isError;
   final CustomState<bool> isSuccess;
+  final CustomState<bool> getImage;
 
   _ProfileStates({required this.ref})
       : isLoading = CustomState<bool>(ref, false),
         isError = CustomState<String>(ref, ''),
+        getImage = CustomState<bool>(ref, false),
         isSuccess = CustomState<bool>(ref, false);
 }
