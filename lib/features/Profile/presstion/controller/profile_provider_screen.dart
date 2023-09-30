@@ -21,7 +21,8 @@ class ProfileLogic extends _ProfileStates {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final phoneController = TextEditingController();
-  String image = 'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301';
+  String image =
+      'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301';
 
   File? profileImage;
 
@@ -53,7 +54,6 @@ class ProfileLogic extends _ProfileStates {
       emailController.text = userModel.email;
       phoneController.text = userModel.phone;
       image = userModel.image;
-
     } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s, name: 'nana');
