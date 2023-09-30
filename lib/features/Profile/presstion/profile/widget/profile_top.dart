@@ -8,11 +8,13 @@ import 'package:shibrawi/core/config/utils/assets_manager.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/Profile/presstion/controller/profile_provider_screen.dart';
 
-class ProfileTop extends StatelessWidget {
+class ProfileTop extends ConsumerWidget {
   const ProfileTop({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final profileProvider = ref.read(profileProviderScreen);
+    ref.watch(profileProvider.isLocalImage.provider);
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 4.0,
@@ -24,23 +26,20 @@ class ProfileTop extends StatelessWidget {
             const Height(5.0),
             CircleAvatar(
               backgroundColor: Colors.white,
-              backgroundImage: const NetworkImage(
-                'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301',
-              ),
+              backgroundImage: (profileProvider.getImage.state)
+                  ? FileImage(profileProvider.profileImage!)
+                  : NetworkImage(profileProvider.image) as ImageProvider,
+              // (profileProvider.getImage.state) ? Image.asset(profileProvider.i):NetworkImage(profileProvider.image ?? ''
+              //'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301',
+              //     ),
               radius: 60.0,
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Consumer(
-                  builder:
-                      (BuildContext context, WidgetRef ref, Widget? child) {
-                    final profileProvider = ref.read(profileProviderScreen);
-                    return InkWell(
-                      highlightColor: Colors.transparent,
-                      splashColor: Colors.transparent,
-                      onTap: () => profileProvider.getProfileImage(),
-                      child: SvgPicture.asset(AssetsManger.profilePicture),
-                    );
-                  },
+                child: InkWell(
+                  highlightColor: Colors.transparent,
+                  splashColor: Colors.transparent,
+                  onTap: () => profileProvider.getProfileImage(),
+                  child: SvgPicture.asset(AssetsManger.profilePicture),
                 ),
               ),
             ),

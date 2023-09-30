@@ -21,7 +21,7 @@ class BoardingItem extends StatelessWidget {
           child: SvgPicture.asset(
             model.image,
             width: double.infinity,
-            height: 300.0,
+            height: 250.0,
           ),
         ),
         const SizedBox(height: 30.0),

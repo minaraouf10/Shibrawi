@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
@@ -20,13 +21,13 @@ class ProfileLogic extends _ProfileStates {
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final phoneController = TextEditingController();
+  String image = 'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301';
 
   File? profileImage;
+
   //final picker = ImagePicker();
 
   final ImagePicker picker = ImagePicker();
-
-
 
   Future<void> getProfileImage() async {
     final pickedFile = await picker.pickImage(source: ImageSource.gallery);
@@ -34,6 +35,7 @@ class ProfileLogic extends _ProfileStates {
     if (pickedFile != null) {
       profileImage = File(pickedFile.path);
       getImage.state = true;
+      isLocalImage.state = true;
       //emit(SocialProfileImagePickedSuccessState());
     } else {
       log('No image selected.');
@@ -41,8 +43,6 @@ class ProfileLogic extends _ProfileStates {
       //emit(SocialProfileImagePickedErrorState());
     }
   }
-
-
 
   getProfileData() async {
     try {
@@ -52,6 +52,8 @@ class ProfileLogic extends _ProfileStates {
       nameController.text = userModel.name;
       emailController.text = userModel.email;
       phoneController.text = userModel.phone;
+      image = userModel.image;
+
     } catch (e, s) {
       isError.state = e.toString();
       log(isError.state, stackTrace: s, name: 'nana');
@@ -102,11 +104,13 @@ class _ProfileStates {
   final CustomState<bool> isLoading;
   final CustomState<String> isError;
   final CustomState<bool> isSuccess;
+  final CustomState<bool> isLocalImage;
   final CustomState<bool> getImage;
 
   _ProfileStates({required this.ref})
       : isLoading = CustomState<bool>(ref, false),
         isError = CustomState<String>(ref, ''),
         getImage = CustomState<bool>(ref, false),
+        isLocalImage = CustomState<bool>(ref, false),
         isSuccess = CustomState<bool>(ref, false);
 }

@@ -65,7 +65,7 @@ class BoardingScreenState extends State<BoardingScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 100.0),
+                padding: const EdgeInsets.only(bottom: 30.0),
                 child: DefaultButton(
                   function: _navigateToNextPage,
                   text: BoardingItem.currentPage < boarding.length - 1
