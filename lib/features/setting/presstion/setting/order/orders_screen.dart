@@ -12,28 +12,32 @@ class OrdersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: const [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: CustomTopScreen(
-                title: 'My Order',
-                enableBack: true,
-                enableCart: false,
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            children: const [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: CustomTopScreen(
+                  title: 'My Order',
+                  enableBack: true,
+                  enableCart: false,
+                ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: OrderItem(),
-            ),
-            Height(35.0),
-            IngredientsOrder(),
-            Height(15.0),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
-              child: CheckDetailsOrder(),
-            )
-          ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: OrderItem(),
+              ),
+              Height(35.0),
+              IngredientsOrder(),
+              Height(15.0),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                child: CheckDetailsOrder(),
+              ),
+              Height(10.0),
+            ],
+          ),
         ),
       ),
     );

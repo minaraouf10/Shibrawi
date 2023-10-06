@@ -43,7 +43,7 @@ class PaymentBody extends StatelessWidget {
                 const Height(16.0),
                 Row(
                   children: [
-                    Image.asset(AssetsManger.visa),
+                    Image.asset(AssetsManger.visaPng),
                     const Width(20.0),
                     const Text(
                       "**** **** ",

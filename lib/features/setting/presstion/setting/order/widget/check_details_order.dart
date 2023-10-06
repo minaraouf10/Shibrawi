@@ -121,7 +121,6 @@ class CheckDetailsOrder extends StatelessWidget {
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
                 color: AppColors.primary,
-                height: 27 / 22,
               ),
             )
           ],

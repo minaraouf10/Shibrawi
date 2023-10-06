@@ -12,7 +12,8 @@ class AssetsManger {
   static const liveTracking = '${imagePath}Live tracking vector.svg';
   static const group = '${imagePath}Group 8089.svg';
   static const orangePoint = '${imagePath}orange_point.svg';
-  static const visa = '${imagePath}visa.png';
+  static const visaPng = '${imagePath}visa.png';
+  static const visaSvg = '${imagePath}visa.svg';
 
   //#endregion
 
@@ -42,4 +43,5 @@ class AssetsManger {
   static const backGroundFavorite = '${iconsPath}back_ground_favorite.svg';
   static const favoriteHeart = '${iconsPath}favorite_heart.svg';
   static const unFavoriteHeart = '${iconsPath}un_favorite_heart.svg';
+  static const plusIcon = '${iconsPath}plus_icon.svg';
 }
