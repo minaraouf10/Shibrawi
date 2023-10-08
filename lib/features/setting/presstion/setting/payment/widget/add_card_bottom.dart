@@ -66,7 +66,7 @@ class AddCardBottom extends StatelessWidget {
                           height: 17 / 14,
                         ),
                       ),
-                      const Width(56.0),
+                      const Width(50.0),
                       TextForm(
                         textType: TextInputType.number,
                         width: 100.0,
@@ -76,7 +76,7 @@ class AddCardBottom extends StatelessWidget {
                           return 'Month cannot be empty';
                         },
                       ),
-                      const Width(25.0),
+                      const Width(20.0),
                       TextForm(
                         textType: TextInputType.number,
                         width: 105.0,

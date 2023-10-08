@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/enums/snack_bar.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/router/route_names.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/auth/presstion/login/controller/login_provider_screen.dart';
 import 'package:shibrawi/features/auth/presstion/login/widget/email_password.dart';
 import 'package:shibrawi/features/auth/presstion/login/widget/login_with_google.dart';
@@ -36,6 +37,7 @@ class LoginScreen extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: const [
+                Height(10.0),
                 TopScreen(),
                 EmailPassword(),
                 LoginWithGoogle(),

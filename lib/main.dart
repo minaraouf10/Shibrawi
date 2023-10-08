@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/router/router_imports.dart';
@@ -11,19 +12,19 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPrefs.init();
   runApp(
-    // DevicePreview(
-    // enabled: true,
-    //   tools: const [
-    //    ...DevicePreview.defaultTools,
-    //  ],
-    // builder: (context) =>
+    DevicePreview(
+    enabled: true,
+      tools: const [
+       ...DevicePreview.defaultTools,
+     ],
+    builder: (context) =>
     TranslationProvider(
       child: UncontrolledProviderScope(
         container: globalRef,
         child: const MyApp(),
       ),
     ),
-    //),
+    ),
   );
 }
 

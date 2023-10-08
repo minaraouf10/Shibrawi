@@ -26,8 +26,6 @@ class ProfileLogic extends _ProfileStates {
 
   File? profileImage;
 
-  //final picker = ImagePicker();
-
   final ImagePicker picker = ImagePicker();
 
   Future<void> getProfileImage() async {
@@ -37,12 +35,14 @@ class ProfileLogic extends _ProfileStates {
       profileImage = File(pickedFile.path);
       getImage.state = true;
       isLocalImage.state = true;
-      //emit(SocialProfileImagePickedSuccessState());
     } else {
       log('No image selected.');
       getImage.state = false;
-      //emit(SocialProfileImagePickedErrorState());
     }
+  }
+
+  Future<void> uploadImage() async {
+
   }
 
   getProfileData() async {

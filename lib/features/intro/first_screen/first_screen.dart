@@ -14,11 +14,16 @@ class FirstScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.asset(
-            AssetsManger.firstPageImage,
-            width: context.width,
+          Expanded(
+            flex: 2,
+            child: SvgPicture.asset(
+              AssetsManger.firstPageImage,
+              width: context.width,
+            ),
           ),
-          const LoginOrSignUp()
+          const Expanded(
+            flex: 1,
+              child:  LoginOrSignUp())
         ],
       ),
     );
