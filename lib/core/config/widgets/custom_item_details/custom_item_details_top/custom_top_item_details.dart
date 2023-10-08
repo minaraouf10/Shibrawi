@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/widgets/custom_item_details/custom_item_details_top/custom_item_details_title.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
 
@@ -16,13 +17,13 @@ class CustomTopItemDetails extends StatelessWidget {
       children: [
         Image.network(
           data.image,
-          width: MediaQuery.of(context).size.width,
+          width: context.width,
           fit: BoxFit.cover,
         ),
         Stack(
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
+              width: context.width,
               height: 200,
               decoration: BoxDecoration(
                 gradient: LinearGradient(

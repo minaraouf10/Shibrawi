@@ -13,17 +13,16 @@ void main() async {
   await SharedPrefs.init();
   runApp(
     DevicePreview(
-    enabled: true,
+      enabled: true,
       tools: const [
-       ...DevicePreview.defaultTools,
-     ],
-    builder: (context) =>
-    TranslationProvider(
-      child: UncontrolledProviderScope(
-        container: globalRef,
-        child: const MyApp(),
+        ...DevicePreview.defaultTools,
+      ],
+      builder: (context) => TranslationProvider(
+        child: UncontrolledProviderScope(
+          container: globalRef,
+          child: const MyApp(),
+        ),
       ),
-    ),
     ),
   );
 }

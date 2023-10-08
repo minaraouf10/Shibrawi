@@ -25,6 +25,7 @@ class AddCardBottom extends StatelessWidget {
           bottomSheetBody: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -66,7 +67,9 @@ class AddCardBottom extends StatelessWidget {
                           height: 17 / 14,
                         ),
                       ),
-                      const Width(50.0),
+                      const Spacer(
+                        flex: 2,
+                      ),
                       TextForm(
                         textType: TextInputType.number,
                         width: 100.0,
@@ -76,7 +79,9 @@ class AddCardBottom extends StatelessWidget {
                           return 'Month cannot be empty';
                         },
                       ),
-                      const Width(20.0),
+                      const Spacer(
+                        flex: 1,
+                      ),
                       TextForm(
                         textType: TextInputType.number,
                         width: 105.0,

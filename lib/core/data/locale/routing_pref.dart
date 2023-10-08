@@ -9,5 +9,7 @@ class RoutingPrefs {
       ? RouteNames.shibrawiLayout
       : RouteNames.onBoarding;
 
-  static String get initialRoute => initial;
+  static String get initialRoute =>
+      //RouteNames.settingScreen;
+      initial;
 }

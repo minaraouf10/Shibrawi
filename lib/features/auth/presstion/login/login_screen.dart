@@ -34,6 +34,7 @@ class LoginScreen extends ConsumerWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: const [

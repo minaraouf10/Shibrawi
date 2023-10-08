@@ -20,6 +20,7 @@ import 'package:shibrawi/features/setting/presstion/setting/notification/notific
 import 'package:shibrawi/features/setting/presstion/setting/order/checkout/checkout_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/order/orders_screen.dart';
 import 'package:shibrawi/features/setting/presstion/setting/payment/payment_screen.dart';
+import 'package:shibrawi/features/setting/presstion/setting/setting_screen/setting_screen.dart';
 
 import '../../../features/carts/presstion/carts_screen.dart';
 

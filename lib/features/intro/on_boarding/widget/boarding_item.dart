@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
+import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/auth/data/model/on_boarding_model.dart';
 import 'package:shibrawi/features/intro/on_boarding/widget/boarding_list.dart';
 
@@ -16,36 +17,57 @@ class BoardingItem extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Padding(
-          padding: const EdgeInsetsDirectional.only(top: 30.0, bottom: 20.0),
-          child: SvgPicture.asset(
-            model.image,
-            width: double.infinity,
-            height: 250.0,
+        Expanded(
+          flex: 7,
+          child: Padding(
+            padding: const EdgeInsetsDirectional.only(top: 30.0, bottom: 20.0),
+            child: SvgPicture.asset(
+              model.image,
+              width: double.infinity,
+              //height: 350.0,
+            ),
           ),
         ),
-        const SizedBox(height: 30.0),
+       // const Height(30.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: buildPageIndicator(),
         ),
-        const SizedBox(
-          height: 30.0,
+        const Height(30.0),
+        Expanded(
+          flex: 1,
+          child: Text(
+            model.title,
+            style: const TextStyle(
+              fontSize: 28.0,
+              color: AppColors.loginBlack,
+            ),
+          ),
         ),
-        Text(
-          model.title,
-          style: const TextStyle(fontSize: 28.0, color: AppColors.loginBlack),
-        ),
-        const SizedBox(height: 30.0),
-        Text(
-          model.body,
-          style: const TextStyle(fontSize: 13.0, color: AppColors.loginBlack),
-        ),
-        const SizedBox(height: 3.0),
-        Text(
-          model.subBody,
-          style: const TextStyle(fontSize: 13.0, color: AppColors.loginBlack),
-        ),
+        //const Height(30.0),
+        Expanded(
+          flex: 1,
+          child: Column(
+            children: [
+              Text(
+                model.body,
+                style: const TextStyle(
+                  fontSize: 13.0,
+                  color: AppColors.loginBlack,
+                ),
+              ),
+             // const Height(30.0),
+              Text(
+                model.subBody,
+                style: const TextStyle(
+                  fontSize: 13.0,
+                  color: AppColors.loginBlack,
+                ),
+              ),
+            ],
+          ),
+        )
+
       ],
     );
   }

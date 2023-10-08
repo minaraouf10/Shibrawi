@@ -103,11 +103,11 @@ class AppRouter {
           builder: (context) => const CartsScreen(),
         );
 
-      // case RouteNames.customNotificationScreen:
-      //   final NotificationModel notificationData = settings.arguments as NotificationModel;
-      //   return MaterialPageRoute(
-      //     builder: (context) =>  CustomNotificationScreen(notificationData),
-      //   );
+      case RouteNames.customNotificationScreen:
+        //final NotificationModel notificationData = settings.arguments as NotificationModel;
+        return MaterialPageRoute(
+          builder: (context) =>  const SettingScreen(),
+        );
 
       // case RouteNames.itemSearchDetailsScreen:
       //   final SearchData itemSearchDetailsData =
