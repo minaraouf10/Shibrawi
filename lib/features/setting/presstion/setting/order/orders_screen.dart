@@ -5,9 +5,11 @@ import 'package:shibrawi/features/setting/presstion/setting/order/widget/check_d
 import 'package:shibrawi/features/setting/presstion/setting/order/widget/ingredients_order.dart';
 import 'package:shibrawi/features/setting/presstion/setting/order/widget/order_item.dart';
 
-class OrdersScreen extends StatelessWidget {
-  const OrdersScreen({super.key});
+import '../../../../menu/data/model/product_model.dart';
 
+class OrdersScreen extends StatelessWidget {
+  const OrdersScreen(this.itemDetailsData,{super.key});
+ final ProductModel itemDetailsData;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +17,8 @@ class OrdersScreen extends StatelessWidget {
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
-            children: const [
-              Padding(
+            children:  [
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: CustomTopScreen(
                   title: 'My Order',
@@ -25,17 +27,17 @@ class OrdersScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: OrderItem(),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: OrderItem(itemDetailsData),
               ),
-              Height(35.0),
-              IngredientsOrder(),
-              Height(15.0),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20.0),
-                child: CheckDetailsOrder(),
+              const Height(35.0),
+            //  const IngredientsOrder(),
+              const Height(15.0),
+               Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: CheckDetailsOrder(itemDetailsData),
               ),
-              Height(10.0),
+              const Height(10.0),
             ],
           ),
         ),

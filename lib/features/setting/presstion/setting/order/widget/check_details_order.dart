@@ -5,9 +5,11 @@ import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart';
 
-class CheckDetailsOrder extends StatelessWidget {
-  const CheckDetailsOrder({super.key});
+import '../../../../../menu/data/model/product_model.dart';
 
+class CheckDetailsOrder extends StatelessWidget {
+  const CheckDetailsOrder(this.itemDetailsData,{super.key});
+  final ProductModel itemDetailsData;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -52,8 +54,8 @@ class CheckDetailsOrder extends StatelessWidget {
         Column(
           children: [
             Row(
-              children: const [
-                Text(
+              children:  [
+                const Text(
                   "Sub Total",
                   style: TextStyle(
                     fontSize: 13,
@@ -62,10 +64,10 @@ class CheckDetailsOrder extends StatelessWidget {
                     height: 16 / 13,
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
-                  "\$68",
-                  style: TextStyle(
+                  "\$ ${itemDetailsData.price}",
+                  style: const TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primary,
@@ -88,7 +90,7 @@ class CheckDetailsOrder extends StatelessWidget {
                 ),
                 Spacer(),
                 Text(
-                  "\$2",
+                  "\$ 2.0",
                   style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
@@ -104,8 +106,8 @@ class CheckDetailsOrder extends StatelessWidget {
         const DefaultDivider(),
         const Height(12.0),
         Row(
-          children: const [
-            Text(
+          children:  [
+            const Text(
               "Total",
               style: TextStyle(
                 fontSize: 13,
@@ -114,10 +116,10 @@ class CheckDetailsOrder extends StatelessWidget {
                 height: 16 / 13,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
-              "\$70",
-              style: TextStyle(
+              "\$ ${itemDetailsData.price + 2}",
+              style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
                 color: AppColors.primary,

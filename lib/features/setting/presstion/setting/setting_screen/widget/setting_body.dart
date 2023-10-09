@@ -28,8 +28,11 @@ class SettingBody extends StatelessWidget {
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
           onTap: () {
-            //context.pushNamed(RouteNames.cartsScreen);
-            context.pushNamed(RouteNames.ordersScreen);
+            context.pushNamed(
+              RouteNames.cartsScreen,
+              arguments: true,
+            );
+            //context.pushNamed(RouteNames.ordersScreen);
           },
           child: const SettingItem(
             icon: AssetsManger.orders,

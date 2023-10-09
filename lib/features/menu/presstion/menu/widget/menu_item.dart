@@ -47,18 +47,20 @@ class MenuItem extends StatelessWidget {
             child: Align(
               alignment: AlignmentDirectional.centerStart,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Height(14.0),
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      color: AppColors.loginBlack,
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.w700,
+                  const Height(10.0),
+                  Expanded(
+                    child: Text(
+                      title,
+                      style: const TextStyle(
+                        color: AppColors.loginBlack,
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ),
-                  const Height(5.0),
+                  //const Height(5.0),
                   // Text(
                   //   items,
                   //   style: const TextStyle(

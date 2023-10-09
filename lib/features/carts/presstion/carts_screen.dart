@@ -1,8 +1,10 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/features/common/future_provider_screen.dart';
+
 import '../../../core/config/router/route_names.dart';
 import '../../../core/config/widgets/custom_cart_item/custom_cart_item.dart';
 import '../../../core/config/widgets/custom_sized_box.dart';
@@ -11,7 +13,12 @@ import '../../menu/presstion/controller/menu_provider_screen.dart';
 import 'controller/cart_provider.dart';
 
 class CartsScreen extends ConsumerWidget {
-  const CartsScreen({super.key});
+  const CartsScreen({
+    this.inOrderScreen = false,
+    super.key,
+  });
+
+  final bool inOrderScreen;
 
   @override
   Widget build(BuildContext context, ref) {
@@ -45,10 +52,17 @@ class CartsScreen extends ConsumerWidget {
                               highlightColor: Colors.transparent,
                               splashColor: Colors.transparent,
                               onTap: () {
-                                context.pushNamed(
-                                  RouteNames.itemDetailsScreen,
-                                  arguments: data[index],
-                                );
+                                if (inOrderScreen) {
+                                  context.pushNamed(
+                                    RouteNames.ordersScreen,
+                                    arguments: data[index],
+                                  );
+                                } else {
+                                  context.pushNamed(
+                                    RouteNames.itemDetailsScreen,
+                                    arguments: data[index],
+                                  );
+                                }
                               },
                               child: Consumer(
                                 builder: (BuildContext context, WidgetRef ref,

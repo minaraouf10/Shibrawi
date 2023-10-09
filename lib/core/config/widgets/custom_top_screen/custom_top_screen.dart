@@ -52,6 +52,7 @@ class CustomTopScreen extends StatelessWidget {
                           onTap: () {
                             context.pushNamed(
                               RouteNames.cartsScreen,
+                              arguments: false
                             );
                           },
                           child: SvgPicture.asset(AssetsManger.shoppingCart))
@@ -74,6 +75,7 @@ class CustomTopScreen extends StatelessWidget {
                     onTap: () {
                       context.pushNamed(
                         RouteNames.cartsScreen,
+                        arguments: false
                       );
                     },
                     child: SvgPicture.asset(AssetsManger.shoppingCart),
