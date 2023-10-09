@@ -6,8 +6,12 @@ import 'package:shibrawi/features/setting/presstion/setting/order/checkout/widge
 import 'package:shibrawi/features/setting/presstion/setting/order/checkout/widget/delivery_address_checkout.dart';
 import 'package:shibrawi/features/setting/presstion/setting/order/checkout/widget/payment_method.dart';
 
+import '../../../../../menu/data/model/product_model.dart';
+
 class CheckoutScreen extends StatelessWidget {
-  const CheckoutScreen({super.key});
+  const CheckoutScreen(this.itemDetailsData, {super.key});
+
+  final ProductModel itemDetailsData;
 
   @override
   Widget build(BuildContext context) {
@@ -16,26 +20,26 @@ class CheckoutScreen extends StatelessWidget {
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           child: Column(
-            children: const [
-              Padding(
+            children: [
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: CheckoutTop(),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: DeliveryAddressCheckout(),
               ),
-              DefaultDivider(
+              const DefaultDivider(
                 height: 12.0,
               ),
-              Height(20.0),
+              const Height(20.0),
               PaymentMethod(),
-              Height(20.0),
-              DefaultDivider(
+              const Height(20.0),
+              const DefaultDivider(
                 height: 12.0,
               ),
-              Height(15.0),
-              CheckDetails()
+              const Height(15.0),
+              CheckDetails(itemDetailsData)
             ],
           ),
         ),

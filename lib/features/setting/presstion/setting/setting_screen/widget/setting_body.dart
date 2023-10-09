@@ -23,7 +23,7 @@ class SettingBody extends StatelessWidget {
             title: 'Payment Details',
           ),
         ),
-        const Height(20.0),
+        const Height(15.0),
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
@@ -39,7 +39,7 @@ class SettingBody extends StatelessWidget {
             title: 'My Orders',
           ),
         ),
-        const Height(20.0),
+        const Height(15.0),
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
@@ -51,7 +51,7 @@ class SettingBody extends StatelessWidget {
             title: 'Notifications',
           ),
         ),
-        const Height(20.0),
+        const Height(15.0),
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
@@ -63,7 +63,7 @@ class SettingBody extends StatelessWidget {
             title: 'Inbox',
           ),
         ),
-        const Height(20.0),
+        const Height(15.0),
         InkWell(
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,

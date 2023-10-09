@@ -28,7 +28,7 @@ class BoardingItem extends StatelessWidget {
             ),
           ),
         ),
-       // const Height(30.0),
+        // const Height(30.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: buildPageIndicator(),
@@ -56,7 +56,7 @@ class BoardingItem extends StatelessWidget {
                   color: AppColors.loginBlack,
                 ),
               ),
-             // const Height(30.0),
+              // const Height(30.0),
               Text(
                 model.subBody,
                 style: const TextStyle(
@@ -67,7 +67,6 @@ class BoardingItem extends StatelessWidget {
             ],
           ),
         )
-
       ],
     );
   }

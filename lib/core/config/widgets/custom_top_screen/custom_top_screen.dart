@@ -50,10 +50,8 @@ class CustomTopScreen extends StatelessWidget {
                           highlightColor: Colors.transparent,
                           splashColor: Colors.transparent,
                           onTap: () {
-                            context.pushNamed(
-                              RouteNames.cartsScreen,
-                              arguments: false
-                            );
+                            context.pushNamed(RouteNames.cartsScreen,
+                                arguments: false);
                           },
                           child: SvgPicture.asset(AssetsManger.shoppingCart))
                       : Container()
@@ -73,10 +71,8 @@ class CustomTopScreen extends StatelessWidget {
                     highlightColor: Colors.transparent,
                     splashColor: Colors.transparent,
                     onTap: () {
-                      context.pushNamed(
-                        RouteNames.cartsScreen,
-                        arguments: false
-                      );
+                      context.pushNamed(RouteNames.cartsScreen,
+                          arguments: false);
                     },
                     child: SvgPicture.asset(AssetsManger.shoppingCart),
                   ),

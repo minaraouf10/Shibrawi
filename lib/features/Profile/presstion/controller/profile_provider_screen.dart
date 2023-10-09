@@ -41,9 +41,7 @@ class ProfileLogic extends _ProfileStates {
     }
   }
 
-  Future<void> uploadImage() async {
-
-  }
+  Future<void> uploadImage() async {}
 
   getProfileData() async {
     try {

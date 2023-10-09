@@ -16,7 +16,6 @@ class DeliveryAddressCheckout extends StatelessWidget {
             fontSize: 13,
             fontWeight: FontWeight.w400,
             color: AppColors.lightBlack,
-            height: 16 / 13,
           ),
         ),
         const Height(17.0),
@@ -24,14 +23,12 @@ class DeliveryAddressCheckout extends StatelessWidget {
           children: const [
             Expanded(
               child: Text(
-                "653 Nostrand Ave., "
-                'Brooklyn, NY 11216',
+                "27 Ahmed Essa Street, "
+                "Hadayek El Kobba, Cairo",
                 style: TextStyle(
-                  fontFamily: "Inter",
                   fontSize: 15,
                   fontWeight: FontWeight.w700,
                   color: Color(0xff4a4b4d),
-                  height: 18 / 15,
                 ),
                 textAlign: TextAlign.left,
               ),

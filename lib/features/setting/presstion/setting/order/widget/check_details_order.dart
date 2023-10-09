@@ -8,8 +8,10 @@ import 'package:shibrawi/core/config/widgets/primary_widget/default_divider.dart
 import '../../../../../menu/data/model/product_model.dart';
 
 class CheckDetailsOrder extends StatelessWidget {
-  const CheckDetailsOrder(this.itemDetailsData,{super.key});
+  const CheckDetailsOrder(this.itemDetailsData, {super.key});
+
   final ProductModel itemDetailsData;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -54,7 +56,7 @@ class CheckDetailsOrder extends StatelessWidget {
         Column(
           children: [
             Row(
-              children:  [
+              children: [
                 const Text(
                   "Sub Total",
                   style: TextStyle(
@@ -106,7 +108,7 @@ class CheckDetailsOrder extends StatelessWidget {
         const DefaultDivider(),
         const Height(12.0),
         Row(
-          children:  [
+          children: [
             const Text(
               "Total",
               style: TextStyle(
@@ -132,7 +134,10 @@ class CheckDetailsOrder extends StatelessWidget {
           highlightColor: Colors.transparent,
           splashColor: Colors.transparent,
           onTap: () {
-            context.pushNamed(RouteNames.checkoutScreen);
+            context.pushNamed(
+              RouteNames.checkoutScreen,
+              arguments: itemDetailsData,
+            );
           },
           child: Container(
             height: 55.0,
@@ -147,7 +152,6 @@ class CheckDetailsOrder extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: AppColors.white,
-                height: 19 / 16,
               ),
             ),
           ),

@@ -93,10 +93,11 @@ extension CustomSnackBar on BuildContext {
       SnackBar(
         behavior: SnackBarBehavior.floating,
         backgroundColor: bgColor,
-        content: Text(
-          message,
-          style: AppTextStyles.hintTextStyle.copyWith(
-            color: AppColors.white,
+        content: Center(
+          child: Text(
+            message,
+            style: AppTextStyles.hintTextStyle
+                .copyWith(color: AppColors.white, fontSize: 16.0),
           ),
         ),
       ),

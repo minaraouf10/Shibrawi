@@ -81,12 +81,13 @@ class AppRouter {
       case RouteNames.ordersScreen:
         final ProductModel itemDetailsData = settings.arguments as ProductModel;
         return MaterialPageRoute(
-          builder: (context) =>  OrdersScreen(itemDetailsData),
+          builder: (context) => OrdersScreen(itemDetailsData),
         );
 
       case RouteNames.checkoutScreen:
+        final ProductModel itemDetailsData = settings.arguments as ProductModel;
         return MaterialPageRoute(
-          builder: (context) => const CheckoutScreen(),
+          builder: (context) => CheckoutScreen(itemDetailsData),
         );
 
       case RouteNames.editProfile:
@@ -101,18 +102,18 @@ class AppRouter {
 
       case RouteNames.cartsScreen:
         final bool inOrderScreen = settings.arguments as bool;
-       // if (inOrderScreen != null) {
-          // Handle the case where inOrderScreen is not null
-          return MaterialPageRoute(
-            builder: (context) => CartsScreen(inOrderScreen: inOrderScreen),
-          );
-       // } else {
-       //    return MaterialPageRoute(
-       //      builder: (context) => const CartsScreen(inOrderScreen: false),
-         // );
-          // Handle the case where inOrderScreen is null or not provided
-          // You can provide a default value or handle the error accordingly.
-       // }
+        // if (inOrderScreen != null) {
+        // Handle the case where inOrderScreen is not null
+        return MaterialPageRoute(
+          builder: (context) => CartsScreen(inOrderScreen: inOrderScreen),
+        );
+      // } else {
+      //    return MaterialPageRoute(
+      //      builder: (context) => const CartsScreen(inOrderScreen: false),
+      // );
+      // Handle the case where inOrderScreen is null or not provided
+      // You can provide a default value or handle the error accordingly.
+      // }
 
       case RouteNames.customNotificationScreen:
         //final NotificationModel notificationData = settings.arguments as NotificationModel;
