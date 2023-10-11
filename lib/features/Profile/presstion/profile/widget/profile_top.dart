@@ -28,7 +28,8 @@ class ProfileTop extends ConsumerWidget {
               backgroundColor: Colors.white,
               backgroundImage: (profileProvider.getImage.state)
                   ? FileImage(profileProvider.profileImage!)
-                  : NetworkImage(profileProvider.image) as ImageProvider,
+                  : NetworkImage(profileProvider.image)
+              as ImageProvider,
               // (profileProvider.getImage.state) ? Image.asset(profileProvider.i):NetworkImage(profileProvider.image ?? ''
               //'https://firebasestorage.googleapis.com/v0/b/graduationproject-59b11.appspot.com/o/user%2FIMG-20230419-WA0012.jpg?alt=media&token=f2066043-4bab-49a8-8f98-8b538628e301',
               //     ),
@@ -38,7 +39,7 @@ class ProfileTop extends ConsumerWidget {
                 child: InkWell(
                   highlightColor: Colors.transparent,
                   splashColor: Colors.transparent,
-                  onTap: () => profileProvider.getProfileImage(),
+                  onTap: () => {},//profileProvider.getProfileImage(),
                   child: SvgPicture.asset(AssetsManger.profilePicture),
                 ),
               ),

@@ -4,7 +4,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/features/Profile/presstion/controller/profile_provider_screen.dart';
 import 'package:shibrawi/features/Profile/presstion/profile/widget/profile_body.dart';
 import 'package:shibrawi/features/Profile/presstion/profile/widget/profile_top.dart';
-
 import '../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 
 class ProfileScreen extends ConsumerStatefulWidget {
@@ -19,11 +18,11 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   Widget build(BuildContext context) {
     final profileProvider = ref.read(profileProviderScreen);
 
-    // Call getProfileData() when the widget is built
-
-    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
-      profileProvider.getProfileData();
-    });
+    SchedulerBinding.instance.addPostFrameCallback(
+      (timeStamp) {
+        profileProvider.getProfileData();
+      },
+    );
 
     return SafeArea(
       child: SingleChildScrollView(

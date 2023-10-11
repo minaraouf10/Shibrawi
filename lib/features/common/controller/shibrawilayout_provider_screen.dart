@@ -32,5 +32,5 @@ class ShibrawiLayoutStates {
   final CustomState<int> currentIndex;
 
   ShibrawiLayoutStates({required this.ref})
-      : currentIndex = CustomState<int>(ref, 2);
+      : currentIndex = CustomState<int>(ref, 3);
 }

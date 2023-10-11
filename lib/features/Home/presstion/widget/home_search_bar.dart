@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-
 import '../../../../core/config/widgets/custom_search_bar/custom_search_bar.dart';
 
 class HomeSearchBar extends StatelessWidget {

@@ -50,9 +50,12 @@ class EditProfileScreen extends ConsumerWidget {
                       : NetworkImage(profileBodyProvider.image)
                           as ImageProvider,
                   radius: 60.0,
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: SvgPicture.asset(AssetsManger.profilePicture),
+                  child: InkWell(
+                    onTap:() => profileBodyProvider.getProfileImage(),
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: SvgPicture.asset(AssetsManger.profilePicture),
+                    ),
                   ),
                 ),
               ),
