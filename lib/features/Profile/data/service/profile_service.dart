@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/api_helper/custom_response.dart';
 import 'package:shibrawi/core/api_helper/dio_client.dart';
@@ -7,9 +6,6 @@ import 'package:shibrawi/core/api_helper/endpoints.dart';
 import 'package:shibrawi/core/config/utils/custom_state.dart';
 import 'package:shibrawi/core/data/locale/user_pref.dart';
 import 'package:shibrawi/features/auth/data/model/user_model.dart';
-import 'package:dio/dio.dart';
-import 'dart:io';
-
 
 final profileServiceProvider = Provider<ProfileService>(
   (ref) => ProfileService(
@@ -43,85 +39,52 @@ class ProfileService {
     UserPrefs.deleteUserToken();
   }
 
-  // Future<UserModel> editProfile(
-  //   String name,
-  //   String email,
-  //   String phone,
-  //   // File file,
-  // ) async {
-  //   final body = {
-  //     "name": name,
-  //     "phone": phone,
-  //     "email": email,
-  //     // "image": await MultipartFile.fromFile(file.path, filename:fileName),
-  //   };
-  //
-  //   final res = CustomResponse(
-  //     await client.put(
-  //       Endpoints.updateProfile,
-  //       body: body,
-  //     ),
-  //   );
-  //   if (res.isError) throw res.message;
-  //   final data = res.data as Json;
-  //   final userModel = UserModel.fromJson(data);
-  //   return userModel;
-  // }
-
   Future<UserModel> editProfile(
-      String name,
-      String email,
-      String phone,
-      String image,
-      ) async {
-    final formData = FormData.fromMap({
+    String name,
+    String email,
+    String phone,
+    // File file,
+  ) async {
+    final body = {
       "name": name,
       "phone": phone,
       "email": email,
-      "image": image,
-      //await MultipartFile.fromFile(image.path, filename: "profile_image.jpg"),
-    });
+      // "image": await MultipartFile.fromFile(file.path, filename:fileName),
+    };
 
     final res = CustomResponse(
       await client.put(
         Endpoints.updateProfile,
-        body: formData,
+        body: body,
       ),
     );
-   // log(image.path.toString(),name: 'image profile service');
     if (res.isError) throw res.message;
     final data = res.data as Json;
     final userModel = UserModel.fromJson(data);
     return userModel;
   }
 
-
-// Future<String> uploadImage(File file) async {
-//   String fileName = file.path.split('/').last;
-//   FormData formData = FormData.fromMap({
-//     "image":
-//     await MultipartFile.fromFile(file.path, filename:fileName),
-//   });
-//   response = await dio.post("/info", data: formData);
-//   return response.data['id'];
-// }
-//
-// Future<UserModel> uploadImageToApi(
-//   String name,
-//   String email,
-//   String phone,
-//   File image,
-// ) async {
-//   final body = {
+// Future<UserModel> editProfile(
+//     String name,
+//     String email,
+//     String phone,
+//     File image,
+//     ) async {
+//   final formData = FormData.fromMap({
 //     "name": name,
 //     "phone": phone,
 //     "email": email,
-//     "image": image,
-//   };
+//     "image": //image,
+//     await MultipartFile.fromFile(image.path, filename: "profile_image.jpg"),
+//   });
 //
 //   final res = CustomResponse(
-//     await client.put(Endpoints.updateProfile, body: body),
+//     await client.put(
+//       Endpoints.updateProfile,
+//       body: formData,
+//     ),
 //   );
+//  // log(image.path.toString(),name: 'image profile service');
 //   if (res.isError) throw res.message;
 //   final data = res.data as Json;
 //   final userModel = UserModel.fromJson(data);

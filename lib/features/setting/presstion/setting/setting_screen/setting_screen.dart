@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shibrawi/features/setting/presstion/setting/setting_screen/widget/setting_body.dart';
-
 import '../../../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 
 class SettingScreen extends StatelessWidget {

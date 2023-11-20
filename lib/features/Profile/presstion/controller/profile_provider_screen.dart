@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
@@ -40,7 +41,6 @@ class ProfileLogic extends _ProfileStates {
   //     getImage.state = false;
   //   }
   // }
-
   Future<void> getProfileImage() async {
     final pickedFile = await picker.pickImage(source: ImageSource.gallery);
 
@@ -56,19 +56,16 @@ class ProfileLogic extends _ProfileStates {
     }
   }
 
-
-
   String fileToUrl(File file) {
     // Use the file's path to create a URL
     final fileUri = Uri.file(file.path);
 
     // Convert the file URI to a string
     url = fileUri.toString();
-    log(url,name: 'image url');
+    log(url, name: 'image url');
 
     return url;
   }
-
 
   getProfileData() async {
     try {
@@ -95,7 +92,7 @@ class ProfileLogic extends _ProfileStates {
         nameController.text,
         emailController.text,
         phoneController.text,
-          url
+        //  profileImage ,
       );
       nameController.text = userModel.name;
       emailController.text = userModel.email;
@@ -112,6 +109,39 @@ class ProfileLogic extends _ProfileStates {
       isLoading.state = false;
     }
   }
+
+  // editProfileData() async {
+  //   try {
+  //     isLoading.state = true;
+  //
+  //     if (profileImage != null) { // Check if profileImage is not null
+  //       final userModel = await profileService.editProfile(
+  //         nameController.text,
+  //         emailController.text,
+  //         phoneController.text,
+  //         profileImage!,
+  //       );
+  //       nameController.text = userModel.name;
+  //       emailController.text = userModel.email;
+  //       phoneController.text = userModel.phone;
+  //
+  //       getProfileData();
+  //
+  //       log(userModel.name, name: 'edit profile');
+  //       isSuccess.state = true;
+  //     } else {
+  //       // Handle the case when profileImage is null
+  //       // You can log an error or show a message to the user
+  //       log('Profile image is null');
+  //       isSuccess.state = false;
+  //     }
+  //   } catch (e, s) {
+  //     isError.state = e.toString();
+  //     log(isError.state, stackTrace: s, name: 'nana');
+  //   } finally {
+  //     isLoading.state = false;
+  //   }
+  // }
 
   logOut() async {
     try {

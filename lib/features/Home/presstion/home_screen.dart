@@ -3,6 +3,7 @@ import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/Home/presstion/widget/home_category.dart';
 import 'package:shibrawi/features/Home/presstion/widget/home_popular_product.dart';
 import 'package:shibrawi/features/Home/presstion/widget/home_search_bar.dart';
+
 import '../../../core/config/widgets/custom_top_screen/custom_top_screen.dart';
 
 class HomeScreen extends StatelessWidget {
