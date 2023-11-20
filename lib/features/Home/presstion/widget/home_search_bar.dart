@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
-import '../../../../core/config/widgets/custom_search_bar/custom_search_bar.dart';
+import '../../../../core/config/router/route_names.dart';
 
 class HomeSearchBar extends StatelessWidget {
   HomeSearchBar({super.key});
@@ -44,7 +45,43 @@ class HomeSearchBar extends StatelessWidget {
                 value = 'Current Location';
               }),
         ),
-        const CustomSearchBar(),
+        InkWell(
+          onTap: () => context.pushNamed(RouteNames.searchScreen),
+          child: Container(
+            padding: const EdgeInsetsDirectional.symmetric(vertical: 5),
+            margin: const EdgeInsets.symmetric(
+              // horizontal: 5.0,
+            ),
+            width: context.width,
+            decoration: BoxDecoration(
+              color: AppColors.gryFormField,
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.white, width: 2.0),
+            ),
+            child: TextFormField(
+              readOnly: true,
+              // controller: searchProvider.searchController,
+              // keyboardType: TextInputType.text,
+              // enableSuggestions: false,
+              // autocorrect: false,
+              // onChanged: (context) => searchProvider.search(),
+              decoration: const InputDecoration(
+                contentPadding:
+                EdgeInsetsDirectional.only(start: 35, end: 10),
+                labelText: 'Search product',
+                enabled: false,
+                prefixIcon: Padding(
+                  padding: EdgeInsetsDirectional.only(start: 10, end: 10),
+                  child: Icon(
+                    Icons.search,
+                    size: 27,
+                  ),
+                ),
+                border: InputBorder.none,
+              ),
+            ),
+          ),
+        ),
       ],
     );
   }
