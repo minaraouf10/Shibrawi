@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/themes/app_colors.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
+
 import '../../../../core/config/router/route_names.dart';
 
 class HomeSearchBar extends StatelessWidget {
@@ -50,8 +51,8 @@ class HomeSearchBar extends StatelessWidget {
           child: Container(
             padding: const EdgeInsetsDirectional.symmetric(vertical: 5),
             margin: const EdgeInsets.symmetric(
-              // horizontal: 5.0,
-            ),
+                // horizontal: 5.0,
+                ),
             width: context.width,
             decoration: BoxDecoration(
               color: AppColors.gryFormField,
@@ -66,8 +67,7 @@ class HomeSearchBar extends StatelessWidget {
               // autocorrect: false,
               // onChanged: (context) => searchProvider.search(),
               decoration: const InputDecoration(
-                contentPadding:
-                EdgeInsetsDirectional.only(start: 35, end: 10),
+                contentPadding: EdgeInsetsDirectional.only(start: 35, end: 10),
                 labelText: 'Search product',
                 enabled: false,
                 prefixIcon: Padding(
