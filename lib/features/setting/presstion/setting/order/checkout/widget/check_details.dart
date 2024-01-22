@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shibrawi/core/config/extensions/context_extensions.dart';
 import 'package:shibrawi/core/config/widgets/custom_sized_box.dart';
 import 'package:shibrawi/features/menu/data/model/product_model.dart';
+import 'package:shibrawi/features/setting/presstion/setting/order/checkout/widget/paymenr_done.dart';
 import 'package:shibrawi/features/setting/presstion/setting/order/controller/checkout_provider.dart';
-
 import '../../../../../../../core/config/enums/snack_bar.dart';
 import '../../../../../../../core/config/themes/app_colors.dart';
 import '../../../../../../../core/config/widgets/primary_widget/default_divider.dart';
@@ -49,7 +49,7 @@ class CheckDetails extends StatelessWidget {
               const Height(12.0),
               Row(
                 children: [
-                  Text(
+                  const Text(
                     "Delivery Cost",
                     style: TextStyle(
                       fontSize: 13,
@@ -58,10 +58,10 @@ class CheckDetails extends StatelessWidget {
                     ),
                     textAlign: TextAlign.left,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
-                    "\$ ${deliveryCost}",
-                    style: TextStyle(
+                    "\$ $deliveryCost",
+                    style: const TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w700,
                       color: AppColors.loginBlack,
@@ -137,10 +137,11 @@ class CheckDetails extends StatelessWidget {
               splashColor: Colors.transparent,
               onTap: () {
                 (checkoutProvider.cash.state)
-                    ? context.showCustomSnackBar(
-                        message: 'Your purchase was successful',
-                        snackBarStatus: SnackBarStatus.success,
-                      )
+                    ? context.showBottomSheet(bottomSheetBody: const PaymentDone())
+                // context.showCustomSnackBar(
+                //         message: 'Your purchase was successful',
+                //         snackBarStatus: SnackBarStatus.success,
+                //       )
                     : context.showCustomSnackBar(
                         message: 'Sorry, this service is not available now',
                         snackBarStatus: SnackBarStatus.error,

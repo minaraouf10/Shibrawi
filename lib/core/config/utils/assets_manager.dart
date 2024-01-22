@@ -14,6 +14,7 @@ class AssetsManger {
   static const orangePoint = '${imagePath}orange_point.svg';
   static const visaPng = '${imagePath}visa.png';
   static const visaSvg = '${imagePath}visa.svg';
+  static const paymentDone = '${imagePath}payment_done.svg';
 
   //#endregion
 
